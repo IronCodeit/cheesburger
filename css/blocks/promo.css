@@ -1,0 +1,22 @@
+.promo {
+  background: url("../../img/promo-fon.png") center center/cover no-repeat; }
+
+.promo__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.promo__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.promo__img {
+  margin-right: 11px; }

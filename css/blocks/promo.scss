@@ -1,0 +1,24 @@
+.promo {
+    background: url("../../img/promo-fon.png") center center / cover no-repeat;
+}
+
+.promo__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.promo__content {
+    display: flex;
+    align-items: center;
+}
+
+.promo__img {
+    margin-right: 11px;
+}
+
+.promo__subtitle {
+    @include lifehack();
+    font-size: 65px;
+    color: $white;
+}
