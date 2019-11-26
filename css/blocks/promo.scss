@@ -1,5 +1,5 @@
 .promo {
-    background: url("../../img/promo-fon.png") center center / cover no-repeat;
+    background: url("../img/promo-fon.png") center center / cover no-repeat;
 }
 
 .promo__container {
@@ -18,7 +18,7 @@
 }
 
 .promo__subtitle {
-    @include lifehack();
-    font-size: 65px;
+    @include lifehack;
     color: $white;
+    font-size: 65px;
 }

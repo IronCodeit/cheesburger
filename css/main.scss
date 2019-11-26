@@ -3,10 +3,10 @@ $orange: #e45028;
 $yellow: #f9b43b;
 $black: #000;
 
-@import "./blocks/header.scss";
-@import "./blocks/nav.scss";
-@import "./blocks/promo.scss";
-@import "./blocks/btn.scss";
-@import "./blocks/fonts.scss";
-@import "./layout/base.scss";
-@import "./layout/normalize.scss";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/promo";
+@import "blocks/btn";
+@import "blocks/fonts";
+@import "layout/base";
+@import "layout/normalize";
