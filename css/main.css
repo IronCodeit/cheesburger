@@ -248,7 +248,8 @@
   font-family: 'ubunturegular';
   opacity: 0.8; }
   .ad__desk h4 {
-    font-family: 'lifehackmedium'; }
+    font-family: 'lifehackmedium';
+    font-size: 24px; }
   .ad__desk p {
     line-height: 24.07px; }
 
@@ -256,13 +257,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   height: 100%; }
 
 .face__item {
@@ -277,6 +278,17 @@
   object-fit: contain;
   -o-object-position: center;
   object-position: center; }
+
+.face__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .container {
   width: 1050px;
