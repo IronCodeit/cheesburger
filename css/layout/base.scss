@@ -1,14 +1,11 @@
 .container {
-    width: 940px;
+    width: 1050px;
+    padding: 0 25px;
     margin: 0 auto;
 }
 
+ul,
 h1 {
-    margin: 0;
-    padding: 0;
-}
-
-ul {
     padding: 0;
     margin: 0;
 
@@ -40,14 +37,4 @@ p {
     font-size: 72px;
     color: $yellow;
     line-height: 1;
-
-    &--color {
-        &--black {
-            color: $black;
-        }
-
-        &--white {
-            color: $white;
-        }
-    }
 }

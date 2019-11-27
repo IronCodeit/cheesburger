@@ -1,0 +1,15 @@
+.face__list {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.face__item {
+    flex-basis: 25%;
+    height: 50vh;
+}
+
+.face__container {
+    height: 100%;
+}
