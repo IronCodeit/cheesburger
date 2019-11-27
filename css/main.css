@@ -262,15 +262,21 @@
   -ms-flex-line-pack: center;
   align-content: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  height: 100%; }
 
 .face__item {
   -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
   height: 50vh; }
 
-.face__container {
-  height: 100%; }
+.face__item_photo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center; }
 
 .container {
   width: 1050px;
