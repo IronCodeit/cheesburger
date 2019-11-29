@@ -3,7 +3,7 @@
     position: relative;
 }
 
-.promo__container {
+.promo--container {
     height: 100%;
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@
     @include lifehack;
     color: $white;
     font-size: 65px;
-    margin-top: 20px;
+    margin-top: 38px;
     letter-spacing: -1.63px;
 }
 

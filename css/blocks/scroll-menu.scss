@@ -1,7 +1,7 @@
 .scroll-menu {
     position: fixed;
-    top: 80px;
-    right: 240px;
+    top: 90px;
+    right: 265px;
 
     &__item {
         list-style-type: disc;
@@ -10,7 +10,7 @@
         list-style-position: inside;
     }
 
-    &__item_active:before {
+    &__item--active:before {
         content: '';
         position: absolute;
         top: 50%;
