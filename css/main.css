@@ -628,18 +628,6 @@ p {
   -ms-flex-align: center;
   align-items: center; }
 
-.face__hover {
-  position: absolute;
-  opacity: 0; }
-
-.face__item--active {
-  position: relative; }
-  .face__item--active:hover .face__hover {
-    opacity: 1;
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s; }
-
 .face__item {
   -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
@@ -660,3 +648,44 @@ p {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s; }
+
+.face__item--active {
+  position: relative; }
+  .face__item--active:hover .face__hover {
+    opacity: 1;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+  .face__item--active .face__hover {
+    position: absolute;
+    padding: 50px 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3); }
+    .face__item--active .face__hover h4 {
+      color: #fff;
+      font-family: 'gagalinregular';
+      font-size: 14px;
+      line-height: 28px;
+      margin-bottom: 30px; }
+    .face__item--active .face__hover p {
+      color: #fff;
+      font-family: 'ubuntu';
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 24px;
+      margin-bottom: 17px; }
+    .face__item--active .face__hover a {
+      color: #fff;
+      font-family: 'ubuntu';
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: #2f3234;
+      padding: 11px 16px;
+      border-radius: 3px; }
