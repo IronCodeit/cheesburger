@@ -628,6 +628,18 @@ p {
   -ms-flex-align: center;
   align-items: center; }
 
+.face__hover {
+  position: absolute;
+  opacity: 0; }
+
+.face__item--active {
+  position: relative; }
+  .face__item--active:hover .face__hover {
+    opacity: 1;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+
 .face__item {
   -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
@@ -639,4 +651,12 @@ p {
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
-  object-position: center; }
+  object-position: center;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1); }
+  .face__item--photo:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
