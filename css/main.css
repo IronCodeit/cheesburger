@@ -782,10 +782,7 @@ p {
 
 .team__item--active .team__accordeon {
   top: 0;
-  opacity: 1;
-  -webkit-transition: 5s;
-  -o-transition: 5s;
-  transition: 5s; }
+  opacity: 1; }
 
 .team__item--active:before {
   -webkit-transform: scale(1, -1);
