@@ -1,0 +1,90 @@
+.team {
+    background: url("../img/bg-team.png") center center / cover no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.team-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba($gray, 0.9);
+    padding-left: 120px;
+}
+
+.team__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.team__photo--pic {
+    width: 100px;
+    height: 100px;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 21px;
+}
+
+.title--team {
+    margin-bottom: 46px;
+}
+
+.team__item {
+    display: flex;
+    align-items: center;
+    color: $white;
+    font-family: 'gagalinregular';
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        border: 6px solid transparent;
+        border-top-color: $yellow;
+        border-bottom-width: 0px;
+        margin-right: 10px;
+    }
+}
+
+.team__accordeon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    display: none;
+}
+
+.team__desk {
+    font-family: 'ubuntu';
+    font-size: 14px;
+    font-weight: 300;
+
+    &--subtitle {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+}
+
+.team__item--active:hover {
+
+    &:before {
+        transform: scale(1, -1);
+    }
+
+
+}

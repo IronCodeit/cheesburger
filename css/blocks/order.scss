@@ -17,7 +17,6 @@
 .form-block {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
 }
 
 .title--form {
@@ -39,6 +38,7 @@
 
 .form__row {
     display: flex;
+    width: 100%;
 
     &:not(:last-child) {
         margin-bottom: 20px;
@@ -52,9 +52,29 @@
 .form__part--input {
     width: 100%;
     padding: 10px 18px;
-    border: 1px solid transparent;
-    border-radius: 3px;
+    border: 2px solid transparent;
+    border-radius: 4px;
     outline: none;
+
+    &:active,
+    &:hover {
+        border: 2px solid $yellow;
+    }
+}
+
+.form__part--text {
+    width: 100%;
+    min-height: 127px;
+    padding: 10px 18px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    min-width: 300px;
+
+    &:active,
+    &:hover {
+        border: 2px solid $yellow;
+    }
 }
 
 .form__part:not(:last-child) {
@@ -76,10 +96,10 @@
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
-    margin-bottom: 10px;
 }
 
-.form__select {
+.form__select,
+.select {
     display: flex;
     align-items: center;
 }
@@ -89,15 +109,102 @@
     align-items: center;
 }
 
-.fake {
+.fake,
+.check-button {
     margin-right: 10px;
 }
 
-.select {
-    display: flex;
-    align-items: center;
+.fake {
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    background: $white;
+
+    &::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        display: block;
+        border-radius: 50%;
+        background-color: $orange;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+.radio-button {
+    display: none;
+
+    &:checked+.fake::before {
+        opacity: 1;
+        transition: 0.3s;
+    }
+}
+
+.mith {
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: relative;
+    background: $white;
+    margin-right: 10px;
+
+    &::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        display: block;
+        background-color: $orange;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+.check-button {
+    display: none;
+
+    &:checked+.mith::before {
+        opacity: 1;
+        transition: 0.3s;
+    }
 }
 
 .select:not(:last-child) {
     margin-right: 20px;
+}
+
+.btn-in {
+    padding: 11px 16px;
+    background-color: $orange;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $white;
+    font-family: 'ubunturegular';
+    border: none;
+}
+
+.btn-out {
+    padding: 11px 16px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $white;
+    font-family: 'ubunturegular';
+    border: none;
+    background-color: transparent;
+}
+
+.check-button {
+    background-color: $yellow;
 }
