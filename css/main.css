@@ -744,7 +744,8 @@ p {
   font-family: 'gagalinregular';
   font-size: 14px;
   font-weight: 400;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  position: relative; }
   .team__item:not(:last-child) {
     margin-bottom: 20px; }
   .team__item:before {
@@ -766,7 +767,10 @@ p {
   -ms-flex-align: center;
   align-items: center;
   padding-top: 20px;
-  display: none; }
+  position: absolute;
+  left: 0;
+  top: -5000px;
+  opacity: 0; }
 
 .team__desk {
   font-family: 'ubuntu';
@@ -776,7 +780,14 @@ p {
     font-weight: 700;
     margin-bottom: 20px; }
 
-.team__item--active:hover:before {
+.team__item--active .team__accordeon {
+  top: 0;
+  opacity: 1;
+  -webkit-transition: 5s;
+  -o-transition: 5s;
+  transition: 5s; }
+
+.team__item--active:before {
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1); }

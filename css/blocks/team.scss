@@ -46,6 +46,7 @@
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
+    position: relative;
 
     &:not(:last-child) {
         margin-bottom: 20px;
@@ -66,7 +67,10 @@
     justify-content: center;
     align-items: center;
     padding-top: 20px;
-    display: none;
+    position: absolute;
+    left: 0;
+    top: -5000px;
+    opacity: 0;
 }
 
 .team__desk {
@@ -80,11 +84,15 @@
     }
 }
 
-.team__item--active:hover {
+.team__item--active {
+
+    & .team__accordeon {
+        top: 0;
+        opacity: 1;
+        transition: 5s;
+    }
 
     &:before {
         transform: scale(1, -1);
     }
-
-
 }
