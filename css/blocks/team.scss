@@ -15,7 +15,7 @@
     top: 0;
     right: 0;
     background: rgba($gray, 0.9);
-    padding-left: 120px;
+    padding: 0 150px;
 }
 
 .team__list {
@@ -39,20 +39,26 @@
 }
 
 .team__item {
-    display: flex;
-    align-items: center;
     color: $white;
     font-family: 'gagalinregular';
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
-    position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.team__name {
+    display: flex;
+    align-items: center;
 
     &:not(:last-child) {
         margin-bottom: 20px;
     }
 
-    &:before {
+    &::before {
         content: "";
         display: block;
         border: 6px solid transparent;
@@ -64,14 +70,23 @@
 
 .team__accordeon {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding-top: 20px;
-    position: absolute;
-    left: 0;
-    top: -5000px;
-    opacity: 0;
+    height: 0;
+    overflow: hidden;
 }
+
+.team__item--active {
+    & .team__accordeon {
+        height: 100%;
+        overflow: visible;
+    }
+
+    .team__name::before {
+        transform: scale(1, -1);
+    }
+}
+
 
 .team__desk {
     font-family: 'ubuntu';
@@ -82,16 +97,8 @@
         font-weight: 700;
         margin-bottom: 20px;
     }
-}
 
-.team__item--active {
-
-    & .team__accordeon {
-        top: 0;
-        opacity: 1;
-    }
-
-    &:before {
-        transform: scale(1, -1);
+    &--text {
+        line-height: 30px;
     }
 }

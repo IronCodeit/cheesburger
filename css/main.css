@@ -704,7 +704,7 @@ p {
   top: 0;
   right: 0;
   background: rgba(47, 50, 52, 0.9);
-  padding-left: 120px; }
+  padding: 0 150px; }
 
 .team__list {
   display: -webkit-box;
@@ -734,21 +734,24 @@ p {
   margin-bottom: 46px; }
 
 .team__item {
+  color: #fff;
+  font-family: 'gagalinregular';
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase; }
+  .team__item:not(:last-child) {
+    margin-bottom: 20px; }
+
+.team__name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  color: #fff;
-  font-family: 'gagalinregular';
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
-  position: relative; }
-  .team__item:not(:last-child) {
+  align-items: center; }
+  .team__name:not(:last-child) {
     margin-bottom: 20px; }
-  .team__item:before {
+  .team__name::before {
     content: "";
     display: block;
     border: 6px solid transparent;
@@ -760,17 +763,23 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 20px;
-  position: absolute;
-  left: 0;
-  top: -5000px;
-  opacity: 0; }
+  height: 0;
+  overflow: hidden; }
+
+.team__item--active .team__accordeon {
+  height: 100%;
+  overflow: visible; }
+
+.team__item--active .team__name::before {
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1); }
 
 .team__desk {
   font-family: 'ubuntu';
@@ -779,15 +788,8 @@ p {
   .team__desk--subtitle {
     font-weight: 700;
     margin-bottom: 20px; }
-
-.team__item--active .team__accordeon {
-  top: 0;
-  opacity: 1; }
-
-.team__item--active:before {
-  -webkit-transform: scale(1, -1);
-  -ms-transform: scale(1, -1);
-  transform: scale(1, -1); }
+  .team__desk--text {
+    line-height: 30px; }
 
 .header {
   position: absolute;
