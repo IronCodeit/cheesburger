@@ -770,7 +770,8 @@ p {
   -ms-flex-align: center;
   align-items: center;
   height: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-left: 16px; }
 
 .team__item--active .team__accordeon {
   height: 100%;
