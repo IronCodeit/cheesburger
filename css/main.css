@@ -832,20 +832,20 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8); }
+  height: 100%; }
 
 .menu__link {
   display: block;
   width: 80px;
   height: 100%;
   text-decoration: none;
-  position: relative; }
-  .menu__link:nth-child(1) {
+  position: relative;
+  background: rgba(0, 0, 0, 0.6); }
+  .menu__link--bg1 {
     background: url("../img/bg-burgleft.png") center center/cover no-repeat; }
-  .menu__link:nth-child(2) {
+  .menu__link--bg2 {
     background: url("../img/bg-burgcenter.png") center center/cover no-repeat; }
-  .menu__link:nth-child(3) {
+  .menu__link--bg3 {
     background: url("../img/bg-burgright.png") center center/cover no-repeat; }
 
 .menu__link-text {
@@ -869,7 +869,8 @@ p {
 .menu__content {
   height: 100%;
   width: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.6); }
 
 .menu__item--active .menu__content {
   width: 550px;
