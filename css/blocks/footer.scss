@@ -1,0 +1,55 @@
+.footer {
+    background: url("../img/bg-footer.png") center center / cover no-repeat;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+.footer--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px
+}
+
+.contacts {
+    font-family: 'ubuntu';
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    &__block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__desk {
+        color: $white;
+        margin-bottom: 10px;
+    }
+
+    &__phone {
+        color: $orange;
+        font-weight: 700;
+        text-decoration: none;
+        display: block;
+    }
+}
+
+.socials__list>* {
+    width: 20px;
+    height: 20px;
+
+    &>*:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.socials__list {
+    display: flex;
+    align-items: center;
+}

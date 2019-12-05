@@ -839,8 +839,14 @@ p {
   width: 80px;
   height: 100%;
   text-decoration: none;
-  position: relative;
-  background: rgba(0, 0, 0, 0.6); }
+  position: relative; }
+  .menu__link:after {
+    content: "";
+    display: block;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); }
   .menu__link--bg1 {
     background: url("../img/bg-burgleft.png") center center/cover no-repeat; }
   .menu__link--bg2 {
@@ -880,6 +886,34 @@ p {
   padding: 40px 30px;
   color: #fff;
   line-height: 25px; }
+
+.cros {
+  fill: #fff;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 2%;
+  right: 11%; }
+
+.connection {
+  fill: #e45028;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px; }
+
+.vk,
+.fb,
+.inst,
+.tw {
+  fill: #585858;
+  width: 20px;
+  height: 20px; }
+
+.fb {
+  fill: #fff; }
+
+.socials__item:not(:last-child) {
+  margin-right: 20px; }
 
 .header {
   position: absolute;
@@ -1108,3 +1142,74 @@ p {
       padding: 5px 14px;
       border-radius: 3px;
       border: none; }
+
+.map {
+  background: url("../img/bg-map.png") center center/cover no-repeat;
+  height: 100vh;
+  position: relative; }
+
+.footer {
+  background: url("../img/bg-footer.png") center center/cover no-repeat;
+  position: absolute;
+  width: 100%;
+  bottom: 0px; }
+
+.footer--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px; }
+
+.contacts {
+  font-family: 'ubuntu';
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .contacts__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .contacts__desk {
+    color: #fff;
+    margin-bottom: 10px; }
+  .contacts__phone {
+    color: #e45028;
+    font-weight: 700;
+    text-decoration: none;
+    display: block; }
+
+.socials__list > * {
+  width: 20px;
+  height: 20px; }
+  .socials__list > * > *:not(:last-child) {
+    margin-right: 20px; }
+
+.socials__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
