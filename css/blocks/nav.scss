@@ -3,6 +3,10 @@
     font-family: 'ubunturegular';
     font-size: 13px;
     font-weight: 500;
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .nav__list {

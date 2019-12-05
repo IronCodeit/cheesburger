@@ -16,3 +16,14 @@
     display: flex;
     align-items: center;
 }
+
+.menu-icon {
+    fill: $white;
+    width: 24px;
+    height: 22px;
+    display: none;
+
+    @include tablets {
+        display: flex;
+    }
+}

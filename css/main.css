@@ -347,6 +347,15 @@ html,
 body {
   height: 100%; }
 
+html {
+  font-size: 16px; }
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 15px; } }
+  @media screen and (max-width: 480px) {
+    html {
+      font-size: 14px; } }
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -807,6 +816,43 @@ p {
   .team__desk--text {
     line-height: 25px; }
 
+.header {
+  position: absolute;
+  width: 100%;
+  top: 15px;
+  z-index: 1; }
+
+.header--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.header__wrapper {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.menu-icon {
+  fill: #fff;
+  width: 24px;
+  height: 22px;
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .menu-icon {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
 .menu {
   background: url("../img/bg-burg.png") center center/cover no-repeat;
   height: 100vh;
@@ -885,7 +931,10 @@ p {
 .menu__text {
   padding: 40px 30px;
   color: #fff;
-  line-height: 25px; }
+  line-height: 24px;
+  font-family: 'ubuntu';
+  font-weight: 300;
+  font-size: 14px; }
 
 .cros {
   fill: #fff;
@@ -915,37 +964,14 @@ p {
 .socials__item:not(:last-child) {
   margin-right: 20px; }
 
-.header {
-  position: absolute;
-  width: 100%;
-  top: 15px;
-  z-index: 1; }
-
-.header--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.header__wrapper {
-  margin-left: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
 .nav {
   margin-right: 15px;
   font-family: 'ubunturegular';
   font-size: 13px;
   font-weight: 500; }
+  @media screen and (max-width: 768px) {
+    .nav {
+      display: none; } }
 
 .nav__list {
   display: -webkit-box;
@@ -1044,9 +1070,9 @@ p {
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
-  text-decoration: none;
   color: #fff;
-  font-family: 'ubunturegular'; }
+  font-family: 'ubunturegular';
+  border: none; }
 
 .scroll-menu {
   position: fixed;

@@ -7,13 +7,14 @@ $lightgray:#585858;
 
 @import "./blocks/fonts.scss";
 @import "./layout/normalize.scss";
+@import "./layout/media.scss";
 @import "./layout/base.scss";
 @import "./blocks/ad.scss";
 @import "./blocks/order.scss";
 @import "./blocks/team.scss";
+@import "./blocks/header.scss";
 @import "./blocks/menu.scss";
 @import "./blocks/svg.scss";
-@import "./blocks/header.scss";
 @import "./blocks/nav.scss";
 @import "./blocks/promo.scss";
 @import "./blocks/btn.scss";

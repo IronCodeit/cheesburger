@@ -3,6 +3,18 @@ body {
     height: 100%;
 }
 
+html {
+    font-size: 16px;
+
+    @include tablets {
+        font-size: 15px;
+    }
+
+    @include phones {
+        font-size: 14px;
+    }
+}
+
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

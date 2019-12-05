@@ -1,5 +1,6 @@
 .menu {
-    background: url("../img/bg-burg.png") center center / cover no-repeat;    height: 100vh;
+    background: url("../img/bg-burg.png") center center / cover no-repeat;
+    height: 100vh;
     position: relative;
 }
 
@@ -83,5 +84,8 @@
 .menu__text {
     padding: 40px 30px;
     color: $white;
-    line-height: 25px;
+    line-height: 24px;
+    font-family: 'ubuntu';
+    font-weight: 300;
+    font-size: 14px;
 }
