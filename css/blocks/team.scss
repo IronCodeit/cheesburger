@@ -14,14 +14,25 @@
     height: 100%;
     top: 0;
     right: 0;
-    background: rgba($gray, 0.9);}
+    background: rgba($gray, 0.9);
+
+    @include tablets {
+        width: 100%;
+    }
+}
 
 .team__block {
     width: 400px;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    @include tablets {
+        width: 100%;
+        align-items: center;
+        padding: 0 25%;
+    }
 }
 
 .team__list {
@@ -31,6 +42,12 @@
     align-items: center;
 }
 
+.team__photo {
+    @include tablets {
+        margin-bottom: 20px;
+    }
+}
+
 .team__photo--pic {
     width: 100px;
     height: 100px;
@@ -38,6 +55,10 @@
     border-radius: 50%;
     object-fit: cover;
     margin-right: 21px;
+
+    @include tablets {
+        margin-right: 0;
+    }
 }
 
 .title--team {
@@ -54,11 +75,22 @@
     &:not(:last-child) {
         margin-bottom: 35px;
     }
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .team__name {
     display: flex;
     align-items: center;
+
+    @include tablets {
+        font-size: 25px;
+    }
 
     &:not(:last-child) {
         margin-bottom: 17px;
@@ -81,6 +113,12 @@
     height: 0;
     overflow: hidden;
     margin-left: 16px;
+
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0;
+    }
 }
 
 .team__item--active {
@@ -92,13 +130,25 @@
     .team__name::before {
         transform: scale(1, -1);
     }
-}
 
+    .team__name {
+        @include tablets {
+            color: $yellow;
+        }
+    }
+}
 
 .team__desk {
     font-family: 'ubuntu';
     font-size: 14px;
     font-weight: 300;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     &--subtitle {
         font-weight: 700;
@@ -107,5 +157,9 @@
 
     &--text {
         line-height: 25px;
+
+        @include tablets {
+            text-align: center;
+        }
     }
 }

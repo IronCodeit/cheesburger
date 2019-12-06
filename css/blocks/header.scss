@@ -12,9 +12,10 @@
 }
 
 .header__wrapper {
-    margin-left: 10px;
+    margin-left: auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .menu-icon {

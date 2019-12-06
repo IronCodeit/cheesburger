@@ -351,10 +351,10 @@ html {
   font-size: 16px; }
   @media screen and (max-width: 768px) {
     html {
-      font-size: 15px; } }
+      font-size: 14px; } }
   @media screen and (max-width: 480px) {
     html {
-      font-size: 14px; } }
+      font-size: 12px; } }
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -365,7 +365,8 @@ body {
   box-sizing: border-box; }
 
 .container {
-  max-width: 960px;
+  max-width: 940px;
+  padding: 0 10px;
   width: 100%;
   margin: 0 auto; }
 
@@ -713,22 +714,32 @@ p {
   top: 0;
   right: 0;
   background: rgba(47, 50, 52, 0.9); }
+  @media screen and (max-width: 768px) {
+    .team-content {
+      width: 100%; } }
 
 .team__block {
   width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start; }
+  @media screen and (max-width: 768px) {
+    .team__block {
+      width: 100%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0 25%; } }
 
 .team__list {
   display: -webkit-box;
@@ -745,6 +756,10 @@ p {
   -ms-flex-align: center;
   align-items: center; }
 
+@media screen and (max-width: 768px) {
+  .team__photo {
+    margin-bottom: 20px; } }
+
 .team__photo--pic {
   width: 100px;
   height: 100px;
@@ -753,6 +768,9 @@ p {
   -o-object-fit: cover;
   object-fit: cover;
   margin-right: 21px; }
+  @media screen and (max-width: 768px) {
+    .team__photo--pic {
+      margin-right: 0; } }
 
 .title--team {
   margin-bottom: 46px; }
@@ -765,6 +783,21 @@ p {
   text-transform: uppercase; }
   .team__item:not(:last-child) {
     margin-bottom: 35px; }
+  @media screen and (max-width: 768px) {
+    .team__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .team__name {
   display: -webkit-box;
@@ -773,6 +806,9 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .team__name {
+      font-size: 25px; } }
   .team__name:not(:last-child) {
     margin-bottom: 17px; }
   .team__name::before {
@@ -796,6 +832,16 @@ p {
   height: 0;
   overflow: hidden;
   margin-left: 16px; }
+  @media screen and (max-width: 768px) {
+    .team__accordeon {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-left: 0; } }
 
 .team__item--active .team__accordeon {
   height: 100%;
@@ -806,15 +852,37 @@ p {
   -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
 
+@media screen and (max-width: 768px) {
+  .team__item--active .team__name {
+    color: #f9b43b; } }
+
 .team__desk {
   font-family: 'ubuntu';
   font-size: 14px;
   font-weight: 300; }
+  @media screen and (max-width: 768px) {
+    .team__desk {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
   .team__desk--subtitle {
     font-weight: 700;
     margin-bottom: 17px; }
   .team__desk--text {
     line-height: 25px; }
+    @media screen and (max-width: 768px) {
+      .team__desk--text {
+        text-align: center; } }
 
 .header {
   position: absolute;
@@ -834,13 +902,16 @@ p {
   align-items: center; }
 
 .header__wrapper {
-  margin-left: 10px;
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .menu-icon {
   fill: #fff;
@@ -1041,12 +1112,32 @@ p {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .promo__content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 0 18%; } }
 
 .promo__img {
   margin-right: 15px; }
+  @media screen and (max-width: 768px) {
+    .promo__img {
+      margin-right: 0;
+      margin-bottom: 30px; } }
 
 .promo--title {
   margin: 0; }
+  @media screen and (max-width: 768px) {
+    .promo--title {
+      text-align: center; } }
 
 .promo__subtitle {
   font-family: 'lifehackmedium';
@@ -1054,6 +1145,9 @@ p {
   font-size: 65px;
   margin-top: 38px;
   letter-spacing: -1.63px; }
+  @media screen and (max-width: 768px) {
+    .promo__subtitle {
+      margin-top: 10px; } }
 
 .promo__scroll_btn {
   width: 29px;
@@ -1072,7 +1166,8 @@ p {
   text-transform: uppercase;
   color: #fff;
   font-family: 'ubunturegular';
-  border: none; }
+  border: none;
+  margin-right: 30px; }
 
 .scroll-menu {
   position: fixed;
