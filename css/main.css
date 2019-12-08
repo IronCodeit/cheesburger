@@ -351,7 +351,7 @@ html {
   font-size: 16px; }
   @media screen and (max-width: 768px) {
     html {
-      font-size: 14px; } }
+      font-size: 15px; } }
   @media screen and (max-width: 480px) {
     html {
       font-size: 12px; } }
@@ -407,8 +407,6 @@ p {
 
 .ad {
   background: url("../img/bg-vegetables.png") center center/cover no-repeat; }
-  .ad__item:not(:last-child) {
-    margin-right: 35px; }
 
 .ad--container {
   height: 100%;
@@ -436,6 +434,12 @@ p {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start; }
+  @media screen and (max-width: 480px) {
+    .ad__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .ad__item {
   display: -webkit-box;
@@ -453,22 +457,47 @@ p {
   align-items: center;
   -ms-flex-preferred-size: 280px;
   flex-basis: 280px; }
+  .ad__item:not(:last-child) {
+    margin-right: 35px; }
+    @media screen and (max-width: 480px) {
+      .ad__item:not(:last-child) {
+        margin-right: 0; } }
+  @media screen and (max-width: 480px) {
+    .ad__item {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      margin-right: 0;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; }
+      .ad__item:not(:last-child) {
+        margin-bottom: 45px; } }
 
 .ad--title {
   color: #2f3234;
   margin-bottom: 58px; }
+  @media screen and (max-width: 480px) {
+    .ad--title {
+      font-size: 50px;
+      margin-bottom: 38px; } }
 
 .ad__img {
   margin-bottom: 35px; }
+  @media screen and (max-width: 480px) {
+    .ad__img {
+      margin-right: 20px; } }
 
-.ad__img {
+.ad__img--pic {
   width: 97px;
-  height: 89px;
-  text-align: center; }
+  height: 89px; }
 
 .ad__desk {
   text-align: center;
   font-family: 'ubunturegular'; }
+  @media screen and (max-width: 480px) {
+    .ad__desk {
+      text-align: left; } }
   .ad__desk h4 {
     font-family: 'lifehackmedium';
     font-size: 24px;
@@ -498,6 +527,9 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .form {
+      padding: 15% 4%; } }
 
 .form-block {
   display: -webkit-box;
@@ -506,6 +538,19 @@ p {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start; }
+  @media screen and (max-width: 768px) {
+    .form-block {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0 10%; } }
 
 .title--form {
   color: #f9b43b;
@@ -554,12 +599,17 @@ p {
 
 .form__part--text {
   width: 100%;
-  min-height: 127px;
+  min-height: 131px;
   padding: 10px 18px;
   border: 2px solid transparent;
   border-radius: 4px;
-  outline: none;
-  min-width: 300px; }
+  outline: none; }
+  @media screen and (max-width: 768px) {
+    .form__part--text {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%; } }
   .form__part--text:active, .form__part--text:hover {
     border: 2px solid #f9b43b; }
 
@@ -740,6 +790,9 @@ p {
       -ms-flex-align: center;
       align-items: center;
       padding: 0 25%; } }
+  @media screen and (max-width: 480px) {
+    .team__block {
+      padding: 0 8%; } }
 
 .team__list {
   display: -webkit-box;
@@ -774,6 +827,10 @@ p {
 
 .title--team {
   margin-bottom: 46px; }
+  @media screen and (max-width: 480px) {
+    .title--team {
+      font-size: 50px;
+      margin-bottom: 32px; } }
 
 .team__item {
   color: #fff;
@@ -998,6 +1055,10 @@ p {
 .menu__item--active .menu__content {
   width: 550px;
   overflow: visible; }
+  @media screen and (max-width: 768px) {
+    .menu__item--active .menu__content {
+      width: 0;
+      overflow: hidden; } }
 
 .menu__text {
   padding: 40px 30px;
@@ -1125,9 +1186,13 @@ p {
       -ms-flex-pack: center;
       justify-content: center;
       padding: 0 18%; } }
+  @media screen and (max-width: 480px) {
+    .promo__content {
+      padding: 0 5%; } }
 
 .promo__img {
-  margin-right: 15px; }
+  margin-right: 15px;
+  max-width: 100%; }
   @media screen and (max-width: 768px) {
     .promo__img {
       margin-right: 0;
@@ -1138,6 +1203,9 @@ p {
   @media screen and (max-width: 768px) {
     .promo--title {
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .promo--title {
+      font-size: 63px; } }
 
 .promo__subtitle {
   font-family: 'lifehackmedium';
@@ -1148,6 +1216,9 @@ p {
   @media screen and (max-width: 768px) {
     .promo__subtitle {
       margin-top: 10px; } }
+  @media screen and (max-width: 480px) {
+    .promo__subtitle {
+      font-size: 54px; } }
 
 .promo__scroll_btn {
   width: 29px;
@@ -1210,59 +1281,107 @@ p {
   flex-basis: 25%;
   height: 50vh;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .face__item {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+      height: 25vh; } }
   .face__item:hover .face__hover {
     opacity: 1;
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s; }
-  .face__item .face__item--photo {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1); }
-    .face__item .face__item--photo:hover {
+
+.face__item--photo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1); }
+  .face__item--photo:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+  @media screen and (max-width: 768px) {
+    .face__item--photo {
       -webkit-filter: grayscale(0);
-      filter: grayscale(0);
-      -webkit-transition: 0.3s;
-      -o-transition: 0.3s;
-      transition: 0.3s; }
-  .face__item .face__hover {
-    position: absolute;
-    padding: 50px 40px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.3); }
-    .face__item .face__hover h4 {
-      color: #fff;
-      font-family: 'gagalinregular';
-      font-size: 14px;
-      line-height: 28px;
-      margin-bottom: 30px; }
-    .face__item .face__hover p {
-      color: #fff;
-      font-family: 'ubuntu';
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 24px;
-      margin-bottom: 17px; }
-    .face__item .face__hover button {
-      color: #fff;
-      font-family: 'ubuntu';
-      font-size: 13px;
-      font-weight: 500;
-      line-height: 30px;
-      text-transform: uppercase;
-      background: #2f3234;
-      padding: 5px 14px;
-      border-radius: 3px;
-      border: none; }
+      filter: grayscale(0); } }
+
+.face__hover {
+  position: absolute;
+  padding: 50px 40px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+  @media screen and (max-width: 768px) {
+    .face__hover {
+      padding: 6%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .face__hover p {
+      display: none; } }
+  .face__hover h4 {
+    color: #fff;
+    font-family: 'gagalinregular';
+    font-size: 14px;
+    margin-bottom: 30px; }
+    @media screen and (max-width: 768px) {
+      .face__hover h4 {
+        margin-bottom: 3px; } }
+    @media screen and (max-width: 480px) {
+      .face__hover h4 {
+        font-size: 24px;
+        margin-bottom: 24px;
+        font-weight: 400; } }
+  .face__hover p {
+    color: #fff;
+    font-family: 'ubuntu';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    margin-bottom: 17px; }
+    @media screen and (max-width: 768px) {
+      .face__hover p {
+        margin-bottom: 3px; } }
+  .face__hover button {
+    color: #fff;
+    font-family: 'ubuntu';
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    background: #2f3234;
+    padding: 5px 14px;
+    border-radius: 3px;
+    border: none; }
+    @media screen and (max-width: 768px) {
+      .face__hover button {
+        padding: 3px 14px; } }
+
+@media screen and (max-width: 768px) {
+  .face__item--active .face__hover {
+    opacity: 1; } }
 
 .map {
   background: url("../img/bg-map.png") center center/cover no-repeat;

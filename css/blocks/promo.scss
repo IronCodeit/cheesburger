@@ -22,10 +22,15 @@
         justify-content: center;
         padding: 0 18%;
     }
+
+    @include phones {
+        padding: 0 5%;
+    }
 }
 
 .promo__img {
     margin-right: 15px;
+    max-width: 100%;
 
     @include tablets {
         margin-right: 0;
@@ -39,6 +44,10 @@
     @include tablets {
         text-align: center;
     }
+
+    @include phones {
+        font-size: 63px;
+    }
 }
 
 .promo__subtitle {
@@ -50,6 +59,10 @@
 
     @include tablets {
         margin-top: 10px;
+    }
+
+    @include phones {
+        font-size: 54px;
     }
 }
 

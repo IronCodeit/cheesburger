@@ -1,9 +1,5 @@
 .ad {
     background: url("../img/bg-vegetables.png") center center / cover no-repeat;
-
-    &__item:not(:last-child) {
-        margin-right: 35px;
-    }
 }
 
 .ad--container {
@@ -18,6 +14,10 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .ad__item {
@@ -26,26 +26,56 @@
     justify-content: flex-start;
     align-items: center;
     flex-basis: 280px;
+
+    &:not(:last-child) {
+        margin-right: 35px;
+
+        @include phones {
+            margin-right: 0;
+        }
+    }
+
+    @include phones {
+        flex-direction: row;
+        margin-right: 0;
+        flex-basis: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 45px;
+        }
+    }
 }
 
 .ad--title {
     color: $gray;
     margin-bottom: 58px;
+
+    @include phones {
+        font-size: 50px;
+        margin-bottom: 38px;
+    }
 }
 
 .ad__img {
     margin-bottom: 35px;
+
+    @include phones {
+        margin-right: 20px;
+    }
 }
 
-.ad__img {
+.ad__img--pic {
     width: 97px;
     height: 89px;
-    text-align: center;
 }
 
 .ad__desk {
     text-align: center;
     font-family: 'ubunturegular';
+
+    @include phones {
+        text-align: left;
+    }
 
     & h4 {
         @include lifehack;

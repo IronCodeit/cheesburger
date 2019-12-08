@@ -79,6 +79,11 @@
 .menu__item--active .menu__content {
     width: 550px;
     overflow: visible;
+
+    @include tablets {
+        width: 0;
+        overflow: hidden;
+    }
 }
 
 .menu__text {
