@@ -98,8 +98,8 @@
     }
 
     @include phones {
-        &:not(:last-child) {
-            margin-right: 10px;
+        &:nth-child(3) {
+            margin-right: 0;
         }
     }
 }
@@ -139,6 +139,16 @@
     font-weight: 300;
     line-height: 24px;
     margin-bottom: 3px;
+}
+
+.form__section {
+    @include phones {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .text {
