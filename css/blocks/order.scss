@@ -16,6 +16,10 @@
     @include tablets {
         padding: 7% 4%;
     }
+
+    @include phones {
+        padding: 5% 0;
+    }
 }
 
 .form-block {
@@ -29,11 +33,22 @@
         align-items: center;
         padding: 0 10%;
     }
+
+    @include phones {
+        padding: 0;
+    }
 }
 
 .title--form {
     color: $yellow;
     margin-bottom: 44px;
+
+    @include phones {
+        font-size: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin-bottom: 32px;
+    }
 }
 
 .form__col {
@@ -74,6 +89,18 @@
 
     &:not(:last-child) {
         margin-right: 20px;
+    }
+
+    &--active {
+        @include phones {
+            display: none;
+        }
+    }
+
+    @include phones {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
     }
 }
 
