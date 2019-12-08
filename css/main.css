@@ -602,7 +602,7 @@ p {
   display: flex;
   width: 100%; }
   .form__row:not(:last-child) {
-    margin-bottom: 20px; }
+    margin-bottom: 25px; }
 
 .form__part {
   -webkit-box-flex: 1;
@@ -648,22 +648,19 @@ p {
   line-height: 24px;
   margin-bottom: 3px; }
 
-@media screen and (max-width: 480px) {
-  .form__section {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; } }
+.form__section {
+  width: 100%; }
+  @media screen and (max-width: 480px) {
+    .form__section .form__row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .text {
   color: #fff;
