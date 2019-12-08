@@ -14,13 +14,14 @@
     align-items: center;
 
     @include tablets {
-        padding: 15% 4%;
+        padding: 7% 4%;
     }
 }
 
 .form-block {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
 
     @include tablets {
         flex-direction: column;
@@ -40,10 +41,22 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-basis: 50%;
+    width: 50%;
+
+    @include tablets {
+        width: 100%;
+    }
+
 
     &:not(:last-child) {
         margin-right: 20px;
+    }
+
+    &:not(:last-child) {
+        @include tablets {
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
     }
 }
 
@@ -58,9 +71,13 @@
 
 .form__part {
     flex: 1;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
 }
 
-.form__part--input {
+.form__field {
     width: 100%;
     padding: 10px 18px;
     border: 2px solid transparent;
@@ -74,12 +91,8 @@
 }
 
 .form__part--text {
-    width: 100%;
     min-height: 131px;
-    padding: 10px 18px;
-    border: 2px solid transparent;
-    border-radius: 4px;
-    outline: none;
+    flex: 1;
 
     @include tablets {
         display: flex;
@@ -90,10 +103,6 @@
     &:hover {
         border: 2px solid $yellow;
     }
-}
-
-.form__part:not(:last-child) {
-    margin-right: 20px;
 }
 
 .form__part--subtitle {
