@@ -1,7 +1,15 @@
 .scroll-menu {
     position: fixed;
-    top: 90px;
-    right: 265px;
+    top: 12%;
+    right: 2%;
+
+    @include tablets {
+        display: none;
+    }
+
+    @include phones {
+        display: none;
+    }
 
     &__item {
         list-style-type: disc;

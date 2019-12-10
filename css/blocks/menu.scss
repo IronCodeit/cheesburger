@@ -74,6 +74,16 @@
     width: 0;
     overflow: hidden;
     background: rgba($black, 0.6);
+    position: relative;
+}
+
+.cros {
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    fill: $white;
+    width: 10px;
+    height: 10px;
 }
 
 .menu__item--active .menu__content {

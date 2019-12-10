@@ -80,7 +80,7 @@
     width: 100%;
 
     &:not(:last-child) {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 }
 
@@ -88,7 +88,7 @@
     flex: 1;
 
     &:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     &--active {
@@ -98,6 +98,7 @@
     }
 
     @include phones {
+
         &:nth-child(3) {
             margin-right: 0;
         }
@@ -106,7 +107,7 @@
 
 .form__field {
     width: 100%;
-    padding: 10px 18px;
+    padding: 7px 15px;
     border: 2px solid transparent;
     border-radius: 4px;
     outline: none;

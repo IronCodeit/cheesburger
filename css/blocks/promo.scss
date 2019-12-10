@@ -30,7 +30,8 @@
 
 .promo__img {
     margin-right: 15px;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
 
     @include tablets {
         margin-right: 0;
