@@ -1,8 +1,8 @@
-.ad {
+.offer {
     background: url("../img/bg-vegetables.png") center center / cover no-repeat;
 }
 
-.ad--container {
+.offer--container {
     height: 100%;
     display: flex;
     align-items: center;
@@ -10,7 +10,7 @@
     flex-direction: column;
 }
 
-.ad__list {
+.offer__list {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -20,7 +20,7 @@
     }
 }
 
-.ad__item {
+.offer__item {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -46,7 +46,7 @@
     }
 }
 
-.ad--title {
+.offer--title {
     color: $gray;
     margin-bottom: 58px;
 
@@ -56,7 +56,7 @@
     }
 }
 
-.ad__img {
+.offer__img {
     margin-bottom: 35px;
 
     @include phones {
@@ -64,12 +64,12 @@
     }
 }
 
-.ad__img--pic {
+.offer__img--pic {
     width: 97px;
     height: 89px;
 }
 
-.ad__desk {
+.offer__desk {
     text-align: center;
     font-family: 'ubunturegular';
 
