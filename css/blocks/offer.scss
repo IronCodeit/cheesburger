@@ -32,12 +32,15 @@
 
         @include phones {
             margin-right: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
         }
     }
 
     @include phones {
         flex-direction: row;
-        margin-right: 0;
         flex-basis: 100%;
 
         &:not(:last-child) {
@@ -51,8 +54,8 @@
     margin-bottom: 58px;
 
     @include phones {
-        font-size: 50px;
-        margin-bottom: 38px;
+        font-size: 45px;
+        margin-bottom: 15px;
     }
 }
 
@@ -81,6 +84,10 @@
         @include lifehack;
         font-size: 24px;
         margin-bottom: 25px;
+
+        @include phones {
+            margin-bottom: 5px;
+        }
     }
 
     & p {

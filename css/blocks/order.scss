@@ -44,10 +44,10 @@
     margin-bottom: 44px;
 
     @include phones {
-        font-size: 50px;
+        font-size: 45px;
         text-align: center;
         line-height: 50px;
-        margin-bottom: 32px;
+        margin-bottom: 15px;
     }
 }
 
@@ -81,6 +81,10 @@
 
     &:not(:last-child) {
         margin-bottom: 20px;
+
+        @include phones {
+            margin-bottom: 7px;
+        }
     }
 }
 
@@ -98,7 +102,6 @@
     }
 
     @include phones {
-
         &:nth-child(3) {
             margin-right: 0;
         }
@@ -112,6 +115,10 @@
     border-radius: 4px;
     outline: none;
 
+    @include phones {
+        padding: 5px 15px;
+    }
+
     &:active,
     &:hover {
         border: 2px solid $yellow;
@@ -119,12 +126,16 @@
 }
 
 .form__part--text {
-    min-height: 131px;
+    min-height: 119px;
     flex: 1;
 
     @include tablets {
         display: flex;
         width: 100%;
+    }
+
+    @include phones {
+        min-height: 100px;
     }
 
     &:active,

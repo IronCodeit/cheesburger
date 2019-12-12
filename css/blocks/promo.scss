@@ -30,7 +30,7 @@
 
 .promo__img {
     margin-right: 15px;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 
     @include tablets {
@@ -47,7 +47,7 @@
     }
 
     @include phones {
-        font-size: 63px;
+        font-size: 58px;
     }
 }
 
@@ -63,7 +63,7 @@
     }
 
     @include phones {
-        font-size: 54px;
+        font-size: 48px;
     }
 }
 

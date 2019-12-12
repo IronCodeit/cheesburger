@@ -471,14 +471,15 @@ p {
     margin-right: 35px; }
     @media screen and (max-width: 480px) {
       .offer__item:not(:last-child) {
-        margin-right: 0; } }
+        margin-right: 0; }
+        .offer__item:not(:last-child):not(:last-child) {
+          margin-bottom: 10px; } }
   @media screen and (max-width: 480px) {
     .offer__item {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
-      margin-right: 0;
       -ms-flex-preferred-size: 100%;
       flex-basis: 100%; }
       .offer__item:not(:last-child) {
@@ -489,8 +490,8 @@ p {
   margin-bottom: 58px; }
   @media screen and (max-width: 480px) {
     .offer--title {
-      font-size: 50px;
-      margin-bottom: 38px; } }
+      font-size: 45px;
+      margin-bottom: 15px; } }
 
 .offer__img {
   margin-bottom: 35px; }
@@ -512,6 +513,9 @@ p {
     font-family: 'lifehackmedium';
     font-size: 24px;
     margin-bottom: 25px; }
+    @media screen and (max-width: 480px) {
+      .offer__desk h4 {
+        margin-bottom: 5px; } }
   .offer__desk p {
     line-height: 24.07px;
     opacity: 0.6; }
@@ -576,10 +580,10 @@ p {
   margin-bottom: 44px; }
   @media screen and (max-width: 480px) {
     .title--form {
-      font-size: 50px;
+      font-size: 45px;
       text-align: center;
       line-height: 50px;
-      margin-bottom: 32px; } }
+      margin-bottom: 15px; } }
 
 .form__col {
   display: -webkit-box;
@@ -613,6 +617,9 @@ p {
   width: 100%; }
   .form__row:not(:last-child) {
     margin-bottom: 20px; }
+    @media screen and (max-width: 480px) {
+      .form__row:not(:last-child) {
+        margin-bottom: 7px; } }
 
 .form__part {
   -webkit-box-flex: 1;
@@ -633,11 +640,14 @@ p {
   border: 2px solid transparent;
   border-radius: 4px;
   outline: none; }
+  @media screen and (max-width: 480px) {
+    .form__field {
+      padding: 5px 15px; } }
   .form__field:active, .form__field:hover {
     border: 2px solid #f9b43b; }
 
 .form__part--text {
-  min-height: 131px;
+  min-height: 119px;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1; }
@@ -647,6 +657,9 @@ p {
       display: -ms-flexbox;
       display: flex;
       width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .form__part--text {
+      min-height: 100px; } }
   .form__part--text:active, .form__part--text:hover {
     border: 2px solid #f9b43b; }
 
@@ -840,7 +853,7 @@ p {
       padding: 0 25%; } }
   @media screen and (max-width: 480px) {
     .team__block {
-      padding: 0 8%; } }
+      padding: 4% 8%; } }
 
 .team__list {
   display: -webkit-box;
@@ -877,8 +890,8 @@ p {
   margin-bottom: 46px; }
   @media screen and (max-width: 480px) {
     .title--team {
-      font-size: 50px;
-      margin-bottom: 32px; } }
+      font-size: 40px;
+      margin-bottom: 30px; } }
 
 .team__item {
   color: #fff;
@@ -888,6 +901,9 @@ p {
   text-transform: uppercase; }
   .team__item:not(:last-child) {
     margin-bottom: 35px; }
+    @media screen and (max-width: 480px) {
+      .team__item:not(:last-child) {
+        margin-bottom: 10px; } }
   @media screen and (max-width: 768px) {
     .team__item {
       display: -webkit-box;
@@ -1244,7 +1260,7 @@ p {
 
 .promo__img {
   margin-right: 15px;
-  width: 100%;
+  max-width: 100%;
   height: auto; }
   @media screen and (max-width: 768px) {
     .promo__img {
@@ -1258,7 +1274,7 @@ p {
       text-align: center; } }
   @media screen and (max-width: 480px) {
     .promo--title {
-      font-size: 63px; } }
+      font-size: 58px; } }
 
 .promo__subtitle {
   font-family: 'lifehackmedium';
@@ -1271,7 +1287,7 @@ p {
       margin-top: 10px; } }
   @media screen and (max-width: 480px) {
     .promo__subtitle {
-      font-size: 54px; } }
+      font-size: 48px; } }
 
 .promo__scroll_btn {
   width: 29px;
