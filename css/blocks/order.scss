@@ -1,0 +1,285 @@
+.order--container {
+    height: 100%;
+}
+
+.order {
+    background: url("../img/bg-form.png") center center / cover no-repeat rgba($black, 0.9);
+}
+
+.form {
+    padding: 130px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include tablets {
+        padding: 7% 4%;
+    }
+
+    @include phones {
+        padding: 5% 0;
+    }
+}
+
+.form-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.title--form {
+    color: $yellow;
+    margin-bottom: 44px;
+
+    @include phones {
+        font-size: 45px;
+        text-align: center;
+        line-height: 50px;
+        margin-bottom: 15px;
+    }
+}
+
+.form__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+
+    @include tablets {
+        width: 100%;
+    }
+
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &:not(:last-child) {
+        @include tablets {
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
+    }
+}
+
+.form__row {
+    display: flex;
+    width: 100%;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @include phones {
+            margin-bottom: 7px;
+        }
+    }
+}
+
+.form__part {
+    flex: 1;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &--active {
+        @include phones {
+            display: none;
+        }
+    }
+
+    @include phones {
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+    }
+}
+
+.form__field {
+    width: 100%;
+    padding: 7px 15px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    outline: none;
+
+    @include phones {
+        padding: 5px 15px;
+    }
+
+    &:active,
+    &:hover {
+        border: 2px solid $yellow;
+    }
+}
+
+.form__part--text {
+    min-height: 119px;
+    flex: 1;
+
+    @include tablets {
+        display: flex;
+        width: 100%;
+    }
+
+    @include phones {
+        min-height: 100px;
+    }
+
+    &:active,
+    &:hover {
+        border: 2px solid $yellow;
+    }
+}
+
+.form__part--subtitle {
+    color: $white;
+    font-family: 'ubuntu';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 3px;
+}
+
+.form__section {
+    width: 100%;
+
+    @include phones {
+        .form__row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.text {
+    color: $white;
+    font-family: 'ubuntu';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.form__select,
+.select {
+    display: flex;
+    align-items: center;
+}
+
+.form__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.fake,
+.check-button {
+    margin-right: 10px;
+}
+
+.fake {
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    background: $white;
+
+    &::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        display: block;
+        border-radius: 50%;
+        background-color: $orange;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+.radio-button {
+    display: none;
+
+    &:checked+.fake::before {
+        opacity: 1;
+        transition: 0.3s;
+    }
+}
+
+.mith {
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: relative;
+    background: $white;
+    margin-right: 10px;
+
+    &::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        display: block;
+        background-color: $orange;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+.check-button {
+    display: none;
+
+    &:checked+.mith::before {
+        opacity: 1;
+        transition: 0.3s;
+    }
+}
+
+.select:not(:last-child) {
+    margin-right: 20px;
+}
+
+.btn-in {
+    padding: 11px 16px;
+    background-color: $orange;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $white;
+    font-family: 'ubunturegular';
+    border: none;
+}
+
+.btn-out {
+    padding: 11px 16px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $white;
+    font-family: 'ubunturegular';
+    border: none;
+    background-color: transparent;
+}
+
+.check-button {
+    background-color: $yellow;
+}

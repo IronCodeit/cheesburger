@@ -1,0 +1,97 @@
+.offer {
+    background: url("../img/bg-vegetables.png") center center / cover no-repeat;
+}
+
+.offer--container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.offer__list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.offer__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 280px;
+
+    &:not(:last-child) {
+        margin-right: 35px;
+
+        @include phones {
+            margin-right: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @include phones {
+        flex-direction: row;
+        flex-basis: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 45px;
+        }
+    }
+}
+
+.offer--title {
+    color: $gray;
+    margin-bottom: 58px;
+
+    @include phones {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+}
+
+.offer__img {
+    margin-bottom: 35px;
+
+    @include phones {
+        margin-right: 20px;
+    }
+}
+
+.offer__img--pic {
+    width: 97px;
+    height: 89px;
+}
+
+.offer__desk {
+    text-align: center;
+    font-family: 'ubunturegular';
+
+    @include phones {
+        text-align: left;
+    }
+
+    & h4 {
+        @include lifehack;
+        font-size: 24px;
+        margin-bottom: 25px;
+
+        @include phones {
+            margin-bottom: 5px;
+        }
+    }
+
+    & p {
+        line-height: 24.07px;
+        opacity: 0.6;
+    }
+}
