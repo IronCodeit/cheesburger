@@ -72,6 +72,16 @@
     margin-bottom: 5px;
 }
 
+.burger__item--svg {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.burger__item--weight {
+    margin-left: auto;
+}
+
 .burgers__menu {
     position: relative;
 }
@@ -83,33 +93,12 @@
     display: flex;
 }
 
-.burger__list {
-    padding: 10px;
-    background-color: rgba($white, 0.8);
-    border-radius: 7px;
-    width: 240px;
-    font-family: 'ubuntu';
-    font-weight: 500;
-}
-
 .burger__item {
     display: flex;
     align-items: center;
 
-    &:before {
-        content: " ";
-        width: 45px;
-        height: 45px;
-        display: block;
-        margin-right: 10px;
-    }
-
     &:not(:last-child) {
         margin-bottom: 10px;
-    }
-
-    &--beef {
-        background: url(../../img/sprite-beef.svg) left center no-repeat;
     }
 }
 
@@ -122,6 +111,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+        .burger__list {
+            display: block;
+        }
+    }
+}
+
+.burger__list {
+    padding: 18px;
+    background-color: rgba($white, 0.8);
+    border-radius: 7px;
+    width: 227px;
+    font-family: 'ubuntu';
+    font-weight: 500;
+    display: none;
 }
 
 .burger__colorie {

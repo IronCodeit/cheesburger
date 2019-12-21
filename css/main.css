@@ -1129,6 +1129,14 @@ p {
   height: 44px;
   margin-bottom: 5px; }
 
+.burger__item--svg {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px; }
+
+.burger__item--weight {
+  margin-left: auto; }
+
 .burgers__menu {
   position: relative; }
 
@@ -1140,14 +1148,6 @@ p {
   display: -ms-flexbox;
   display: flex; }
 
-.burger__list {
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 7px;
-  width: 240px;
-  font-family: 'ubuntu';
-  font-weight: 500; }
-
 .burger__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1155,16 +1155,8 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .burger__item:before {
-    content: " ";
-    width: 45px;
-    height: 45px;
-    display: block;
-    margin-right: 10px; }
   .burger__item:not(:last-child) {
     margin-bottom: 10px; }
-  .burger__item--beef {
-    background: url(../../img/sprite-beef.svg) left center no-repeat; }
 
 .burger__composition {
   width: 90px;
@@ -1184,6 +1176,17 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .burger__composition:hover .burger__list {
+    display: block; }
+
+.burger__list {
+  padding: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 7px;
+  width: 227px;
+  font-family: 'ubuntu';
+  font-weight: 500;
+  display: none; }
 
 .burger__colorie {
   display: -webkit-box;
