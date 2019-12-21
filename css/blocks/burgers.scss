@@ -33,6 +33,7 @@
 .burgers--title {
     color: $white;
     margin-bottom: 56px;
+    letter-spacing: 3px;
 }
 
 .burgers__text {
@@ -71,6 +72,47 @@
     margin-bottom: 5px;
 }
 
+.burgers__menu {
+    position: relative;
+}
+
+.burger__drop {
+    position: absolute;
+    top: -22%;
+    left: 6%;
+    display: flex;
+}
+
+.burger__list {
+    padding: 10px;
+    background-color: rgba($white, 0.8);
+    border-radius: 7px;
+    width: 240px;
+    font-family: 'ubuntu';
+    font-weight: 500;
+}
+
+.burger__item {
+    display: flex;
+    align-items: center;
+
+    &:before {
+        content: " ";
+        width: 45px;
+        height: 45px;
+        display: block;
+        margin-right: 10px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &--beef {
+        background: url(../../img/sprite-beef.svg) left center no-repeat;
+    }
+}
+
 .burger__composition {
     width: 90px;
     height: 90px;
@@ -80,9 +122,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: -22%;
-    left: 6%;
 }
 
 .burger__colorie {
@@ -92,6 +131,16 @@
     align-items: center;
     position: absolute;
     left: 6%;
+    @include gagalin;
+    color: $white;
+    text-transform: uppercase;
+    opacity: 0.5;
+
+    &--weight {
+        font-size: 20px;
+        margin-top: -33px;
+        margin-bottom: 12px;
+    }
 }
 
 .burger__icon--kkal {
@@ -103,12 +152,4 @@
     @include gagalin;
     color: $white;
     text-transform: uppercase;
-
-    &--colorie {
-        opacity: 0.5;
-    }
-}
-
-.burgers__menu {
-    position: relative;
 }
