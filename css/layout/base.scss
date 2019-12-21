@@ -9,10 +9,10 @@ body {
 }
 
 html {
-    font-size: 16px;
+    font-size: 14px;
 
     @include tablets {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     @include phones {

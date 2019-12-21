@@ -1,0 +1,114 @@
+.burgers {
+    background: linear-gradient(to top, $yellow 0%, $orangelight 48%, $yellow 74%, $yellow 100%);
+    height: 100vh;
+}
+
+.burgers--container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burgers__scroll--btn-left {
+    width: 37px;
+    height: 29px;
+    display: block;
+    background: url("../img/burger-scroll-left.png") center center no-repeat;
+}
+
+.burgers__scroll--btn-right {
+    width: 37px;
+    height: 29px;
+    display: block;
+    background: url("../img/burger-scroll-right.png") center center no-repeat;
+}
+
+.burgers__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burgers--title {
+    color: $white;
+    margin-bottom: 56px;
+}
+
+.burgers__text {
+    color: $white;
+    font-family: 'ubuntu';
+    font-weight: 300;
+    margin-bottom: 36px;
+    line-height: 24px;
+}
+
+.burgers__price {
+    display: flex;
+    align-items: center;
+
+}
+
+.burgers__money {
+    margin-right: 29px;
+    font-size: 72px;
+    letter-spacing: -1.79px;
+    @include gagalin;
+    color: $orange;
+
+}
+
+.rubles {
+    letter-spacing: -0.75px;
+    @include gagalin;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.burger__icon--composit {
+    width: 46px;
+    height: 44px;
+    margin-bottom: 5px;
+}
+
+.burger__composition {
+    width: 90px;
+    height: 90px;
+    background-color: $orangelight;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -22%;
+    left: 6%;
+}
+
+.burger__colorie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 6%;
+}
+
+.burger__icon--kkal {
+    width: 60px;
+    height: 60px;
+}
+
+.burger__subtitle {
+    @include gagalin;
+    color: $white;
+    text-transform: uppercase;
+
+    &--colorie {
+        opacity: 0.5;
+    }
+}
+
+.burgers__menu {
+    position: relative;
+}
