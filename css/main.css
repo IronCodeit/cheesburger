@@ -1098,7 +1098,8 @@ p {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column; } }
+      flex-direction: column;
+      margin-top: 50px; } }
 
 .burgers--title {
   color: #fff;
@@ -1198,7 +1199,8 @@ p {
     transition: 0.3s; }
   @media screen and (max-width: 768px) {
     .burger__drop {
-      top: -12%; } }
+      top: -18%;
+      left: 0%; } }
 
 .burger__list {
   padding: 18px;
@@ -1235,8 +1237,8 @@ p {
     margin-bottom: 12px; }
   @media screen and (max-width: 768px) {
     .burger__colorie {
-      right: 6%;
-      top: -22%; } }
+      left: 85%;
+      top: -18%; } }
 
 .burger__icon--kkal {
   width: 60px;

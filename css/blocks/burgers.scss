@@ -35,6 +35,7 @@
 
     @include tablets {
         flex-direction: column;
+        margin-top: 50px;
     }
 }
 
@@ -134,7 +135,8 @@
     }
 
     @include tablets {
-        top: -12%;
+        top: -18%;
+        left: 0%;
     }
 }
 
@@ -167,8 +169,8 @@
     }
 
     @include tablets {
-        right: 6%;
-        top: -22%;
+        left: 85%;
+        top: -18%;
     }
 }
 
