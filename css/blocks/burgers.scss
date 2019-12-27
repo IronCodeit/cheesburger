@@ -8,6 +8,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include tablets {
+        padding: 47px;
+    }
 }
 
 .burgers__scroll--btn-left {
@@ -28,12 +32,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .burgers--title {
     color: $white;
     margin-bottom: 56px;
     letter-spacing: 3px;
+
+    @include tablets {
+        margin-bottom: 10px;
+    }
 }
 
 .burgers__text {
@@ -42,12 +54,15 @@
     font-weight: 300;
     margin-bottom: 36px;
     line-height: 24px;
+
+    @include tablets {
+        margin-bottom: 0px;
+    }
 }
 
 .burgers__price {
     display: flex;
-    align-items: center;
-
+    align-items: flex-end;
 }
 
 .burgers__money {
@@ -56,7 +71,6 @@
     letter-spacing: -1.79px;
     @include gagalin;
     color: $orange;
-
 }
 
 .rubles {
@@ -86,13 +100,6 @@
     position: relative;
 }
 
-.burger__drop {
-    position: absolute;
-    top: -22%;
-    left: 6%;
-    display: flex;
-}
-
 .burger__item {
     display: flex;
     align-items: center;
@@ -111,11 +118,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.burger__drop {
+    position: absolute;
+    top: -22%;
+    left: 6%;
+    display: flex;
 
     &:hover {
         .burger__list {
-            display: block;
+            opacity: 1;
+            transition: 0.3s;
         }
+    }
+
+    @include tablets {
+        top: -12%;
     }
 }
 
@@ -126,7 +145,7 @@
     width: 227px;
     font-family: 'ubuntu';
     font-weight: 500;
-    display: none;
+    opacity: 0;
 }
 
 .burger__colorie {
@@ -146,6 +165,11 @@
         margin-top: -33px;
         margin-bottom: 12px;
     }
+
+    @include tablets {
+        right: 6%;
+        top: -22%;
+    }
 }
 
 .burger__icon--kkal {
@@ -157,4 +181,14 @@
     @include gagalin;
     color: $white;
     text-transform: uppercase;
+}
+
+.burgers__desk {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
