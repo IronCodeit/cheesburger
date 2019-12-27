@@ -352,13 +352,13 @@ body {
   overflow: hidden; }
 
 html {
-  font-size: 14px; }
+  font-size: 16px; }
   @media screen and (max-width: 768px) {
     html {
-      font-size: 13px; } }
+      font-size: 15px; } }
   @media screen and (max-width: 480px) {
     html {
-      font-size: 12px; } }
+      font-size: 14px; } }
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -1070,6 +1070,9 @@ p {
   @media screen and (max-width: 768px) {
     .burgers--container {
       padding: 47px; } }
+  @media screen and (max-width: 480px) {
+    .burgers--container {
+      padding: 20px; } }
 
 .burgers__scroll--btn-left {
   width: 37px;
@@ -1082,6 +1085,10 @@ p {
   height: 29px;
   display: block;
   background: url("../img/burger-scroll-right.png") center center no-repeat; }
+
+.burgers__img {
+  max-width: 100%;
+  height: auto; }
 
 .burgers__content {
   display: -webkit-box;
@@ -1108,6 +1115,11 @@ p {
   @media screen and (max-width: 768px) {
     .burgers--title {
       margin-bottom: 10px; } }
+  @media screen and (max-width: 480px) {
+    .burgers--title {
+      font-size: 50px;
+      margin-bottom: 36px;
+      font-weight: 400; } }
 
 .burgers__text {
   color: #fff;
@@ -1118,6 +1130,9 @@ p {
   @media screen and (max-width: 768px) {
     .burgers__text {
       margin-bottom: 0px; } }
+  @media screen and (max-width: 480px) {
+    .burgers__text {
+      margin-bottom: 26px; } }
 
 .burgers__price {
   display: -webkit-box;
@@ -1133,12 +1148,18 @@ p {
   letter-spacing: -1.79px;
   font-family: 'gagalinregular';
   color: #e45028; }
+  @media screen and (max-width: 480px) {
+    .burgers__money {
+      font-size: 50px; } }
 
 .rubles {
   letter-spacing: -0.75px;
   font-family: 'gagalinregular';
   font-size: 30px;
   font-weight: 400; }
+  @media screen and (max-width: 480px) {
+    .rubles {
+      font-size: 24px; } }
 
 .burger__icon--composit {
   width: 46px;
@@ -1155,6 +1176,9 @@ p {
 
 .burgers__menu {
   position: relative; }
+  @media screen and (max-width: 480px) {
+    .burgers__menu {
+      margin-bottom: 26px; } }
 
 .burger__item {
   display: -webkit-box;
@@ -1201,6 +1225,9 @@ p {
     .burger__drop {
       top: -18%;
       left: 0%; } }
+  @media screen and (max-width: 480px) {
+    .burger__drop {
+      top: -33%; } }
 
 .burger__list {
   padding: 18px;
@@ -1239,6 +1266,9 @@ p {
     .burger__colorie {
       left: 85%;
       top: -18%; } }
+  @media screen and (max-width: 480px) {
+    .burger__colorie {
+      top: -33%; } }
 
 .burger__icon--kkal {
   width: 60px;
@@ -1251,6 +1281,7 @@ p {
 
 @media screen and (max-width: 768px) {
   .burgers__desk {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

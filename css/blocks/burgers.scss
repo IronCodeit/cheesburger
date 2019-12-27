@@ -12,6 +12,10 @@
     @include tablets {
         padding: 47px;
     }
+
+    @include phones {
+        padding: 20px;
+    }
 }
 
 .burgers__scroll--btn-left {
@@ -26,6 +30,12 @@
     height: 29px;
     display: block;
     background: url("../img/burger-scroll-right.png") center center no-repeat;
+}
+
+
+.burgers__img {
+    max-width: 100%;
+    height: auto;
 }
 
 .burgers__content {
@@ -47,6 +57,12 @@
     @include tablets {
         margin-bottom: 10px;
     }
+
+    @include phones {
+        font-size: 50px;
+        margin-bottom: 36px;
+        font-weight: 400;
+    }
 }
 
 .burgers__text {
@@ -58,6 +74,10 @@
 
     @include tablets {
         margin-bottom: 0px;
+    }
+
+    @include phones {
+        margin-bottom: 26px;
     }
 }
 
@@ -72,6 +92,10 @@
     letter-spacing: -1.79px;
     @include gagalin;
     color: $orange;
+
+    @include phones {
+        font-size: 50px;
+    }
 }
 
 .rubles {
@@ -79,6 +103,10 @@
     @include gagalin;
     font-size: 30px;
     font-weight: 400;
+
+    @include phones {
+        font-size: 24px;
+    }
 }
 
 .burger__icon--composit {
@@ -99,6 +127,10 @@
 
 .burgers__menu {
     position: relative;
+
+    @include phones {
+        margin-bottom: 26px;
+    }
 }
 
 .burger__item {
@@ -138,6 +170,10 @@
         top: -18%;
         left: 0%;
     }
+
+    @include phones {
+        top: -33%;
+    }
 }
 
 .burger__list {
@@ -172,6 +208,10 @@
         left: 85%;
         top: -18%;
     }
+
+    @include phones {
+        top: -33%;
+    }
 }
 
 .burger__icon--kkal {
@@ -186,7 +226,9 @@
 }
 
 .burgers__desk {
+
     @include tablets {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
