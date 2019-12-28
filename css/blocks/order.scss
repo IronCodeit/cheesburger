@@ -7,7 +7,7 @@
 }
 
 .form {
-    padding: 130px 70px;
+    padding: rem(130px) rem(70px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -41,13 +41,13 @@
 
 .title--form {
     color: $yellow;
-    margin-bottom: 44px;
+    margin-bottom: rem(44px);
 
     @include phones {
-        font-size: 45px;
+        font-size: rem(45px);
         text-align: center;
-        line-height: 50px;
-        margin-bottom: 15px;
+        line-height: rem(50px);
+        margin-bottom: rem(15px);
     }
 }
 
@@ -64,12 +64,12 @@
 
 
     &:not(:last-child) {
-        margin-right: 20px;
+        margin-right: rem(20px);
     }
 
     &:not(:last-child) {
         @include tablets {
-            margin-bottom: 15px;
+            margin-bottom: rem(15px);
             margin-right: 0;
         }
     }
@@ -80,10 +80,10 @@
     width: 100%;
 
     &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: rem(20px);
 
         @include phones {
-            margin-bottom: 7px;
+            margin-bottom: rem(7px);
         }
     }
 }
@@ -92,7 +92,7 @@
     flex: 1;
 
     &:not(:last-child) {
-        margin-right: 10px;
+        margin-right: rem(10px);
     }
 
     &--active {
@@ -110,13 +110,13 @@
 
 .form__field {
     width: 100%;
-    padding: 7px 15px;
+    padding: rem(7px) rem(15px);
     border: 2px solid transparent;
     border-radius: 4px;
     outline: none;
 
     @include phones {
-        padding: 5px 15px;
+        padding: rem(5px) rem(15px);
     }
 
     &:active,
@@ -126,7 +126,7 @@
 }
 
 .form__part--text {
-    min-height: 119px;
+    min-height: rem(119px);
     flex: 1;
 
     @include tablets {
@@ -135,7 +135,7 @@
     }
 
     @include phones {
-        min-height: 100px;
+        min-height: rem(100px);
     }
 
     &:active,
@@ -147,10 +147,10 @@
 .form__part--subtitle {
     color: $white;
     font-family: 'ubuntu';
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 300;
-    line-height: 24px;
-    margin-bottom: 3px;
+    line-height: rem(24px);
+    margin-bottom: rem(3px);
 }
 
 .form__section {
@@ -168,9 +168,9 @@
 .text {
     color: $white;
     font-family: 'ubuntu';
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 300;
-    line-height: 24px;
+    line-height: rem(24px);
 }
 
 .form__select,
@@ -186,12 +186,12 @@
 
 .fake,
 .check-button {
-    margin-right: 10px;
+    margin-right: rem(10px);
 }
 
 .fake {
-    width: 14px;
-    height: 14px;
+    width: rem(14px);
+    height: rem(14px);
     display: block;
     position: relative;
     border-radius: 50%;
@@ -199,8 +199,8 @@
 
     &::before {
         content: "";
-        width: 7px;
-        height: 7px;
+        width: rem(7px);
+        height: rem(7px);
         display: block;
         border-radius: 50%;
         background-color: $orange;
@@ -222,17 +222,17 @@
 }
 
 .mith {
-    width: 14px;
-    height: 14px;
+    width: rem(14px);
+    height: rem(14px);
     display: block;
     position: relative;
     background: $white;
-    margin-right: 10px;
+    margin-right: rem(10px);
 
     &::before {
         content: "";
-        width: 7px;
-        height: 7px;
+        width: rem(7px);
+        height: rem(7px);
         display: block;
         background-color: $orange;
         position: absolute;
@@ -253,14 +253,14 @@
 }
 
 .select:not(:last-child) {
-    margin-right: 20px;
+    margin-right: rem(20px);
 }
 
 .btn-in {
-    padding: 11px 16px;
+    padding: rem(11px) rem(16px);
     background-color: $orange;
     border-radius: 3px;
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 500;
     text-transform: uppercase;
     color: $white;
@@ -269,9 +269,9 @@
 }
 
 .btn-out {
-    padding: 11px 16px;
+    padding: rem(11px) rem(16px);
     border-radius: 3px;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 300;
     text-transform: uppercase;
     color: $white;

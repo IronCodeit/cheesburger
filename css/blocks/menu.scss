@@ -26,7 +26,7 @@
 
 .menu__link {
     display: block;
-    width: 80px;
+    width: rem(80px);
     height: 100%;
     text-decoration: none;
     position: relative;
@@ -56,7 +56,7 @@
 .menu__link-text {
     color: $white;
     font-family: 'gagalinregular';
-    font-size: 40px;
+    font-size: rem(40px);
     font-weight: 400;
     text-align: center;
     position: absolute;
@@ -65,7 +65,7 @@
     transform: rotate(-90deg) translateY(-50%);
     transform-origin: 0% 0%;
     white-space: nowrap;
-    margin-top: -40px;
+    margin-top: rem(-40px);
 }
 
 .menu__content {
@@ -81,12 +81,12 @@
     top: 2%;
     right: 4%;
     fill: $white;
-    width: 10px;
-    height: 10px;
+    width: rem(10px);
+    height: rem(10px);
 }
 
 .menu__item--active .menu__content {
-    width: 550px;
+    width: rem(550px);
     overflow: visible;
 
     @include tablets {
@@ -96,10 +96,10 @@
 }
 
 .menu__text {
-    padding: 40px 30px;
+    padding: rem(40px) rem(30px);
     color: $white;
-    line-height: 24px;
+    line-height: rem(24px);
     font-family: 'ubuntu';
     font-weight: 300;
-    font-size: 14px;
+    font-size: rem(14px);
 }

@@ -10,25 +10,27 @@
     justify-content: center;
 
     @include tablets {
-        padding: 50px;
+        padding: rem(25px);
     }
 
     @include phones {
-        padding: 20px;
+        padding: rem(20px);
     }
 }
 
 .burgers__scroll--btn-left {
-    width: 40px;
-    height: 29px;
+    width: rem(40px);
+    height: rem(29px);
     display: block;
+    padding-left: rem(10px);
     background: url("../img/burger-scroll-left.png") center center no-repeat;
 }
 
 .burgers__scroll--btn-right {
-    width: 40px;
-    height: 29px;
+    width: rem(40px);
+    height: rem(29px);
     display: block;
+    padding-right: rem(10px);
     background: url("../img/burger-scroll-right.png") center center no-repeat;
 }
 
@@ -46,22 +48,27 @@
 
     @include tablets {
         flex-direction: column;
-        margin-top: 50px;
+        margin-top: rem(50px);
+        padding: rem(22px);
+    }
+
+    @include phones {
+        padding: rem(5px);
     }
 }
 
 .burgers--title {
     color: $white;
-    margin-bottom: 56px;
-    letter-spacing: 3px;
+    margin-bottom: rem(56px);
+    letter-spacing: rem(3px);
 
     @include tablets {
-        margin-bottom: 10px;
+        margin-bottom: rem(10px);
     }
 
     @include phones {
-        font-size: 50px;
-        margin-bottom: 36px;
+        font-size: rem(50px);
+        margin-bottom: rem(36px);
         font-weight: 400;
     }
 }
@@ -70,15 +77,15 @@
     color: $white;
     font-family: 'ubuntu';
     font-weight: 300;
-    margin-bottom: 36px;
-    line-height: 24px;
+    margin-bottom: rem(36px);
+    line-height: rem(24px);
 
     @include tablets {
-        margin-bottom: 0px;
+        margin-bottom: rem(0px);
     }
 
     @include phones {
-        margin-bottom: 26px;
+        margin-bottom: rem(26px);
     }
 }
 
@@ -88,38 +95,38 @@
 }
 
 .burgers__money {
-    margin-right: 29px;
-    font-size: 72px;
-    letter-spacing: -1.79px;
+    margin-right: rem(29px);
+    font-size: rem(72px);
+    letter-spacing: rem(-1.79px);
     @include gagalin;
     color: $orange;
 
     @include phones {
-        font-size: 50px;
+        font-size: rem(50px);
     }
 }
 
 .rubles {
-    letter-spacing: -0.75px;
+    letter-spacing: rem(-0.75px);
     @include gagalin;
-    font-size: 30px;
+    font-size: rem(30px);
     font-weight: 400;
 
     @include phones {
-        font-size: 24px;
+        font-size: rem(24px);
     }
 }
 
 .burger__icon--composit {
-    width: 46px;
-    height: 44px;
-    margin-bottom: 5px;
+    width: rem(46px);
+    height: rem(44px);
+    margin-bottom: rem(5px);
 }
 
 .burger__item--svg {
-    width: 45px;
-    height: 45px;
-    margin-right: 10px;
+    width: rem(45px);
+    height: rem(45px);
+    margin-right: rem(10px);
 }
 
 .burger__item--weight {
@@ -130,7 +137,7 @@
     position: relative;
 
     @include phones {
-        margin-bottom: 26px;
+        margin-bottom: rem(26px);
     }
 }
 
@@ -139,13 +146,13 @@
     align-items: center;
 
     &:not(:last-child) {
-        margin-bottom: 10px;
+        margin-bottom: rem(10px);
     }
 }
 
 .burger__composition {
-    width: 90px;
-    height: 90px;
+    width: rem(90px);
+    height: rem(90px);
     background-color: $orangelight;
     border-radius: 7px;
     display: flex;
@@ -178,10 +185,10 @@
 }
 
 .burger__list {
-    padding: 18px;
+    padding: rem(18px);
     background-color: rgba($white, 0.8);
     border-radius: 7px;
-    width: 227px;
+    width: rem(227px);
     font-family: 'ubuntu';
     font-weight: 500;
     opacity: 0;
@@ -200,9 +207,9 @@
     opacity: 0.5;
 
     &--weight {
-        font-size: 20px;
-        margin-top: -33px;
-        margin-bottom: 12px;
+        font-size: rem(20px);
+        margin-top: rem(-33px);
+        margin-bottom: rem(12px);
     }
 
     @include tablets {
@@ -216,8 +223,8 @@
 }
 
 .burger__icon--kkal {
-    width: 60px;
-    height: 60px;
+    width: rem(60px);
+    height: rem(60px);
 }
 
 .burger__subtitle {

@@ -9,14 +9,14 @@ body {
 }
 
 html {
-    font-size: 15px;
+    font-size: rem(15px);
 
     @include tablets {
-        font-size: 15px;
+        font-size: rem(15px);
     }
 
     @include phones {
-        font-size: 14px;
+        font-size: rem(14px);
     }
 }
 

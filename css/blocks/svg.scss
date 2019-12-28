@@ -1,8 +1,8 @@
 .connection {
     fill: $orange;
-    width: 12px;
-    height: 12px;
-    margin-right: 10px;
+    width: rem(12px);
+    height: rem(12px);
+    margin-right: rem(10px);
 }
 
 .vk,
@@ -10,8 +10,8 @@
 .inst,
 .tw {
     fill: $lightgray;
-    width: 20px;
-    height: 20px;
+    width: rem(20px);
+    height: rem(20px);
 }
 
 
@@ -20,5 +20,5 @@
 }
 
 .socials__item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: rem(20px);
 }
