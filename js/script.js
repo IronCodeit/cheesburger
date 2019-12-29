@@ -3,6 +3,7 @@ const menu = document.querySelector('.menu'),
     menuItemLength = menuItem.length;
 
 menu.addEventListener('click', function (e) {
+    e.preventDefault();
     for (let i = 0; i < menuItemLength; i++) {
         menuItem[i].classList.remove('menu__item--active');
     }
@@ -10,8 +11,8 @@ menu.addEventListener('click', function (e) {
 
 for (let i = 0; i < menuItemLength; i++) {
     menuItem[i].addEventListener('click', function (e) {
-        e.stopPropagation();
         e.preventDefault();
+        e.stopPropagation();
 
         if (menuItem[i].classList.contains('menu__item--active')) {
             menuItem[i].classList.remove('menu__item--active');
