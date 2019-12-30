@@ -1466,6 +1466,85 @@ p {
     font-weight: 500;
     text-transform: uppercase; }
 
+.drop {
+  background: rgba(47, 50, 52, 0.9);
+  height: 100vh; }
+
+.drop--container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+.drop__content {
+  width: 100%;
+  height: 100%; }
+
+.drop__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 17px 24px;
+  margin-bottom: 150px; }
+
+.cros--drop {
+  width: 18px;
+  height: 18px;
+  fill: #fff; }
+
+.nav--vertical {
+  margin-right: 0px; }
+  @media screen and (max-width: 768px) {
+    .nav--vertical {
+      display: block; } }
+  .nav--vertical .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .nav--vertical .nav__item {
+    margin-right: 0px;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .nav--vertical .nav__item:last-child {
+      margin-bottom: 0px; }
+  .nav--vertical .nav__link {
+    font-size: 24px;
+    font-weight: 400; }
+
 .promo {
   background: url("../img/promo-fon.png") center center/cover no-repeat;
   position: relative; }

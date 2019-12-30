@@ -1,0 +1,64 @@
+.drop {
+    background: rgba($gray, 0.9);
+    height: 100vh;
+}
+
+.drop--container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.drop__content {
+    width: 100%;
+    height: 100%;
+}
+
+.drop__img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 24px;
+    margin-bottom: 150px;
+}
+
+.cros--drop {
+    width: 18px;
+    height: 18px;
+    fill: $white;
+}
+
+.nav--vertical {
+
+    @include tablets {
+        display: block;
+    }
+
+    margin-right: 0px;
+
+    & .nav__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .nav__item {
+        margin-right: 0px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    & .nav__link {
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
