@@ -1,5 +1,12 @@
 .order--container {
     height: 100%;
+
+    @include phones {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 .order {
@@ -44,10 +51,11 @@
     margin-bottom: rem(44px);
 
     @include phones {
-        font-size: rem(45px);
+        font-size: rem(50px);
         text-align: center;
-        line-height: rem(50px);
+        line-height: rem(60px);
         margin-bottom: rem(15px);
+        padding: 0 50px;
     }
 }
 
@@ -83,7 +91,7 @@
         margin-bottom: rem(20px);
 
         @include phones {
-            margin-bottom: rem(7px);
+            margin-bottom: rem(20px);
         }
     }
 }
@@ -114,10 +122,6 @@
     border: 2px solid transparent;
     border-radius: 4px;
     outline: none;
-
-    @include phones {
-        padding: rem(5px) rem(15px);
-    }
 
     &:active,
     &:hover {

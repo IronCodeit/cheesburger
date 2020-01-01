@@ -31,17 +31,18 @@ for (let i = 0; i < menuItemLength; i++) {
 
 
 //Гамбургер меню!!!
-const drop = document.querySelector('.drop')
-const menuIcon = document.querySelector('.menu-icon')
+const drop = document.querySelector('.drop');
+const menuIcon = document.querySelector('.menu-icon');
+const crosDrop = document.querySelector('.cros--drop');
+const body = document.querySelector('body');
+
 
 menuIcon.addEventListener('click', function (e) {
-    drop.classList.remove('drop');
+    drop.style.display = 'block';
+    body.style.overflow = 'hidden';
+});
 
-    if (drop.classList.contains('drop')) {
-        drop.classList.remove('drop');
-    } else {
-        drop.classList.remove('drop');
-    }
-
-    drop.classList.add('drop');
+crosDrop.addEventListener('click', function (e) {
+    drop.style.display = 'none';
+    body.style.overflow = 'visible';
 });
