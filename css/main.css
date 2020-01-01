@@ -1468,7 +1468,8 @@ p {
 
 .drop {
   background: rgba(47, 50, 52, 0.9);
-  height: 100vh; }
+  height: 100vh;
+  display: none; }
 
 .drop--container {
   height: 100%;
@@ -1497,11 +1498,11 @@ p {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 17px 24px;
-  margin-bottom: 150px; }
+  margin-bottom: 80px; }
 
 .cros--drop {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   fill: #fff; }
 
 .nav--vertical {
@@ -1539,14 +1540,16 @@ p {
     -ms-flex-direction: column;
     flex-direction: column; }
     .nav--vertical .nav__item:after {
-      margin-bottom: 25px;
+      margin-bottom: 27px;
       margin-left: 0;
       width: 6px;
       height: 6px; }
   .nav--vertical .nav__link {
     font-size: 24px;
     font-weight: 400;
-    margin-bottom: 25px; }
+    margin-bottom: 27px; }
+  .nav--vertical .nav__link--last {
+    margin-bottom: 0; }
 
 .promo {
   background: url("../img/promo-fon.png") center center/cover no-repeat;

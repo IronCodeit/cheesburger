@@ -28,3 +28,13 @@ for (let i = 0; i < menuItemLength; i++) {
 
 //menu.addEventListener('click', e => { });
 //по клику в любую область меню нам нужно закрыть наш активный эл-т, а именно у конкретного item удалить активный класс.
+
+
+const drop = document.querySelector('.drop')
+const menuIcon = document.querySelector('.menu-icon')
+
+menuIcon.addEventListener('click', function (e) {
+    for (let i = 0; i < menuItemLength; i++) {
+        menuItem[i].classList.remove('menu__item--active');
+    }
+});

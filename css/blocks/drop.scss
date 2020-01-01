@@ -1,6 +1,7 @@
 .drop {
     background: rgba($gray, 0.9);
     height: 100vh;
+    display: none;
 }
 
 .drop--container {
@@ -20,12 +21,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 17px 24px;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
 }
 
 .cros--drop {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
     fill: $white;
 }
 
@@ -52,7 +53,7 @@
         flex-direction: column;
 
         &:after {
-            margin-bottom: 25px;
+            margin-bottom: 27px;
             margin-left: 0;
             width: 6px;
             height: 6px;
@@ -62,6 +63,10 @@
     & .nav__link {
         font-size: 24px;
         font-weight: 400;
-        margin-bottom: 25px;
+        margin-bottom: 27px;
+    }
+
+    & .nav__link--last {
+        margin-bottom: 0;
     }
 }
