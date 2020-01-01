@@ -34,7 +34,5 @@ const drop = document.querySelector('.drop')
 const menuIcon = document.querySelector('.menu-icon')
 
 menuIcon.addEventListener('click', function (e) {
-    for (let i = 0; i < menuItemLength; i++) {
-        menuItem[i].classList.remove('menu__item--active');
-    }
+    drop.classList.remove('drop');
 });

@@ -1467,9 +1467,12 @@ p {
     text-transform: uppercase; }
 
 .drop {
-  background: rgba(47, 50, 52, 0.9);
+  background: rgba(47, 50, 52, 0.99);
+  position: absolute;
   height: 100vh;
-  display: none; }
+  width: 100%;
+  top: 0;
+  z-index: 10; }
 
 .drop--container {
   height: 100%;
@@ -1539,17 +1542,16 @@ p {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
+    .nav--vertical .nav__item:not(:last-child) {
+      margin-bottom: 27px; }
     .nav--vertical .nav__item:after {
-      margin-bottom: 27px;
       margin-left: 0;
       width: 6px;
       height: 6px; }
   .nav--vertical .nav__link {
     font-size: 24px;
     font-weight: 400;
-    margin-bottom: 27px; }
-  .nav--vertical .nav__link--last {
-    margin-bottom: 0; }
+    padding-bottom: 27px; }
 
 .promo {
   background: url("../img/promo-fon.png") center center/cover no-repeat;
