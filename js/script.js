@@ -30,9 +30,18 @@ for (let i = 0; i < menuItemLength; i++) {
 //по клику в любую область меню нам нужно закрыть наш активный эл-т, а именно у конкретного item удалить активный класс.
 
 
+//Гамбургер меню!!!
 const drop = document.querySelector('.drop')
 const menuIcon = document.querySelector('.menu-icon')
 
 menuIcon.addEventListener('click', function (e) {
     drop.classList.remove('drop');
+
+    if (drop.classList.contains('drop')) {
+        drop.classList.remove('drop');
+    } else {
+        drop.classList.remove('drop');
+    }
+
+    drop.classList.add('drop');
 });
