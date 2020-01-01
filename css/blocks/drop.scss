@@ -46,19 +46,22 @@
 
     & .nav__item {
         margin-right: 0px;
-        margin-bottom: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
 
-        &:last-child {
-            margin-bottom: 0px;
+        &:after {
+            margin-bottom: 25px;
+            margin-left: 0;
+            width: 6px;
+            height: 6px;
         }
     }
 
     & .nav__link {
         font-size: 24px;
         font-weight: 400;
+        margin-bottom: 25px;
     }
 }
