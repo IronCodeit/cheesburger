@@ -45,6 +45,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.burgers__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include tablets {
         flex-direction: column;

@@ -46,3 +46,21 @@ crosDrop.addEventListener('click', function (e) {
     drop.style.display = 'none';
     body.style.overflow = 'visible';
 });
+
+
+//Слайдер
+const btnRight = document.querySelector('.burgers__scroll--btn-right'),
+    burgersSlide = document.querySelector('.burgers__slide'),
+    burgersSlideLength = burgersSlide.length;
+
+btnRight.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (burgersSlide[i].classList.contains('burgers__slide--active')) {
+        burgersSlide[i].style.display = 'block';
+    } else {
+        for (let i = 0; i < menuItemLength; i++) {
+            burgersSlide[i].style.display = 'none';
+        }
+    }
+});
