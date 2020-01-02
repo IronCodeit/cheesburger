@@ -1075,7 +1075,8 @@ p {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  overflow: hidden; }
   @media screen and (max-width: 768px) {
     .burgers--container {
       padding: 1.5625rem; } }
@@ -1111,7 +1112,8 @@ p {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 0; }
 
 .burgers__slide {
   display: -webkit-box;
@@ -1134,6 +1136,9 @@ p {
   @media screen and (max-width: 480px) {
     .burgers__slide {
       padding: 0.3125rem; } }
+
+.burgers__slide--active .burgers__slide {
+  width: 100vw; }
 
 .burgers--title {
   color: #fff;

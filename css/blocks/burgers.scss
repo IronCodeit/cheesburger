@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     @include tablets {
         padding: rem(25px);
@@ -45,6 +46,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 0;
 }
 
 .burgers__slide {
@@ -61,6 +63,10 @@
     @include phones {
         padding: rem(5px);
     }
+}
+
+.burgers__slide--active .burgers__slide {
+    width: 100vw;
 }
 
 .burgers--title {

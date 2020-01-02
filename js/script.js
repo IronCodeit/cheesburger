@@ -49,7 +49,7 @@ crosDrop.addEventListener('click', function (e) {
 
 
 //Слайдер
-const btnRight = document.querySelector('.burgers__scroll--btn-right'),
+/* const btnRight = document.querySelector('.burgers__scroll--btn-right'),
     burgersSlide = document.querySelector('.burgers__slide'),
     burgersSlideLength = burgersSlide.length;
 
@@ -63,4 +63,4 @@ btnRight.addEventListener('click', function (e) {
             burgersSlide[i].style.display = 'none';
         }
     }
-});
+}); */
