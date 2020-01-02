@@ -9,7 +9,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 95%;
 
     @include tablets {
         padding: rem(25px);
@@ -47,16 +46,17 @@
 .burgers__content {
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
+    align-items: center;    position: relative;
 }
 
 .burgers__slide {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     position: relative;
+    margin-right: 100vw;
+    flex-shrink: 0;
 
     @include tablets {
         flex-direction: column;

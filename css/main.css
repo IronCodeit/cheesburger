@@ -371,7 +371,7 @@ body {
 .container {
   max-width: 940px;
   padding: 0 10px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto; }
 
 ul,
@@ -1076,8 +1076,7 @@ p {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative;
-  width: 95%; }
+  position: relative; }
   @media screen and (max-width: 768px) {
     .burgers--container {
       padding: 1.5625rem; } }
@@ -1120,14 +1119,16 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100vw;
-  position: relative; }
+  width: 100%;
+  position: relative;
+  margin-right: 100vw;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
   @media screen and (max-width: 768px) {
     .burgers__slide {
       -webkit-box-orient: vertical;
