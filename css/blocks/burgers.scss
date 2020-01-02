@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    overflow: hidden;
 
     @include tablets {
         padding: rem(25px);
@@ -46,17 +46,16 @@
 .burgers__content {
     display: flex;
     justify-content: center;
-    align-items: center;    position: relative;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    right: 120%;
 }
 
 .burgers__slide {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
-    position: relative;
-    margin-right: 100vw;
-    flex-shrink: 0;
 
     @include tablets {
         flex-direction: column;
