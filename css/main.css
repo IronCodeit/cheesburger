@@ -1076,7 +1076,8 @@ p {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  overflow: hidden; }
+  position: relative;
+  width: 95%; }
   @media screen and (max-width: 768px) {
     .burgers--container {
       padding: 1.5625rem; } }
@@ -1113,7 +1114,7 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 0; }
+  position: relative; }
 
 .burgers__slide {
   display: -webkit-box;
@@ -1124,7 +1125,9 @@ p {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 100vw;
+  position: relative; }
   @media screen and (max-width: 768px) {
     .burgers__slide {
       -webkit-box-orient: vertical;
@@ -1136,9 +1139,6 @@ p {
   @media screen and (max-width: 480px) {
     .burgers__slide {
       padding: 0.3125rem; } }
-
-.burgers__slide--active .burgers__slide {
-  width: 100vw; }
 
 .burgers--title {
   color: #fff;

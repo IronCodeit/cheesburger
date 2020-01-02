@@ -8,7 +8,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    position: relative;
+    width: 95%;
 
     @include tablets {
         padding: rem(25px);
@@ -36,6 +37,7 @@
 }
 
 .burgers__img {
+
     @include tablets {
         max-width: 100%;
         height: auto;
@@ -46,13 +48,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 0;
+    position: relative;
 }
 
 .burgers__slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    position: relative;
 
     @include tablets {
         flex-direction: column;
@@ -63,10 +67,6 @@
     @include phones {
         padding: rem(5px);
     }
-}
-
-.burgers__slide--active .burgers__slide {
-    width: 100vw;
 }
 
 .burgers--title {
