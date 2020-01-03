@@ -1098,10 +1098,12 @@ p {
   padding-right: 0.625rem;
   background: url("../img/burger-scroll-right.png") center center no-repeat; }
 
-@media screen and (max-width: 768px) {
-  .burgers__img {
-    max-width: 100%;
-    height: auto; } }
+.burgers__img {
+  width: 505px;
+  height: auto; }
+  @media screen and (max-width: 768px) {
+    .burgers__img {
+      max-width: 100%; } }
 
 .burgers__content {
   display: -webkit-box;
@@ -1114,18 +1116,20 @@ p {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: 100%;
-  right: 120%; }
+  width: 95%;
+  right: 100%; }
 
 .burgers__slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
   @media screen and (max-width: 768px) {
     .burgers__slide {
       -webkit-box-orient: vertical;
