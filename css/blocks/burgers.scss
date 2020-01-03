@@ -87,7 +87,7 @@
 
     @include phones {
         font-size: rem(50px);
-        margin-bottom: rem(36px);
+        margin-bottom: rem(5px);
         font-weight: 400;
     }
 }
@@ -104,7 +104,7 @@
     }
 
     @include phones {
-        margin-bottom: rem(26px);
+        margin-bottom: rem(5px);
     }
 }
 
@@ -156,9 +156,7 @@
     position: relative;
     margin-right: rem(10px);
 
-    @include phones {
-        margin-bottom: rem(26px);
-    }
+    @include phones {}
 }
 
 .burger__item {
