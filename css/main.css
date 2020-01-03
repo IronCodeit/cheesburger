@@ -371,7 +371,7 @@ body {
 .container {
   max-width: 940px;
   padding: 0 10px;
-  width: 95%;
+  width: 100%;
   margin: 0 auto; }
 
 ul,
@@ -1088,18 +1088,18 @@ p {
   width: 2.5rem;
   height: 1.8125rem;
   display: block;
-  padding-left: 0.625rem;
+  padding-left: 1.25rem;
   background: url("../img/burger-scroll-left.png") center center no-repeat; }
 
 .burgers__scroll--btn-right {
   width: 2.5rem;
   height: 1.8125rem;
   display: block;
-  padding-right: 0.625rem;
+  padding-right: 1.25rem;
   background: url("../img/burger-scroll-right.png") center center no-repeat; }
 
 .burgers__img {
-  width: 505px;
+  width: 28.125rem;
   height: auto; }
   @media screen and (max-width: 768px) {
     .burgers__img {
@@ -1115,11 +1115,18 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative;
-  width: 95%;
-  right: 100%; }
+  width: 100%; }
 
 .burgers__slide {
+  display: none; }
+
+.burgers__slide--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+
+.burger__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1128,10 +1135,9 @@ p {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  width: 100%; }
+  align-items: center; }
   @media screen and (max-width: 768px) {
-    .burgers__slide {
+    .burger__inner {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1139,7 +1145,7 @@ p {
       margin-top: 3.125rem;
       padding: 1.375rem; } }
   @media screen and (max-width: 480px) {
-    .burgers__slide {
+    .burger__inner {
       padding: 0.3125rem; } }
 
 .burgers--title {
@@ -1209,7 +1215,8 @@ p {
   margin-left: auto; }
 
 .burgers__menu {
-  position: relative; }
+  position: relative;
+  margin-right: 0.625rem; }
   @media screen and (max-width: 480px) {
     .burgers__menu {
       margin-bottom: 1.625rem; } }
@@ -1245,7 +1252,7 @@ p {
 
 .burger__drop {
   position: absolute;
-  top: -22%;
+  top: -30%;
   left: 6%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1257,7 +1264,7 @@ p {
     transition: 0.3s; }
   @media screen and (max-width: 768px) {
     .burger__drop {
-      top: -18%;
+      top: -25%;
       left: 0%; } }
   @media screen and (max-width: 480px) {
     .burger__drop {
@@ -1266,7 +1273,7 @@ p {
 .burger__list {
   padding: 1.125rem;
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 7px;
+  border-radius: 0.4375rem;
   width: 14.1875rem;
   font-family: 'ubuntu';
   font-weight: 500;
@@ -1299,7 +1306,7 @@ p {
   @media screen and (max-width: 768px) {
     .burger__colorie {
       left: 85%;
-      top: -18%; } }
+      top: -25%; } }
   @media screen and (max-width: 480px) {
     .burger__colorie {
       top: -33%; } }

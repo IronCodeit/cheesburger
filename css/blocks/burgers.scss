@@ -23,7 +23,7 @@
     width: rem(40px);
     height: rem(29px);
     display: block;
-    padding-left: rem(10px);
+    padding-left: rem(20px);
     background: url("../img/burger-scroll-left.png") center center no-repeat;
 }
 
@@ -31,12 +31,12 @@
     width: rem(40px);
     height: rem(29px);
     display: block;
-    padding-right: rem(10px);
+    padding-right: rem(20px);
     background: url("../img/burger-scroll-right.png") center center no-repeat;
 }
 
 .burgers__img {
-    width: 505px;
+    width: rem(449px);
     height: auto;
 
     @include tablets {
@@ -48,16 +48,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    width: 95%;
-    right: 100%;
+    width: 100%;
 }
 
 .burgers__slide {
+    display: none;
+}
+
+.burgers__slide--active {
+    display: flex;
+    width: 100%;
+}
+
+.burger__inner {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 
     @include tablets {
         flex-direction: column;
@@ -148,6 +154,7 @@
 
 .burgers__menu {
     position: relative;
+    margin-right: rem(10px);
 
     @include phones {
         margin-bottom: rem(26px);
@@ -176,7 +183,7 @@
 
 .burger__drop {
     position: absolute;
-    top: -22%;
+    top: -30%;
     left: 6%;
     display: flex;
 
@@ -188,7 +195,7 @@
     }
 
     @include tablets {
-        top: -18%;
+        top: -25%;
         left: 0%;
     }
 
@@ -200,7 +207,7 @@
 .burger__list {
     padding: rem(18px);
     background-color: rgba($white, 0.8);
-    border-radius: 7px;
+    border-radius: rem(7px);
     width: rem(227px);
     font-family: 'ubuntu';
     font-weight: 500;
@@ -227,7 +234,7 @@
 
     @include tablets {
         left: 85%;
-        top: -18%;
+        top: -25%;
     }
 
     @include phones {
