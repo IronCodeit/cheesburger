@@ -1,7 +1,7 @@
 .nav {
-    margin-right: 15px;
+    margin-right: rem(15px);
     font-family: 'ubunturegular';
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 500;
 
     @include tablets {
@@ -13,11 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .nav__item {
-    margin-right: 17px;
+    margin-right: rem(17px);
     display: flex;
     align-items: center;
 
@@ -28,11 +27,11 @@
     &:after {
         content: "";
         display: block;
-        width: 5px;
-        height: 5px;
+        width: rem(5px);
+        height: rem(5px);
         background-color: $white;
         border-radius: 50%;
-        margin-left: 15px;
+        margin-left: rem(15px);
     }
 
     &:last-child {
@@ -44,7 +43,7 @@
     .nav__link {
         text-decoration: none;
         color: $white;
-        font-size: 13px;
+        font-size: rem(13px);
         font-weight: 500;
         text-transform: uppercase;
     }
