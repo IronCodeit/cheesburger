@@ -29,13 +29,13 @@
 }
 
 .promo__img {
-    margin-right: 15px;
+    margin-right: rem(15px);
     max-width: 100%;
     height: auto;
 
     @include tablets {
         margin-right: 0;
-        margin-bottom: 30px;
+        margin-bottom: rem(30px);
     }
 }
 
@@ -47,31 +47,32 @@
     }
 
     @include phones {
-        font-size: 58px;
+        font-size: rem(58px);
     }
 }
 
 .promo__subtitle {
     @include lifehack;
     color: $white;
-    font-size: 65px;
-    margin-top: 38px;
-    letter-spacing: -1.63px;
+    font-size: rem(65px);
+    margin-top: rem(38px);
+    letter-spacing: rem(-1.63px);
 
     @include tablets {
-        margin-top: 10px;
+        margin-top: rem(10px);
     }
 
     @include phones {
-        font-size: 48px;
+        font-size: rem(48px);
     }
 }
 
 .promo__scroll_btn {
-    width: 29px;
-    height: 14px;
+    width: rem(29px);
+    height: rem(14px);
     display: block;
     background: url("../img/btn-scroll.png") center center no-repeat;
     position: absolute;
-    bottom: 25px;
+    bottom: rem(20px);
+    padding-bottom: rem(20px);
 }

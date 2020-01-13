@@ -1,12 +1,12 @@
 .btn {
-    padding: 11px 16px;
+    padding: rem(11px) rem(15px);
     background-color: $orange;
     border-radius: 3px;
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 500;
     text-transform: uppercase;
     color: $white;
     font-family: 'ubunturegular';
     border: none;
-    margin-right: 30px;
+    margin-right: rem(30px);
 }
