@@ -64,3 +64,31 @@ btnRight.addEventListener('click', function (e) {
         }
     }
 }); */
+
+
+
+const teamContent = document.querySelector('.team-content');
+const teamItem = document.querySelectorAll('.team__item');
+const teamItemLength = teamItem.length;
+
+teamContent.addEventListener('click', function (e) {
+    for (let i = 0; i < teamItemLength; i++) {
+        teamItem[i].classList.remove('team__item--active');
+    }
+});
+
+for (let i = 0; i < teamItemLength; i++) {
+    teamItem[i].addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (teamItem[i].classList.contains('team__item--active')) {
+            teamItem[i].classList.remove('team__item--active');
+        } else {
+            for (let i = 0; i < teamItemLength; i++) {
+                teamItem[i].classList.remove('team__item--active');
+            }
+            teamItem[i].classList.add('team__item--active');
+        }
+    });
+}
