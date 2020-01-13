@@ -25,16 +25,16 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    flex-basis: 280px;
+    flex-basis: rem(280px);
 
     &:not(:last-child) {
-        margin-right: 35px;
+        margin-right: rem(35px);
 
         @include phones {
             margin-right: 0;
 
             &:not(:last-child) {
-                margin-bottom: 10px;
+                margin-bottom: rem(10px);
             }
         }
     }
@@ -44,32 +44,32 @@
         flex-basis: 100%;
 
         &:not(:last-child) {
-            margin-bottom: 45px;
+            margin-bottom: rem(45px);
         }
     }
 }
 
 .offer--title {
     color: $gray;
-    margin-bottom: 58px;
+    margin-bottom: rem(58px);
 
     @include phones {
-        font-size: 45px;
-        margin-bottom: 15px;
+        font-size: rem(50px);
+        margin-bottom: rem(35px);
     }
 }
 
 .offer__img {
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
 
     @include phones {
-        margin-right: 20px;
+        margin-right: rem(20px);
     }
 }
 
 .offer__img--pic {
-    width: 97px;
-    height: 89px;
+    width: rem(97px);
+    height: rem(89px);
 }
 
 .offer__desk {
@@ -82,16 +82,16 @@
 
     & h4 {
         @include lifehack;
-        font-size: 24px;
-        margin-bottom: 25px;
+        font-size: rem(24px);
+        margin-bottom: rem(25px);
 
         @include phones {
-            margin-bottom: 5px;
+            margin-bottom: rem(5px);
         }
     }
 
     & p {
-        line-height: 24.07px;
+        line-height: rem(24.07px);
         opacity: 0.6;
     }
 }

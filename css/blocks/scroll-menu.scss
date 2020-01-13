@@ -24,9 +24,9 @@
         top: 50%;
         transform: translate(-25%, -45%);
         left: 0;
-        width: 10px;
-        height: 10px;
+        width: rem(10px);
+        height: rem(10px);
         border-radius: 50%;
-        box-shadow: 0 0 0 1.5px $white;
+        box-shadow: 0 0 0 rem(1.5px) $white;
     }
 }
