@@ -80,6 +80,7 @@
     font-size: rem(14px);
     font-weight: 400;
     text-transform: uppercase;
+    cursor: pointer;
 
     &:not(:last-child) {
         margin-bottom: rem(35px);

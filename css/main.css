@@ -907,7 +907,8 @@ p {
   font-family: 'gagalinregular';
   font-size: 0.875rem;
   font-weight: 400;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  cursor: pointer; }
   .team__item:not(:last-child) {
     margin-bottom: 2.1875rem; }
     @media screen and (max-width: 480px) {
