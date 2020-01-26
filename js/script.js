@@ -93,7 +93,10 @@ right.addEventListener('click', function (e) {
         if (burgersSlide[i].classList.contains('burgers__slide--active')) {
             burgersSlide[i].classList.remove('burgers__slide--active');
         } else {
-            burgersSlide[i].classList.remove('burgers__slide--active');
+            for (let i = 0; i < teamItemLength; i++) {
+                burgersSlide[i].classList.remove('burgers__slide--active');
+            }
+            burgersSlide[i].classList.add('burgers__slide--active');
         }
     }
 });
@@ -106,6 +109,9 @@ left.addEventListener('click', function (e) {
         if (burgersSlide[i].classList.contains('burgers__slide--active')) {
             burgersSlide[i].classList.remove('burgers__slide--active');
         } else {
+            for (let i = 0; i < teamItemLength; i++) {
+                burgersSlide[i].classList.remove('burgers__slide--active');
+            }
             burgersSlide[i].classList.add('burgers__slide--active');
         }
     }
