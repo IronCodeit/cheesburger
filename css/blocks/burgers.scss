@@ -48,12 +48,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     max-width: rem(848px);
+    width: 100%;
+    position: relative;
 }
 
 .burgers__slide {
     display: none;
+    width: rem(848px);
 }
 
 .burgers__slide--active {

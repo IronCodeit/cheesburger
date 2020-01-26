@@ -86,11 +86,43 @@ const right = document.querySelector(".burgers__scroll--btn-right");
 const burgersContent = document.querySelector(".burgers__content");
 const computed = getComputedStyle(burgersContent);
 const burgersSlide = document.querySelector(".burgers__slide");
+const burgersSlideLength = burgersSlide.length;
+
 //console.log(computed.right);
+
+for (let i = 0; i < burgersSlideLength; i++) {
+    right.addEventListener('click', function (e) {//когда мы кликаем на menuItem[i] - у нас происходит всплытие нашего события.
+        e.preventDefault();
+        e.stopPropagation();//Отменяет всплытие(применяем потому что на menu навешено событие, к-е удаляет класс и когда всплытие дойдёт до section.menu )
+
+        if (burgersSlide[i].classList.contains('burgers__slide--active')) {
+            burgersSlide[i].classList.remove('burgers__slide--active');
+        } else {
+            for (let i = 0; i < burgersSlideLength; i++) {
+                burgersSlide[i].classList.remove('burgers__slide--active');
+            }//если я не напишу этот цикл тут, то при клике на лишки одновременно откроются оба элемента.
+            burgersSlide[i].classList.add('burgers__slide--active');
+        }
+    });
+
+    left.addEventListener('click', function (e) {//когда мы кликаем на menuItem[i] - у нас происходит всплытие нашего события.
+        e.preventDefault();
+        e.stopPropagation();//Отменяет всплытие(применяем потому что на menu навешено событие, к-е удаляет класс и когда всплытие дойдёт до section.menu )
+
+        if (burgersSlide[i].classList.contains('burgers__slide--active')) {
+            burgersSlide[i].classList.remove('burgers__slide--active');
+        } else {
+            for (let i = 0; i < burgersSlideLength; i++) {
+                burgersSlide[i].classList.remove('burgers__slide--active');
+            }//если я не напишу этот цикл тут, то при клике на лишки одновременно откроются оба элемента.
+            burgersSlide[i].classList.add('burgers__slide--active');
+        }
+    });
+
+}
 
 right.addEventListener('click', function (event) {
     event.preventDefault();
-    burgersSlide.style.display = 'flex';
     let currentRight = parseInt(computed.right);//Текущ. знач. css св-ва right прогоняем ч/з parseInt и получаем число.
     if (!currentRight) {
         currentRight = 0;
@@ -103,7 +135,6 @@ right.addEventListener('click', function (event) {
 
 left.addEventListener('click', function (event) {
     event.preventDefault();
-    burgersSlide.style.display = 'flex';
     let currentRight = parseInt(computed.right);
 
     if (!currentRight) {
