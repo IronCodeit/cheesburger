@@ -90,7 +90,37 @@ const burgersSlideLength = burgersSlide.length;
 
 //console.log(computed.right);
 
+right.addEventListener('click', function (event) {
+    event.preventDefault();
+    let currentRight = parseInt(computed.right);//Текущ. знач. css св-ва right прогоняем ч/з parseInt и получаем число.
+    if (!currentRight) {
+        currentRight = 0;
+    }
+    if (currentRight < 3468) {
+        burgersContent.style.right = currentRight + 867 + "px";
+    }
+    //Это условие необх-0 для того, чтобы огранич-ь максимальные координаты нашего эл-та.
+});
+
+left.addEventListener('click', function (event) {
+    event.preventDefault();
+    let currentRight = parseInt(computed.right);
+
+    if (!currentRight) {
+        currentRight = 0;
+    }
+
+    if (currentRight > 0) {
+        burgersContent.style.right = currentRight - 867 + "px";// - это аналог items.style.right = ${currentRight - 100}px;
+    }
+});
+//getComputedStyle - переводит все в числа.
+//!currentRight - проверка, не обязательная. Т.е. если в !currentRight что-то не похожее на число, то мы в currentRight записываем 0.
+//В совр-х брауз-х можно обойтись и без проверки.
+
+
 for (let i = 0; i < burgersSlideLength; i++) {
+
     right.addEventListener('click', function (e) {//когда мы кликаем на menuItem[i] - у нас происходит всплытие нашего события.
         e.preventDefault();
         e.stopPropagation();//Отменяет всплытие(применяем потому что на menu навешено событие, к-е удаляет класс и когда всплытие дойдёт до section.menu )
@@ -118,33 +148,4 @@ for (let i = 0; i < burgersSlideLength; i++) {
             burgersSlide[i].classList.add('burgers__slide--active');
         }
     });
-
 }
-
-right.addEventListener('click', function (event) {
-    event.preventDefault();
-    let currentRight = parseInt(computed.right);//Текущ. знач. css св-ва right прогоняем ч/з parseInt и получаем число.
-    if (!currentRight) {
-        currentRight = 0;
-    }
-    if (currentRight < 848) {
-        burgersContent.style.right = currentRight + 848 + "px";
-    }
-    //Это условие необх-0 для того, чтобы огранич-ь максимальные координаты нашего эл-та.
-});
-
-left.addEventListener('click', function (event) {
-    event.preventDefault();
-    let currentRight = parseInt(computed.right);
-
-    if (!currentRight) {
-        currentRight = 0;
-    }
-
-    if (currentRight > 0) {
-        burgersContent.style.right = currentRight - 848 + "px";// - это аналог items.style.right = ${currentRight - 100}px;
-    }
-});
-//getComputedStyle - переводит все в числа.
-//!currentRight - проверка, не обязательная. Т.е. если в !currentRight что-то не похожее на число, то мы в currentRight записываем 0.
-//В совр-х брауз-х можно обойтись и без проверки.
