@@ -80,19 +80,40 @@ for (let i = 0; i < menuItemLength; i++) {
 
 
 //Слайдер
-const btnRight = document.querySelector('.burgers__scroll--btn-right'),
-    burgersSlide = document.querySelectorAll('.burgers__slide'),
-    burgersSlideLength = burgersSlide.length;
+//1 способ реал-ии слайдера
+const left = document.querySelector(".burgers__scroll--btn-left");
+const right = document.querySelector(".burgers__scroll--btn-right");
+const burgersContent = document.querySelector(".burgers__content");
+const computed = getComputedStyle(burgersContent);
+const burgersSlide = document.querySelector(".burgers__slide");
+//console.log(computed.right);
 
-btnRight.addEventListener('click', function (e) {
-    e.preventDefault();
+right.addEventListener('click', function (event) {
+    event.preventDefault();
+    burgersSlide.style.display = 'flex';
+    let currentRight = parseInt(computed.right);//Текущ. знач. css св-ва right прогоняем ч/з parseInt и получаем число.
+    if (!currentRight) {
+        currentRight = 0;
+    }
+    if (currentRight < 848) {
+        burgersContent.style.right = currentRight + 848 + "px";
+    }
+    //Это условие необх-0 для того, чтобы огранич-ь максимальные координаты нашего эл-та.
+});
 
-    if (burgersSlide[i].classList.contains('burgers__slide--active')) {
-        burgersSlide[i].classList.remove('burgers__slide--active');
-    } else {
-        for (let i = 0; i < menuItemLength; i++) {
-            burgersSlide[i].classList.remove('burgers__slide--active');
-        }
-        burgersSlide[i].classList.add('burgers__slide--active');
+left.addEventListener('click', function (event) {
+    event.preventDefault();
+    burgersSlide.style.display = 'flex';
+    let currentRight = parseInt(computed.right);
+
+    if (!currentRight) {
+        currentRight = 0;
+    }
+
+    if (currentRight > 0) {
+        burgersContent.style.right = currentRight - 848 + "px";// - это аналог items.style.right = ${currentRight - 100}px;
     }
 });
+//getComputedStyle - переводит все в числа.
+//!currentRight - проверка, не обязательная. Т.е. если в !currentRight что-то не похожее на число, то мы в currentRight записываем 0.
+//В совр-х брауз-х можно обойтись и без проверки.
