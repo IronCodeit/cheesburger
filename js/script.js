@@ -80,39 +80,27 @@ for (let i = 0; i < menuItemLength; i++) {
 
 
 //Слайдер
-const left = document.querySelector(".burgers__scroll--btn-left");
-const right = document.querySelector(".burgers__scroll--btn-right");
-const burgersSlide = document.querySelectorAll(".burgers__slide");
-const burgersSlideLength = burgersSlide.length;
+const left = document.querySelector(".burgers__scroll--btn-left"),
+    right = document.querySelector(".burgers__scroll--btn-right");
 
-right.addEventListener('click', function (e) {
+right.addEventListener('click', e => {
     e.preventDefault();
 
-    for (let i = 0; i < burgersSlideLength; i++) {
+    const activeEl = document.querySelector('.burgers__slide--active');
 
-        if (burgersSlide[i].classList.contains('burgers__slide--active')) {
-            burgersSlide[i].classList.remove('burgers__slide--active');
-        } else {
-            for (let i = 0; i < teamItemLength; i++) {
-                burgersSlide[i].classList.remove('burgers__slide--active');
-            }
-            burgersSlide[i].classList.add('burgers__slide--active');
-        }
+    if (activeEl.nextElementSibling) {
+        activeEl.nextElementSibling.classList.add('burgers__slide--active');
+        activeEl.classList.remove('burgers__slide--active');
     }
 });
 
-left.addEventListener('click', function (e) {
+left.addEventListener('click', e => {
     e.preventDefault();
 
-    for (let i = 0; i < burgersSlideLength; i++) {
+    const activeEl = document.querySelector('.burgers__slide--active');
 
-        if (burgersSlide[i].classList.contains('burgers__slide--active')) {
-            burgersSlide[i].classList.remove('burgers__slide--active');
-        } else {
-            for (let i = 0; i < teamItemLength; i++) {
-                burgersSlide[i].classList.remove('burgers__slide--active');
-            }
-            burgersSlide[i].classList.add('burgers__slide--active');
-        }
+    if (activeEl.previousElementSibling) {
+        activeEl.previousElementSibling.classList.add('burgers__slide--active');
+        activeEl.classList.remove('burgers__slide--active');
     }
 });

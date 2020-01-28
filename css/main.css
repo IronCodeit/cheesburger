@@ -1119,7 +1119,12 @@ p {
   width: 100%; }
 
 .burgers__slide {
-  display: none; }
+  display: none;
+  -webkit-transition: -webkit-transform 2s ease;
+  transition: -webkit-transform 2s ease;
+  -o-transition: transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease; }
 
 .burgers__slide--active {
   display: -webkit-box;
