@@ -1100,7 +1100,7 @@ p {
   background: url("../img/burger-scroll-right.png") center center no-repeat; }
 
 .burgers__img {
-  width: 28.0625rem;
+  max-width: 28.0625rem;
   height: auto; }
   @media screen and (max-width: 768px) {
     .burgers__img {
@@ -1119,12 +1119,7 @@ p {
   width: 100%; }
 
 .burgers__slide {
-  display: none;
-  -webkit-transition: -webkit-transform 2s ease;
-  transition: -webkit-transform 2s ease;
-  -o-transition: transform 2s ease;
-  transition: transform 2s ease;
-  transition: transform 2s ease, -webkit-transform 2s ease; }
+  display: none; }
 
 .burgers__slide--active {
   display: -webkit-box;

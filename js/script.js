@@ -81,10 +81,11 @@ for (let i = 0; i < menuItemLength; i++) {
 
 //Слайдер
 const left = document.querySelector(".burgers__scroll--btn-left"),
-    right = document.querySelector(".burgers__scroll--btn-right");
+    right = document.querySelector(".burgers__scroll--btn-right"),
+    burgersContent = document.querySelector(".burgers__content");
 
 right.addEventListener('click', e => {
-    e.preventDefault();
+    loop("right", e);
 
     const activeEl = document.querySelector('.burgers__slide--active');
 
@@ -95,7 +96,7 @@ right.addEventListener('click', e => {
 });
 
 left.addEventListener('click', e => {
-    e.preventDefault();
+    loop("left", e);
 
     const activeEl = document.querySelector('.burgers__slide--active');
 
@@ -104,3 +105,13 @@ left.addEventListener('click', e => {
         activeEl.classList.remove('burgers__slide--active');
     }
 });
+
+function loop(direction, e) {
+    e.preventDefault();
+
+    if (direction === "right") {
+        burgersContent.appendChild(burgersContent.firstElementChild);
+    } else {
+        burgersContent.insertBefore(burgersContent.lastElementChild, burgersContent.firstElementChild);
+    }
+}

@@ -36,7 +36,8 @@
 }
 
 .burgers__img {
-    width: rem(449px);
+    max-width: rem(449px);
+
     height: auto;
 
     @include tablets {
@@ -155,8 +156,6 @@
 .burgers__menu {
     position: relative;
     margin-right: rem(10px);
-
-    @include phones {}
 }
 
 .burger__item {
