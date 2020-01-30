@@ -7,7 +7,6 @@ const body = document.querySelector('body');
 
 menuIcon.addEventListener('click', function (e) {
     drop.style.display = 'block';
-    body.style.overflow = 'hidden';
 });
 
 crosDrop.addEventListener('click', function (e) {

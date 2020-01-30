@@ -41,7 +41,7 @@
     height: auto;
 
     @include tablets {
-        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -192,7 +192,7 @@
     }
 
     @include tablets {
-        top: -25%;
+        top: -15%;
         left: 0%;
     }
 
@@ -231,7 +231,7 @@
 
     @include tablets {
         left: 85%;
-        top: -25%;
+        top: -15%;
     }
 
     @include phones {

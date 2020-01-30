@@ -355,10 +355,10 @@ html {
   font-size: 0.9375rem; }
   @media screen and (max-width: 768px) {
     html {
-      font-size: 0.9375rem; } }
+      font-size: 0.875rem; } }
   @media screen and (max-width: 480px) {
     html {
-      font-size: 0.875rem; } }
+      font-size: 0.8125rem; } }
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -369,10 +369,10 @@ body {
   box-sizing: border-box; }
 
 .container {
-  max-width: 940px;
-  padding: 0 10px;
+  max-width: 58.75rem;
+  padding: 0rem 0.625rem;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0rem auto; }
 
 ul,
 h1,
@@ -388,7 +388,7 @@ p {
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -404,14 +404,14 @@ p {
   align-items: center; }
   @media screen and (max-width: 768px) {
     .section {
-      min-height: 0; } }
+      min-height: 0rem; } }
   @media screen and (max-width: 480px) {
     .section {
-      min-height: 0; } }
+      min-height: 0rem; } }
 
 .title {
   font-family: 'gagalinregular';
-  font-size: 72px;
+  font-size: 4.5rem;
   color: #f9b43b;
   line-height: 1; }
 
@@ -1104,7 +1104,7 @@ p {
   height: auto; }
   @media screen and (max-width: 768px) {
     .burgers__img {
-      max-width: 100%; } }
+      width: 100%; } }
 
 .burgers__content {
   display: -webkit-box;
@@ -1262,7 +1262,7 @@ p {
     transition: 0.3s; }
   @media screen and (max-width: 768px) {
     .burger__drop {
-      top: -25%;
+      top: -15%;
       left: 0%; } }
   @media screen and (max-width: 480px) {
     .burger__drop {
@@ -1304,7 +1304,7 @@ p {
   @media screen and (max-width: 768px) {
     .burger__colorie {
       left: 85%;
-      top: -25%; } }
+      top: -15%; } }
   @media screen and (max-width: 480px) {
     .burger__colorie {
       top: -33%; } }
@@ -1505,7 +1505,25 @@ p {
   width: 100%;
   top: 0;
   z-index: 10;
-  display: none; }
+  display: none;
+  -webkit-animation: vsp 0.5s;
+  animation: vsp 0.5s; }
+
+@-webkit-keyframes vsp {
+  0% {
+    display: none;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
+
+@keyframes vsp {
+  0% {
+    display: none;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
 
 .drop--container {
   height: 100%;

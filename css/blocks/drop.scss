@@ -6,6 +6,19 @@
     top: 0;
     z-index: 10;
     display: none;
+    animation: vsp 0.5s;
+}
+
+@keyframes vsp {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
 }
 
 .drop--container {
