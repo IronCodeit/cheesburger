@@ -6,7 +6,7 @@
     top: 0;
     z-index: 10;
     display: none;
-    animation: vsp 0.5s;
+    animation: vsp 1s;
 }
 
 @keyframes vsp {
@@ -18,6 +18,22 @@
     100% {
         display: block;
         opacity: 1;
+    }
+}
+
+.drop--down {
+    animation: close 1s;
+}
+
+@keyframes close {
+    100% {
+        display: block;
+        opacity: 1;
+    }
+
+    0% {
+        display: none;
+        opacity: 0;
     }
 }
 

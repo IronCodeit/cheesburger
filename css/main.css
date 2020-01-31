@@ -1506,8 +1506,8 @@ p {
   top: 0;
   z-index: 10;
   display: none;
-  -webkit-animation: vsp 0.5s;
-  animation: vsp 0.5s; }
+  -webkit-animation: vsp 1s;
+  animation: vsp 1s; }
 
 @-webkit-keyframes vsp {
   0% {
@@ -1524,6 +1524,26 @@ p {
   100% {
     display: block;
     opacity: 1; } }
+
+.drop--down {
+  -webkit-animation: close 1s;
+  animation: close 1s; }
+
+@-webkit-keyframes close {
+  100% {
+    display: block;
+    opacity: 1; }
+  0% {
+    display: none;
+    opacity: 0; } }
+
+@keyframes close {
+  100% {
+    display: block;
+    opacity: 1; }
+  0% {
+    display: none;
+    opacity: 0; } }
 
 .drop--container {
   height: 100%;

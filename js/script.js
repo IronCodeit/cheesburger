@@ -11,7 +11,7 @@ menuIcon.addEventListener('click', function (e) {
 
 crosDrop.addEventListener('click', function (e) {
     drop.style.display = 'none';
-    body.style.overflow = 'visible';
+    drop.classList.add('drop--down');
 });
 
 
@@ -25,7 +25,9 @@ teamContent.addEventListener('click', function (e) {
     for (let i = 0; i < teamItemLength; i++) {
         teamItem[i].classList.remove('team__item--active');
     }
-});
+}
+
+);
 
 for (let i = 0; i < teamItemLength; i++) {
     teamItem[i].addEventListener('click', function (e) {
@@ -34,13 +36,18 @@ for (let i = 0; i < teamItemLength; i++) {
 
         if (teamItem[i].classList.contains('team__item--active')) {
             teamItem[i].classList.remove('team__item--active');
-        } else {
+        }
+
+        else {
             for (let i = 0; i < teamItemLength; i++) {
                 teamItem[i].classList.remove('team__item--active');
             }
+
             teamItem[i].classList.add('team__item--active');
         }
-    });
+    }
+
+    );
 }
 
 
@@ -54,23 +61,33 @@ menu.addEventListener('click', function (e) {
     for (let i = 0; i < menuItemLength; i++) {
         menuItem[i].classList.remove('menu__item--active');
     }
-});
+}
+
+);
 
 for (let i = 0; i < menuItemLength; i++) {
-    menuItem[i].addEventListener('click', function (e) {//когда мы кликаем на menuItem[i] - у нас происходит всплытие нашего события.
+    menuItem[i].addEventListener('click', function (e) {
+        //когда мы кликаем на menuItem[i] - у нас происходит всплытие нашего события.
         e.preventDefault();
-        e.stopPropagation();//Отменяет всплытие(применяем потому что на menu навешено событие, к-е удаляет класс и когда всплытие дойдёт до section.menu )
+        e.stopPropagation(); //Отменяет всплытие(применяем потому что на menu навешено событие, к-е удаляет класс и когда всплытие дойдёт до section.menu )
 
         if (menuItem[i].classList.contains('menu__item--active')) {
             menuItem[i].classList.remove('menu__item--active');
-        } else {
+        }
+
+        else {
             for (let i = 0; i < menuItemLength; i++) {
                 menuItem[i].classList.remove('menu__item--active');
-            }//если я не напишу этот цикл тут, то при клике на лишки одновременно откроются оба элемента.
+            }
+
+            //если я не напишу этот цикл тут, то при клике на лишки одновременно откроются оба элемента.
             menuItem[i].classList.add('menu__item--active');
         }
-    });
+    }
+
+    );
 }
+
 //menuItemLength - длина массива menuItem.
 //вместо i < menuItemLength можно написать i < menuItem.length, но в таком случае при работе с большими данными если делать цикл по 3 000 000 записей через for, то он будет работать медленно, т.к. будет пересчитывать длину на каждой итерации цикла
 //menu.addEventListener('click', e => { });
@@ -92,7 +109,9 @@ right.addEventListener('click', e => {
         activeEl.nextElementSibling.classList.add('burgers__slide--active');
         activeEl.classList.remove('burgers__slide--active');
     }
-});
+}
+
+);
 
 left.addEventListener('click', e => {
     loop("left", e);
@@ -103,14 +122,18 @@ left.addEventListener('click', e => {
         activeEl.previousElementSibling.classList.add('burgers__slide--active');
         activeEl.classList.remove('burgers__slide--active');
     }
-});
+}
+
+);
 
 function loop(direction, e) {
     e.preventDefault();
 
     if (direction === "right") {
         burgersContent.appendChild(burgersContent.firstElementChild);
-    } else {
+    }
+
+    else {
         burgersContent.insertBefore(burgersContent.lastElementChild, burgersContent.firstElementChild);
     }
 }
