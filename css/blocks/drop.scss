@@ -5,7 +5,7 @@
     top: 0;
     z-index: 10;
     display: none;
-    animation: vsp 1s;
+    animation: vsp 0.5s;
 }
 
 @keyframes vsp {
@@ -21,7 +21,7 @@
 }
 
 .drop--down {
-    animation: close 1s;
+    animation: close 0.5s;
 }
 
 @keyframes close {

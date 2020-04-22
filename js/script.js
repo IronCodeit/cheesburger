@@ -8,17 +8,14 @@ const body = document.querySelector('body');
 menuIcon.addEventListener('click', function (e) {
     drop.style.display = 'block';
     body.style.overflow = 'hidden';
-}
-
-);
+    body.classList.remove('drop');
+});
 
 crosDrop.addEventListener('click', function (e) {
     drop.style.display = 'none';
     body.style.overflow = 'visible';
-    drop.classList.add('drop--down');
-}
-
-);
+    body.classList.add('drop--down');
+});
 
 
 

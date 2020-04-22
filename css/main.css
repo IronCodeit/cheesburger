@@ -1783,8 +1783,8 @@ p {
   top: 0;
   z-index: 10;
   display: none;
-  -webkit-animation: vsp 1s;
-  animation: vsp 1s; }
+  -webkit-animation: vsp 0.5s;
+  animation: vsp 0.5s; }
 
 @-webkit-keyframes vsp {
   0% {
@@ -1803,8 +1803,8 @@ p {
     opacity: 1; } }
 
 .drop--down {
-  -webkit-animation: close 1s;
-  animation: close 1s; }
+  -webkit-animation: close 0.5s;
+  animation: close 0.5s; }
 
 @-webkit-keyframes close {
   100% {
