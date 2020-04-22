@@ -7,12 +7,18 @@ const body = document.querySelector('body');
 
 menuIcon.addEventListener('click', function (e) {
     drop.style.display = 'block';
-});
+    body.style.overflow = 'hidden';
+}
+
+);
 
 crosDrop.addEventListener('click', function (e) {
     drop.style.display = 'none';
+    body.style.overflow = 'visible';
     drop.classList.add('drop--down');
-});
+}
+
+);
 
 
 
@@ -55,18 +61,17 @@ for (let i = 0; i < teamItemLength; i++) {
 //Горизонтальный аккордион.
 const menu = document.querySelector('.menu'),
     menuItem = document.querySelectorAll('.menu__item'),
+    //Если бы мы не указали бы All, то обратились бы только к первому .menu__item из всех.
     menuItemLength = menuItem.length;
 
-menu.addEventListener('click', function (e) {
+menu.addEventListener('click', e => {
     for (let i = 0; i < menuItemLength; i++) {
         menuItem[i].classList.remove('menu__item--active');
     }
-}
-
-);
+});
 
 for (let i = 0; i < menuItemLength; i++) {
-    menuItem[i].addEventListener('click', function (e) {
+    menuItem[i].addEventListener('click', e => {
         //когда мы кликаем на menuItem[i] - у нас происходит всплытие нашего события.
         e.preventDefault();
         e.stopPropagation(); //Отменяет всплытие(применяем потому что на menu навешено событие, к-е удаляет класс и когда всплытие дойдёт до section.menu )
@@ -83,9 +88,7 @@ for (let i = 0; i < menuItemLength; i++) {
             //если я не напишу этот цикл тут, то при клике на лишки одновременно откроются оба элемента.
             menuItem[i].classList.add('menu__item--active');
         }
-    }
-
-    );
+    });
 }
 
 //menuItemLength - длина массива menuItem.

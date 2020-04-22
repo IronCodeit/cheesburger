@@ -1,6 +1,47 @@
 .scroll-menu {
     position: fixed;
     top: 12%;
+    right: 3%;
+
+    @include tablets {
+        display: none;
+    }
+
+    &__item {
+        position: relative;
+        display: block;
+        width: rem(16px);
+        height: rem(16px);
+        border-radius: 50%;
+        border: 1px solid transparent;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: rem(5px);
+            height: rem(5px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $white;
+            border-radius: 50%;
+        }
+
+        &--active {
+            border: 1px solid $white;
+        }
+    }
+}
+
+
+
+/* .scroll-menu {
+    position: fixed;
+    top: 12%;
     right: 2%;
 
     @include tablets {
@@ -29,4 +70,4 @@
         border-radius: 50%;
         box-shadow: 0 0 0 rem(1.5px) $white;
     }
-}
+} */

@@ -1,9 +1,9 @@
+$gray:#2f3234;
 $white: #fff;
 $orange: #e45028;
 $orangelight: #eb8c38;
 $yellow: #f9b43b;
 $black: #000;
-$gray:#2f3234;
 $lightgray:#585858;
 
 @import "./blocks/fonts.scss";
@@ -15,13 +15,13 @@ $lightgray:#585858;
 @import "./blocks/team.scss";
 @import "./blocks/header.scss";
 @import "./blocks/burgers.scss";
+@import "./blocks/promo.scss";
 @import "./blocks/menu.scss";
 @import "./blocks/svg.scss";
 @import "./blocks/nav.scss";
-@import "./blocks/drop.scss";
-@import "./blocks/promo.scss";
 @import "./blocks/btn.scss";
 @import "./blocks/scroll-menu.scss";
 @import "./blocks/face.scss";
+@import "./blocks/drop.scss";
 @import "./blocks/map.scss";
 @import "./blocks/footer.scss";
