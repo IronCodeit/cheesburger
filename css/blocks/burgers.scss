@@ -69,6 +69,7 @@
         flex-direction: column;
         margin-top: rem(50px);
         padding: rem(22px);
+        width: 100%;
     }
 
     @include phones {
@@ -248,15 +249,22 @@
     position: relative;
     margin-right: rem(10px);
     width: 50%;
+
+    @include tablets {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .burgers__desk {
     width: 50%;
-    //@include tablets {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    //}
+
+    @include tablets {
+        width: 100%;
+    }
 }

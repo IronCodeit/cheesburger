@@ -1144,7 +1144,8 @@ p {
       -ms-flex-direction: column;
       flex-direction: column;
       margin-top: 3.125rem;
-      padding: 1.375rem; } }
+      padding: 1.375rem;
+      width: 100%; } }
   @media screen and (max-width: 480px) {
     .burger__inner {
       padding: 0.3125rem; } }
@@ -1318,6 +1319,10 @@ p {
   position: relative;
   margin-right: 0.625rem;
   width: 50%; }
+  @media screen and (max-width: 768px) {
+    .burgers__menu {
+      width: 100%;
+      text-align: center; } }
 
 .burgers__desk {
   width: 50%;
@@ -1335,6 +1340,9 @@ p {
   -ms-flex-align: center;
   align-items: center;
   text-align: center; }
+  @media screen and (max-width: 768px) {
+    .burgers__desk {
+      width: 100%; } }
 
 .promo {
   background: url("../img/promo-fon.png") center center/cover no-repeat;
