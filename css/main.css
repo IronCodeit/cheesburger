@@ -1101,7 +1101,7 @@ p {
 
 .burgers__img {
   max-width: 28.0625rem;
-  height: auto; }
+  height: 19.625rem; }
   @media screen and (max-width: 768px) {
     .burgers__img {
       width: 100%; } }
@@ -1318,23 +1318,22 @@ p {
   color: #fff;
   text-transform: uppercase; }
 
-@media screen and (max-width: 768px) {
-  .burgers__desk {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    text-align: center; } }
+.burgers__desk {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center; }
 
 .promo {
   background: url("../img/promo-fon.png") center center/cover no-repeat;
@@ -1783,8 +1782,8 @@ p {
   top: 0;
   z-index: 10;
   display: none;
-  -webkit-animation: vsp 0.5s;
-  animation: vsp 0.5s; }
+  -webkit-animation: vsp 1s;
+  animation: vsp 1s; }
 
 @-webkit-keyframes vsp {
   0% {
@@ -1803,8 +1802,8 @@ p {
     opacity: 1; } }
 
 .drop--down {
-  -webkit-animation: close 0.5s;
-  animation: close 0.5s; }
+  -webkit-animation: close 1s;
+  animation: close 1s; }
 
 @-webkit-keyframes close {
   100% {

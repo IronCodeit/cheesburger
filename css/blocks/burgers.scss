@@ -38,7 +38,7 @@
 .burgers__img {
     max-width: rem(449px);
 
-    height: auto;
+    height: rem(314px);
 
     @include tablets {
         width: 100%;
@@ -252,12 +252,12 @@
 
 .burgers__desk {
 
-    @include tablets {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+    //@include tablets {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    //}
 }
