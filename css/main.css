@@ -1115,8 +1115,7 @@ p {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  width: 100%; }
+  align-items: center; }
 
 .burgers__slide {
   display: none; }
@@ -1136,7 +1135,8 @@ p {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 53.75rem; }
   @media screen and (max-width: 768px) {
     .burger__inner {
       -webkit-box-orient: vertical;
@@ -1214,10 +1214,6 @@ p {
 
 .burger__item--weight {
   margin-left: auto; }
-
-.burgers__menu {
-  position: relative;
-  margin-right: 0.625rem; }
 
 .burger__item {
   display: -webkit-box;
@@ -1318,8 +1314,13 @@ p {
   color: #fff;
   text-transform: uppercase; }
 
+.burgers__menu {
+  position: relative;
+  margin-right: 0.625rem;
+  width: 50%; }
+
 .burgers__desk {
-  width: 100%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1802,8 +1803,8 @@ p {
     opacity: 1; } }
 
 .drop--down {
-  -webkit-animation: close 1s;
-  animation: close 1s; }
+  -webkit-animation: close 0.5s;
+  animation: close 0.5s; }
 
 @-webkit-keyframes close {
   100% {
