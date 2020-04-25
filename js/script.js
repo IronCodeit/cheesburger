@@ -9,13 +9,17 @@ menuIcon.addEventListener('click', function (e) {
     drop.style.display = 'block';
     body.style.overflow = 'hidden';
     body.classList.remove('drop--down');
-});
+}
+
+);
 
 crosDrop.addEventListener('click', function (e) {
     drop.style.display = 'none';
     body.style.overflow = 'visible';
     body.classList.add('drop--down');
-});
+}
+
+);
 
 
 
@@ -65,7 +69,9 @@ menu.addEventListener('click', e => {
     for (let i = 0; i < menuItemLength; i++) {
         menuItem[i].classList.remove('menu__item--active');
     }
-});
+}
+
+);
 
 for (let i = 0; i < menuItemLength; i++) {
     menuItem[i].addEventListener('click', e => {
@@ -85,7 +91,9 @@ for (let i = 0; i < menuItemLength; i++) {
             //если я не напишу этот цикл тут, то при клике на лишки одновременно откроются оба элемента.
             menuItem[i].classList.add('menu__item--active');
         }
-    });
+    }
+
+    );
 }
 
 //menuItemLength - длина массива menuItem.
@@ -137,3 +145,38 @@ function loop(direction, e) {
         burgersContent.insertBefore(burgersContent.lastElementChild, burgersContent.firstElementChild);
     }
 }
+
+
+
+
+//Оverlay.
+const faces = document.querySelector('.face__list'),
+    overlay = document.querySelector('.overlay'),
+    popupText = document.querySelector('.popup__text');
+
+faces.addEventListener('click', e => {
+    let elem = e.target;
+    console.log(elem.tagName);
+
+    if (elem.tagName === 'BUTTON') {
+        let modalText = elem.previousElementSibling.innerHTML;
+        popupText.innerHTML = modalText;
+        overlay.style.display = 'block';
+    }
+});
+
+document.addEventListener('keyup', e => {
+    console.log(e.key);
+    let keyName = e.key;
+
+    if (keyName === 'Escape') {
+        overlay.style.display = 'none';
+    }
+});
+
+const closeElement = overlay.querySelector(".close");
+
+closeElement.addEventListener("click", e => {
+    e.preventDefault();
+    overlay.style.display = "none";
+});

@@ -37,7 +37,7 @@
 
 .burgers__img {
     max-width: rem(449px);
-    height: rem(314px);
+    width: 100%;    height: rem(314px);
 
     @include tablets {
         width: 100%;
