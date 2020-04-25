@@ -148,7 +148,6 @@ function loop(direction, e) {
 
 
 
-
 //Оverlay.
 const faces = document.querySelector('.face__list'),
     overlay = document.querySelector('.overlay'),
@@ -161,6 +160,7 @@ faces.addEventListener('click', e => {
     if (elem.tagName === 'BUTTON') {
         let modalText = elem.previousElementSibling.innerHTML;
         popupText.innerHTML = modalText;
+        popupText.style.boxShadow = "10px 10px 50px white";
         overlay.style.display = 'block';
     }
 });
@@ -180,3 +180,64 @@ closeElement.addEventListener("click", e => {
     e.preventDefault();
     overlay.style.display = "none";
 });
+
+
+
+//Форма
+const formBlock = document.querySelector('#form-block');
+const btnIn = document.querySelector('#btn-in');
+
+btnIn.addEventListener('click', event => {
+    event.preventDefault();
+
+    if (validateForm(formBlock)) {
+        const data = {
+            name: formBlock.elements.name.value,
+            name: formBlock.elements.phone.value,
+            name: formBlock.elements.comment.value
+        };
+
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.send(JSON.stringify(data));
+
+        xhr.addEventListener('load', () => {
+            if (xhr.response.status) {
+                console.log('Всё ок!');
+                //Вместо console.log() можно указывать напр. модальное окно какое-то.
+            } else {
+                console.log('Что-то пошло не так!');
+            }
+        });
+
+    }
+});
+
+function validateForm(form) {
+    let valid = true;
+
+    if (!validateField(form.elements.name)) {
+        valid = false;
+    }
+
+    if (!validateField(form.elements.phone)) {
+        valid = false;
+    }
+
+    if (!validateField(form.elements.comment)) {
+        valid = false;
+    }
+
+    return valid;
+}
+
+function validateField(field) {
+    field.nextElementSibling.textContent = field.validationMessage;
+    return field.checkValidity();
+}
+
+//Метод send ещё выполняет ф-ию отправки конкретных(указанных) данных.
+//Перед тем, как отправлять данные на сервер получим данные в формате JSON.
+//GET - получать данные с сервера.
+//POST - отправлять данные на сервер.

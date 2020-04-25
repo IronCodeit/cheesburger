@@ -560,7 +560,7 @@ p {
     .form {
       padding: 5% 0; } }
 
-.form-block {
+#form-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -571,7 +571,7 @@ p {
   -ms-flex-pack: center;
   justify-content: center; }
   @media screen and (max-width: 768px) {
-    .form-block {
+    #form-block {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -584,7 +584,7 @@ p {
       align-items: center;
       padding: 0 10%; } }
   @media screen and (max-width: 480px) {
-    .form-block {
+    #form-block {
       padding: 0; } }
 
 .title--form {
@@ -785,7 +785,7 @@ p {
 .select:not(:last-child) {
   margin-right: 1.25rem; }
 
-.btn-in {
+#btn-in {
   padding: 0.6875rem 1rem;
   background-color: #e45028;
   border-radius: 3px;
@@ -796,7 +796,7 @@ p {
   font-family: 'ubunturegular';
   border: none; }
 
-.btn-out {
+#btn-out {
   padding: 0.6875rem 1rem;
   border-radius: 3px;
   font-size: 0.875rem;
@@ -809,6 +809,12 @@ p {
 
 .check-button {
   background-color: #f9b43b; }
+
+.error {
+  color: #e45028;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center; }
 
 .team {
   background: url("../img/bg-team.png") center center/cover no-repeat;
@@ -1805,9 +1811,8 @@ p {
   text-align: center;
   font-size: 1.125rem;
   background: #fff;
-  width: 30%;
-  height: 15%;
-  padding: 10px;
+  width: 25%;
+  padding: 15px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1815,7 +1820,7 @@ p {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 10;
-  border-radius: 40px 0px 40px 40px; }
+  border-radius: 30px 0px 30px 30px; }
 
 .close {
   color: #fff;
