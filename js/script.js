@@ -191,7 +191,7 @@ btnIn.addEventListener('click', event => {
     event.preventDefault();
 
     if (validateForm(formBlock)) {
-        let formData = new FormData();
+        var formData = new FormData();
         formData.append('name', formBlock.elements.name.value);
         formData.append('name', formBlock.elements.phone.value);
         formData.append('name', formBlock.elements.comment.value);
