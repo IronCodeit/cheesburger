@@ -191,7 +191,7 @@ btnIn.addEventListener('click', event => {
     event.preventDefault();
 
     if (validateForm(formBlock)) {
-        let formData = new FormData(form)
+        let formData = new FormData(form);
         formData.append('formBlock.elements.name.value');
         formData.append('formBlock.elements.phone.value');
         formData.append('formBlock.elements.comment.value');
@@ -204,10 +204,9 @@ btnIn.addEventListener('click', event => {
 
     xhr.addEventListener('load', () => {
         if (xhr.response) {
-            console.log('Всё ок!');
-            //Вместо console.log() можно указывать напр. модальное окно какое-то.
+            alert('Отправка удалась');
         } else {
-            console.log('Что-то пошло не так!');
+            alert('Произошла ошибка');
         }
     });
 });
