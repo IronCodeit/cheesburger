@@ -164,6 +164,7 @@
 }
 
 .burger__drop {
+    z-index: 20;
     position: absolute;
     top: -30%;
     left: 6%;
@@ -179,6 +180,19 @@
     }
 }
 
+.burger__list {
+    padding: rem(18px);
+    background-color: rgba($white, 0.8);
+    border-radius: rem(7px);
+    width: rem(227px);
+    font-family: 'ubuntu';
+    font-weight: 500;
+    opacity: 0;
+    display: none;
+    left: 100%;
+    z-index: 20;
+}
+
 .burger__composition {
     width: rem(90px);
     height: rem(90px);
@@ -189,20 +203,11 @@
     justify-content: center;
     align-items: center;
 
-    &:hover+.burger__list {
+    &:hover~.burger__list {
         opacity: 1;
         transition: 0.3s;
+        display: block;
     }
-}
-
-.burger__list {
-    padding: rem(18px);
-    background-color: rgba($white, 0.8);
-    border-radius: rem(7px);
-    width: rem(227px);
-    font-family: 'ubuntu';
-    font-weight: 500;
-    opacity: 0;
 }
 
 .burger__colorie {
