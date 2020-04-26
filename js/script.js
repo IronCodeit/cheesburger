@@ -191,11 +191,11 @@ btnIn.addEventListener('click', event => {
     event.preventDefault();
 
     if (validateForm(formBlock)) {
-        let formData = new FormData(document.forms.formBlock);
-        formData.append('formBlock.elements.name.value');
-        formData.append('formBlock.elements.phone.value');
-        formData.append('formBlock.elements.comment.value');
-        formData.append('e: mail: maluda223@gmail.com');
+        let formData = new FormData();
+        formData.append('name', formBlock.elements.name.value);
+        formData.append('name', formBlock.elements.phone.value);
+        formData.append('name', formBlock.elements.comment.value);
+        formData.append('to', 'e: mail: maluda223@gmail.com');
     }
 
     const xhr = new XMLHttpRequest();
