@@ -1235,7 +1235,6 @@ p {
     margin-bottom: 0.625rem; }
 
 .burger__drop {
-  z-index: 20;
   position: absolute;
   top: -30%;
   left: 6%;
@@ -1259,8 +1258,7 @@ p {
   font-weight: 500;
   opacity: 0;
   display: none;
-  left: 100%;
-  z-index: 20; }
+  left: 100%; }
 
 .burger__composition {
   width: 5.625rem;
