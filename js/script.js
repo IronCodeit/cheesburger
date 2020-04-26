@@ -191,24 +191,24 @@ btnIn.addEventListener('click', event => {
     event.preventDefault();
 
     if (validateForm(formBlock)) {
-        var formData = new FormData();
+        let formData = new FormData();
         formData.append('name', formBlock.elements.name.value);
         formData.append('name', formBlock.elements.phone.value);
         formData.append('name', formBlock.elements.comment.value);
         formData.append('to', 'e: mail: maluda223@gmail.com');
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.send(formData);
+
+        xhr.addEventListener('load', () => {
+            if (xhr.response) {
+                alert('Отправка удалась');
+            } else {
+                alert('Произошла ошибка');
+            }
+        });
     }
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-    xhr.send(formData);
-
-    xhr.addEventListener('load', () => {
-        if (xhr.response) {
-            alert('Отправка удалась');
-        } else {
-            alert('Произошла ошибка');
-        }
-    });
 });
 
 function validateForm(form) {

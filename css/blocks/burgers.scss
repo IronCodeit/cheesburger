@@ -37,7 +37,8 @@
 
 .burgers__img {
     max-width: rem(449px);
-    width: 100%;    height: rem(314px);
+    width: 100%;
+    height: rem(314px);
 
     @include tablets {
         width: 100%;
@@ -162,6 +163,22 @@
     }
 }
 
+.burger__drop {
+    position: absolute;
+    top: -30%;
+    left: 6%;
+    display: flex;
+
+    @include tablets {
+        top: -15%;
+        left: 0%;
+    }
+
+    @include phones {
+        top: -33%;
+    }
+}
+
 .burger__composition {
     width: rem(90px);
     height: rem(90px);
@@ -171,28 +188,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.burger__drop {
-    position: absolute;
-    top: -30%;
-    left: 6%;
-    display: flex;
-
-    &:hover {
-        .burger__list {
-            opacity: 1;
-            transition: 0.3s;
-        }
-    }
-
-    @include tablets {
-        top: -15%;
-        left: 0%;
-    }
-
-    @include phones {
-        top: -33%;
+    &:hover+.burger__list {
+        opacity: 1;
+        transition: 0.3s;
     }
 }
 
