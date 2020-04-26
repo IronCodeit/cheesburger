@@ -184,58 +184,56 @@ closeElement.addEventListener("click", e => {
 
 
 //Форма
-const formBlock = document.querySelector('#form-block');
-const btnIn = document.querySelector('#btn-in');
+const formBlock = document.querySelector('#form-block'),
+    btnIn = document.querySelector('#btn-in');
 
 btnIn.addEventListener('click', event => {
     event.preventDefault();
 
     if (validateForm(formBlock)) {
-        const data = {
-            name: formBlock.elements.name.value,
-            name: formBlock.elements.phone.value,
-            name: formBlock.elements.comment.value
-        };
-
-        const xhr = new XMLHttpRequest();
-        xhr.responseType = 'json';
-        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-        xhr.send(JSON.stringify(data));
-
-        xhr.addEventListener('load', () => {
-            if (xhr.response.status) {
-                console.log('Всё ок!');
-                //Вместо console.log() можно указывать напр. модальное окно какое-то.
-            } else {
-                console.log('Что-то пошло не так!');
-            }
-        });
-
+        let formData = new FormData(form)
+        formData.append('formBlock.elements.name.value'),
+            formData.append('formBlock.elements.phone.value'),
+            formData.append('formBlock.elements.comment.value'),
+            formData.append('e: mail: maluda223@gmail.com');
     }
-});
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData);
+
+    xhr.addEventListener('load', () => {
+        if (xhr.response) {
+            console.log('Всё ок!');
+            //Вместо console.log() можно указывать напр. модальное окно какое-то.
+        } else {
+            console.log('Что-то пошло не так!');
+        }
+    });
+}
 
 function validateForm(form) {
-    let valid = true;
+        let valid = true;
 
-    if (!validateField(form.elements.name)) {
-        valid = false;
+        if (!validateField(form.elements.name)) {
+            valid = false;
+        }
+
+        if (!validateField(form.elements.phone)) {
+            valid = false;
+        }
+
+        if (!validateField(form.elements.comment)) {
+            valid = false;
+        }
+
+        return valid;
     }
-
-    if (!validateField(form.elements.phone)) {
-        valid = false;
-    }
-
-    if (!validateField(form.elements.comment)) {
-        valid = false;
-    }
-
-    return valid;
-}
 
 function validateField(field) {
-    field.nextElementSibling.textContent = field.validationMessage;
-    return field.checkValidity();
-}
+        field.nextElementSibling.textContent = field.validationMessage;
+        return field.checkValidity();
+    }
 
 //Метод send ещё выполняет ф-ию отправки конкретных(указанных) данных.
 //Перед тем, как отправлять данные на сервер получим данные в формате JSON.
