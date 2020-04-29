@@ -188,7 +188,7 @@ closeElement.addEventListener("click", e => {
 
 //Форма
 const formBlock = document.querySelector('#form-block'),
-    btnIn = document.querySelector('.btn-in');
+    btnIn = document.querySelector('#btn-in');
 
 btnIn.addEventListener('click', event => {
     event.preventDefault();
