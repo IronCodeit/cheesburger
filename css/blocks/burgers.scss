@@ -36,11 +36,12 @@
 }
 
 .burgers__img {
-    width: rem(449px);
-    height: auto;
+    max-width: rem(449px);
+    width: 100%;
+    height: rem(314px);
 
     @include tablets {
-        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -48,7 +49,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 .burgers__slide {
@@ -64,11 +64,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: rem(860px);
 
     @include tablets {
         flex-direction: column;
         margin-top: rem(50px);
         padding: rem(22px);
+        width: 100%;
     }
 
     @include phones {
@@ -152,19 +154,28 @@
     margin-left: auto;
 }
 
-.burgers__menu {
-    position: relative;
-    margin-right: rem(10px);
-
-    @include phones {}
-}
-
 .burger__item {
     display: flex;
     align-items: center;
 
     &:not(:last-child) {
         margin-bottom: rem(10px);
+    }
+}
+
+.burger__drop {
+    position: absolute;
+    top: -30%;
+    left: 6%;
+    display: flex;
+
+    @include tablets {
+        top: -15%;
+        left: 0%;
+    }
+
+    @include phones {
+        top: -33%;
     }
 }
 
@@ -177,28 +188,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.burger__drop {
-    position: absolute;
-    top: -30%;
-    left: 6%;
-    display: flex;
-
-    &:hover {
-        .burger__list {
-            opacity: 1;
-            transition: 0.3s;
-        }
-    }
-
-    @include tablets {
-        top: -25%;
-        left: 0%;
-    }
-
-    @include phones {
-        top: -33%;
+    &:hover~.burger__list {
+        opacity: 1;
+        transition: 0.8s;
+        display: block;
     }
 }
 
@@ -210,6 +204,14 @@
     font-family: 'ubuntu';
     font-weight: 500;
     opacity: 0;
+    display: none;
+    left: 100%;
+
+    &:hover {
+        opacity: 1;
+        transition: 0.8s;
+        display: block;
+    }
 }
 
 .burger__colorie {
@@ -232,7 +234,7 @@
 
     @include tablets {
         left: 85%;
-        top: -25%;
+        top: -15%;
     }
 
     @include phones {
@@ -251,14 +253,26 @@
     text-transform: uppercase;
 }
 
-.burgers__desk {
+.burgers__menu {
+    position: relative;
+    margin-right: rem(10px);
+    width: 50%;
 
     @include tablets {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         text-align: center;
+    }
+}
+
+.burgers__desk {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include tablets {
+        width: 100%;
     }
 }

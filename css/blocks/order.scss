@@ -29,7 +29,7 @@
     }
 }
 
-.form-block {
+#form-block {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -221,7 +221,7 @@
 
     &:checked+.fake::before {
         opacity: 1;
-        transition: 0.3s;
+        transition: 0.5s;
     }
 }
 
@@ -260,7 +260,7 @@
     margin-right: rem(20px);
 }
 
-.btn-in {
+#btn-in {
     padding: rem(11px) rem(16px);
     background-color: $orange;
     border-radius: 3px;
@@ -272,7 +272,7 @@
     border: none;
 }
 
-.btn-out {
+#btn-out {
     padding: rem(11px) rem(16px);
     border-radius: 3px;
     font-size: rem(14px);
@@ -286,4 +286,11 @@
 
 .check-button {
     background-color: $yellow;
+}
+
+.error {
+    color: $orange;
+    font-size: rem(16px);
+    font-style: italic;
+    text-align: center;
 }
