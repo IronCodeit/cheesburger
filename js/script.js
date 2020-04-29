@@ -162,6 +162,7 @@ faces.addEventListener('click', e => {
         popupText.innerHTML = modalText;
         popupText.style.boxShadow = "10px 10px 50px white";
         overlay.style.display = 'block';
+        body.style.overflow = 'hidden';
     }
 });
 
@@ -171,6 +172,7 @@ document.addEventListener('keyup', e => {
 
     if (keyName === 'Escape') {
         overlay.style.display = 'none';
+        body.style.overflow = 'visible';
     }
 });
 
@@ -179,6 +181,7 @@ const closeElement = overlay.querySelector(".close");
 closeElement.addEventListener("click", e => {
     e.preventDefault();
     overlay.style.display = "none";
+    body.style.overflow = 'visible';
 });
 
 
@@ -238,3 +241,60 @@ function validateField(field) {
 //Перед тем, как отправлять данные на сервер получим данные в формате JSON.
 //GET - получать данные с сервера.
 //POST - отправлять данные на сервер.
+
+
+//Обработка input.
+/* const phone = formBlock.elements.phone.value;
+phone.addEventListener('keyup', e => {
+    let keyName = e.key;
+
+    if (keyName) {
+        e.preventDefault();
+    }
+});
+
+const flat = formBlock.elements.flat.value;
+flat.addEventListener('keyup', e => {
+    let keyName = e.key;
+
+    if (keyName) {
+        e.preventDefault();
+    }
+});
+
+const floor = formBlock.elements.floor.value;
+floor.addEventListener('keyup', e => {
+    let keyName = e.key;
+
+    if (keyName) {
+        e.preventDefault();
+    }
+}); */
+
+
+let inputs = document.querySelectorAll('input[data-rule]');
+for (let input of inputs) {
+    input.addEventListener('keyup', function () {
+        let rule = this.dataset.rule;
+        let value = this.value;
+        let check;
+
+        switch (rule) {
+            case 'phone':
+                check = /^\d+$/.test(value);
+                break;
+            case 'flat':
+                check = /^\d+$/.test(value);
+                break;
+            case 'floor':
+                check = /^\d+$/.test(value);
+                break;
+        }
+
+        if (check = false) {
+            e.preventDefault();
+        } else {
+            check = true;
+        }
+    });
+}

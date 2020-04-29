@@ -179,18 +179,6 @@
     }
 }
 
-.burger__list {
-    padding: rem(18px);
-    background-color: rgba($white, 0.8);
-    border-radius: rem(7px);
-    width: rem(227px);
-    font-family: 'ubuntu';
-    font-weight: 500;
-    opacity: 0;
-    display: none;
-    left: 100%;
-}
-
 .burger__composition {
     width: rem(90px);
     height: rem(90px);
@@ -203,7 +191,25 @@
 
     &:hover~.burger__list {
         opacity: 1;
-        transition: 0.3s;
+        transition: 0.8s;
+        display: block;
+    }
+}
+
+.burger__list {
+    padding: rem(18px);
+    background-color: rgba($white, 0.8);
+    border-radius: rem(7px);
+    width: rem(227px);
+    font-family: 'ubuntu';
+    font-weight: 500;
+    opacity: 0;
+    display: none;
+    left: 100%;
+
+    &:hover {
+        opacity: 1;
+        transition: 0.8s;
         display: block;
     }
 }
