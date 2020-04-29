@@ -188,7 +188,7 @@ closeElement.addEventListener("click", e => {
 
 //Форма
 const formBlock = document.querySelector('#form-block'),
-    btnIn = document.querySelector('#btn-in');
+    btnIn = document.querySelector('.btn-in');
 
 btnIn.addEventListener('click', event => {
     event.preventDefault();
@@ -244,57 +244,33 @@ function validateField(field) {
 
 
 //Обработка input.
-/* const phone = formBlock.elements.phone.value;
-phone.addEventListener('keyup', e => {
-    let keyName = e.key;
-
-    if (keyName) {
-        e.preventDefault();
-    }
-});
-
-const flat = formBlock.elements.flat.value;
-flat.addEventListener('keyup', e => {
-    let keyName = e.key;
-
-    if (keyName) {
-        e.preventDefault();
-    }
-});
-
-const floor = formBlock.elements.floor.value;
-floor.addEventListener('keyup', e => {
-    let keyName = e.key;
-
-    if (keyName) {
-        e.preventDefault();
-    }
-}); */
-
-
 let inputs = document.querySelectorAll('input[data-rule]');
 for (let input of inputs) {
-    input.addEventListener('keyup', function () {
+    input.addEventListener('keydown', function (e) {
         let rule = this.dataset.rule;
         let value = this.value;
-        let check;
+        let check = event.key;
 
         switch (rule) {
             case 'phone':
-                check = /^\d+$/.test(value);
+                if (event.key >= 0 || event.key >= 9 || event.key === 'Backspace' || event.key === 'Delete') {
+                    check = true;
+                }
                 break;
             case 'flat':
-                check = /^\d+$/.test(value);
+                if (event.key >= 0 || event.key >= 9 || event.key === 'Backspace' || event.key === 'Delete') {
+                    check = true;
+                }
                 break;
             case 'floor':
-                check = /^\d+$/.test(value);
+                if (event.key >= 0 || event.key >= 9 || event.key === 'Backspace' || event.key === 'Delete') {
+                    check = true;
+                }
                 break;
         }
 
-        if (check = false) {
+        if (!check) {
             e.preventDefault();
-        } else {
-            check = true;
         }
     });
 }
