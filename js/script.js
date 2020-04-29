@@ -245,28 +245,13 @@ function validateField(field) {
 
 //Обработка input.
 let inputs = document.querySelectorAll('input[data-rule]');
+
 for (let input of inputs) {
     input.addEventListener('keydown', function (e) {
-        let rule = this.dataset.rule;
-        let value = this.value;
-        let check = event.key;
+        let check;
 
-        switch (rule) {
-            case 'phone':
-                if (event.key >= 0 || event.key >= 9 || event.key === 'Backspace' || event.key === 'Delete') {
-                    check = true;
-                }
-                break;
-            case 'flat':
-                if (event.key >= 0 || event.key >= 9 || event.key === 'Backspace' || event.key === 'Delete') {
-                    check = true;
-                }
-                break;
-            case 'floor':
-                if (event.key >= 0 || event.key >= 9 || event.key === 'Backspace' || event.key === 'Delete') {
-                    check = true;
-                }
-                break;
+        if (event.key >= 0 || event.key >= 9 || event.key === 'Backspace' || event.key === 'Delete') {
+            check = true;
         }
 
         if (!check) {
@@ -274,3 +259,7 @@ for (let input of inputs) {
         }
     });
 }
+
+
+
+
