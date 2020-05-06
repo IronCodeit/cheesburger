@@ -262,7 +262,7 @@ for (let input of inputs) {
 
 
 //OnePageScroll
-const sections = $('section');
+const sections = $('.section');
 const display = $('.maincontent');
 
 //Данная ф-я будет принимать №секции - sectionEq и двигать её.
@@ -280,7 +280,7 @@ $(window).on('wheel', e => {
     //1-й арг. - это данные об e событии.
     if (deltaY > 0) {
         performTransition(2);
-        //console.log('next');
+        console.log('next');
     }
 
     if (deltaY < 0) {

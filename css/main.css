@@ -350,8 +350,7 @@ body {
 .wrapper {
   width: 100%;
   overflow: hidden;
-  height: 100%;
-  position: relative; }
+  height: 100%; }
 
 .maincontent {
   height: 100%;
