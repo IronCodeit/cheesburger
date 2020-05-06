@@ -360,8 +360,8 @@ $("body").swipe({
         fingerCount,
         fingerData
     ) {
-        const scrollToSections = direction == 'up' ? "next" : "prev";
-        scrollToSection(scrollToSections);
+        const scrollDirections = direction === "up" ? "next" : "prev";
+        scrollToSection(scrollDirections);
         //alert(direction);
         //$(this).text("You swiped " + direction);
     }
