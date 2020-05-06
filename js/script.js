@@ -266,36 +266,43 @@ const sections = $('.section');
 const display = $('.maincontent');
 let inScroll = false;//Т.е. изначально запретим скрол стр.
 
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
 //Данная ф-я будет принимать №секции - sectionEq и двигать её.
 const performTransition = sectionEq => {
 
-    if (inScroll === false) {
-        inScroll === true;
+    if (inScroll) return;//Т.е. код не выполнится.
+    inScroll === true;
+    const transitionIsOver = 1000;
+    const mouseInvertionIsOver = 300;
 
-        //Т.е. если стр. не скролится, то условие будет вып-ся(false). как скрос появится - то (true).
-        const position = sectionEq * -100;
+    //Т.е. если стр. не скролится, то условие будет вып-ся(false). как скрос появится - то (true).
+    const position = sectionEq * -100;
 
-        sections
-            .eq(sectionEq)//этот метод выбирает энный эл-т среди найденных ,т.е. эл- с опред-м номером.
-            .addClass('active')
+    if (isNaN(position))
+        console.error("Передано неверное число в performTransition");
+
+    sections
+        .eq(sectionEq)//этот метод выбирает энный эл-т среди найденных ,т.е. эл- с опред-м номером.
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
+
+    display.css({
+        transform: `translateY(${position}%)`
+    });
+
+    setTimeout(() => {
+        inScroll === false;
+
+        $('.scroll-menu__item')
+            .eq(sectionEq)
+            .addClass('scroll-menu__item--active')
             .siblings()
-            .removeClass('active');
-
-        display.css({
-            transform: `translateY(${position}%)`
-        });
-
-        setTimeout(() => {
-            inScroll === false;
-
-            $('.scroll-menu__item')
-                .eq(sectionEq)
-                .addClass('scroll-menu__item--active')
-                .siblings()
-                .removeClass('scroll-menu__item--active');
-        }, 1300);
-        //Время инерции 300 мсек. 1300 = 300 + наша 1000.
-    }
+            .removeClass('scroll-menu__item--active');
+    }, transitionIsOver + mouseInvertionIsOver);
+    //Время инерции 300 мсек. 1300 = 300 + наша 1000.
 }
 //Данная ф-я сама будет переключать секции и она будет принимать нужный номер.
 const scrollToSection = direction => {
@@ -328,18 +335,19 @@ $(window).on('wheel', e => {
     }
 });
 
-$(window).on('keydown', e => {
+$(document).on('keydown', e => {
     const tagName = e.target.tagName.toLowerCase();
+    const userTypingInInputs = tagName === "input" && tagName === "textarea";
 
-    if (tagName != 'input' && tagName != 'textarea') {
-        switch (e.keyCode) {
-            case 38:
-                scrollToSection('prev');
-                break;
-            case 40:
-                scrollToSection('next');
-                break;
-        }
+    if (userTypingInInputs) return;
+
+    switch (e.keyCode) {
+        case 38:
+            scrollToSection("prev");
+            break;
+        case 40:
+            scrollToSection("next");
+            break;
     }
 });
 
@@ -351,18 +359,18 @@ $("[data-scroll-to]").on("click", e => {
     performTransition(target);
 });
 
-$("body").swipe({
-    swipe: function (
-        event,
-        direction,
-        distance,
-        duration,
-        fingerCount,
-        fingerData
-    ) {
-        const scrollDirections = direction === "up" ? "next" : "prev";
-        scrollToSection(scrollDirections);
-        //alert(direction);
-        //$(this).text("You swiped " + direction);
-    }
-});
+if (isMobile) {
+    $("body").swipe({
+        swipe: function (
+            event,
+            direction,
+            distance,
+            duration,
+            fingerCount,
+            fingerData
+        ) {
+            const scrollDirections = direction === "up" ? "next" : "prev";
+            scrollToSection(scrollDirections);
+        }
+    });
+}
