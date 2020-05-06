@@ -350,3 +350,19 @@ $("[data-scroll-to]").on("click", e => {
 
     performTransition(target);
 });
+
+$("body").swipe({
+    swipe: function (
+        event,
+        direction,
+        distance,
+        duration,
+        fingerCount,
+        fingerData
+    ) {
+        const scrollToSections = direction == 'up' ? "next" : "prev";
+        scrollToSection(scrollToSections);
+        //alert(direction);
+        //$(this).text("You swiped " + direction);
+    }
+});
