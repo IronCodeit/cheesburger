@@ -261,5 +261,30 @@ for (let input of inputs) {
 }
 
 
+//OnePageScroll
+const sections = $('section');
+const display = $('.maincontent');
 
+//Данная ф-я будет принимать №секции - sectionEq и двигать её.
+const performTransition = sectionEq => {
+    const position = sectionEq * -100;
+
+    display.css({
+        transform: 'translateY(${position}%)'
+    });
+}
+
+$(window).on('wheel', e => {
+    const deltaY = e.originalEvent.deltaY;
+    //console.log(deltaY);
+    //1-й арг. - это данные об e событии.
+    if (deltaY > 0) {
+        performTransition(2);
+        //console.log('next');
+    }
+
+    if (deltaY < 0) {
+        console.log('prev');
+    }
+});
 
