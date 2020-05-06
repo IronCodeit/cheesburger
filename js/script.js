@@ -280,9 +280,9 @@ const countSectionPosition = (sectionEq) => {
 
 const resetActiveClass = (item, eq) => {
   item.eq(eq)
-    .addClass("scroll-menu__item--active")
+    .addClass("active")
     .siblings()
-    .removeClass("scroll-menu__item--active");
+    .removeClass("active");
 };
 
 const performTransition = (sectionEq) => {
@@ -297,7 +297,7 @@ const performTransition = (sectionEq) => {
   resetActiveClass(sections, sectionEq);
 
   display.css({
-    transform: `translateY(${position}%)`,
+    transform: `translateY(${position}%)`
   });
 
   setTimeout(() => {
@@ -356,7 +356,6 @@ $(document).on("keydown", (e) => {
 });
 
 $("[data-scroll-to]").on("click", (e) => {
-  e.preventDefault();
 
   const $this = $(e.currentTarget);
   const target = $this.attr("data-scroll-to");
