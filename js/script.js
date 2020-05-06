@@ -264,27 +264,89 @@ for (let input of inputs) {
 //OnePageScroll
 const sections = $('.section');
 const display = $('.maincontent');
+let inScroll = false;//Т.е. изначально запретим скрол стр.
 
 //Данная ф-я будет принимать №секции - sectionEq и двигать её.
 const performTransition = sectionEq => {
-    const position = sectionEq * -100;
 
-    display.css({
-        transform: 'translateY(${position}%)'
-    });
+    if (inScroll === false) {
+        inScroll === true;
+
+        //Т.е. если стр. не скролится, то условие будет вып-ся(false). как скрос появится - то (true).
+        const position = sectionEq * -100;
+
+        sections
+            .eq(sectionEq)//этот метод выбирает энный эл-т среди найденных ,т.е. эл- с опред-м номером.
+            .addClass('active')
+            .siblings()
+            .removeClass('active');
+
+        display.css({
+            transform: `translateY(${position}%)`
+        });
+
+        setTimeout(() => {
+            inScroll === false;
+
+            $('.scroll-menu__item')
+                .eq(sectionEq)
+                .addClass('scroll-menu__item--active')
+                .siblings()
+                .removeClass('scroll-menu__item--active');
+        }, 1300);
+        //Время инерции 300 мсек. 1300 = 300 + наша 1000.
+    }
+}
+//Данная ф-я сама будет переключать секции и она будет принимать нужный номер.
+const scrollToSection = direction => {
+    const activeSection = sections.filter('.active');
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    if (direction === 'next' && nextSection.length) {
+        performTransition(nextSection.index());
+    }
+
+    if (direction === 'prev' && prevSection.length) {
+        performTransition(prevSection.index());
+    }
 }
 
 $(window).on('wheel', e => {
     const deltaY = e.originalEvent.deltaY;
+    //если пишу с пом js - то e.deltaY.
+    //если пишу с пом jq - то e.originalEvent.deltaY.
     //console.log(deltaY);
+    //Cв-во deltaY.
     //1-й арг. - это данные об e событии.
     if (deltaY > 0) {
-        performTransition(2);
-        console.log('next');
+        scrollToSection('next');
     }
 
     if (deltaY < 0) {
-        console.log('prev');
+        scrollToSection('prev');
     }
 });
 
+$(window).on('keydown', e => {
+    const tagName = e.target.tagName.toLowerCase();
+
+    if (tagName != 'input' && tagName != 'textarea') {
+        switch (e.keyCode) {
+            case 38:
+                scrollToSection('prev');
+                break;
+            case 40:
+                scrollToSection('next');
+                break;
+        }
+    }
+});
+
+$("[data-scroll-to]").on("click", e => {
+    e.preventDefault();
+    const $this = $(e.currentTarget);
+    const target = $this.attr("data-scroll-to");
+
+    performTransition(target);
+});
