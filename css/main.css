@@ -1858,108 +1858,6 @@ p {
 .video {
   background: url("../img/video_bg.png") center center/cover no-repeat; }
 
-.player {
-  position: relative;
-  display: inline-block; }
-  .player.hidden {
-    opacity: 0;
-    -webkit-transition: opacity 0.3s;
-    -o-transition: opacity 0.3s;
-    transition: opacity 0.3s; }
-
-.player__splash {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("../img/bg/player-splash.jpg") center center/cover no-repeat;
-  cursor: pointer; }
-
-.player__wrapper.active .player__splash {
-  display: none; }
-
-.player__controls {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 35px;
-  background: #3e3e3e;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0 25px; }
-
-.player__start {
-  width: 0;
-  height: 0;
-  border: 11px solid transparent;
-  border-left-color: #626262;
-  padding: 0;
-  border-right-width: 0;
-  background: transparent;
-  outline: none;
-  position: relative; }
-  .player__start.paused {
-    width: 14px;
-    height: 22px;
-    border: none; }
-    .player__start.paused:after, .player__start.paused:before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 5px;
-      top: 0;
-      bottom: 0;
-      background: #626262; }
-    .player__start.paused:after {
-      right: 0; }
-    .player__start.paused:before {
-      left: 0; }
-
-.player__playback {
-  height: 16px;
-  width: 446px;
-  position: relative; }
-  .player__playback:before {
-    content: "";
-    height: 4px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    background: #626262;
-    display: block;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
-
-.player__playback-button {
-  background: #626262;
-  border-radius: 50px;
-  border: none;
-  width: 12px;
-  height: 12px;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  left: 0; }
-
-.player__duration {
-  color: #626262;
-  font-weight: bold; }
-
 .title--video {
   color: #2f3234;
   margin-top: 0rem;
@@ -1980,6 +1878,218 @@ p {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
+
+.workflow {
+  width: 100%;
+  background-image: url(../img/bg_video.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.container--workflow {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .container--workflow {
+      height: 62%; } }
+
+.player {
+  width: 70%;
+  position: relative;
+  overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .player {
+      margin-top: 7%;
+      width: 100%; } }
+
+.player__video {
+  width: 100%; }
+
+.player__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background: #3e3e3e;
+  position: absolute;
+  bottom: 0;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: 3.2rem; }
+  @media screen and (max-width: 768px) {
+    .player__controls {
+      -webkit-box-pack: left;
+      -ms-flex-pack: left;
+      justify-content: left; } }
+  @media screen and (max-width: 480px) {
+    .player__controls {
+      height: 2.2rem; } }
+
+.player__button {
+  background: rgba(0, 0, 0, 0);
+  width: 50px;
+  height: 50px;
+  outline: none; }
+  @media screen and (max-width: 480px) {
+    .player__button {
+      width: 2.2rem;
+      height: 2.2rem; } }
+
+.play-pic,
+.volume-pic {
+  width: inherit;
+  height: inherit; }
+
+.progress {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 55%;
+  flex-basis: 55%;
+  height: 5px;
+  border-radius: 1px;
+  background: #626262;
+  cursor: pointer; }
+  @media screen and (max-width: 768px) {
+    .progress {
+      -ms-flex-preferred-size: 49%;
+      flex-basis: 49%; } }
+  @media screen and (max-width: 480px) {
+    .progress {
+      -ms-flex-preferred-size: 83%;
+      flex-basis: 83%; } }
+
+.progress__filled {
+  z-index: 150;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  -webkit-transform: translateY(37%);
+  -ms-transform: translateY(37%);
+  transform: translateY(37%);
+  bottom: 0;
+  background: #626262; }
+
+.player__volume {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media screen and (max-width: 480px) {
+    .player__volume {
+      display: none; } }
+
+.player__slider {
+  height: inherit; }
+
+input[type=range] {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 55%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */ }
+
+input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; }
+
+input[type=range]::-ms-track {
+  width: 70%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #626262;
+  cursor: pointer;
+  margin-top: -5%;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */ }
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #626262;
+  cursor: pointer; }
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #626262;
+  cursor: pointer; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #626262;
+  border-radius: 1px; }
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #626262; }
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #626262;
+  border-radius: 1px; }
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent; }
+
+input[type=range]::-ms-fill-lower {
+  background: #626262;
+  border-radius: 1px; }
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #626262; }
+
+input[type=range]::-ms-fill-upper {
+  background: #626262;
+  border-radius: 1x; }
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #626262; }
 
 .drop {
   background: rgba(47, 50, 52, 0.99);

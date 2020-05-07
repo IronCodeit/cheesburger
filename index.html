@@ -755,18 +755,26 @@
 				<div class="container video--container">
 					<h2 class="title title--video">Как мы работаем</h2>
 					<div class="player">
-						<div class="player__wrapper">
-							<div id="yt-player"></div>
-							<div class="player__splash"></div>
-						</div>
+						<video class="player__video viewer">
+							<source src="./video/videoplayback.mp4" type="video/mp4">
+						</video>
 						<div class="player__controls">
-							<button class="player__start"></button>
-							<div class="player__playback">
-								<button class="player__playback-button"></button>
+							<button class="player__button toggle" title="Toggle Play">
+								<svg class="play-pic">
+									<use xlink:href="./img/icons/sprite.svg#play"></use>
+								</svg>
+							</button>
+							<div class="progress">
+								<div class="progress__filled" style="left: 14.8745%;"></div>
 							</div>
-							<div class="player__duration">
-								<span class="player__duration-completed">0:00</span> :
-								<span class="player__duration-estimate">0:00</span>
+							<div class="player__volume">
+								<button class="player__button mute" title="Toggle Mute">
+									<svg class="volume-pic">
+										<use xlink:href="./img/icons/sprite.svg#volume"></use>
+									</svg>
+								</button>
+								<input type="range" name="volume" class="player__slider" min="0" max="100" step="5"
+									value="100">
 							</div>
 						</div>
 					</div>
