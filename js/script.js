@@ -418,9 +418,9 @@ function togglePlay() {
 function updateButton() {
     const icon = this.paused;
     if (icon) {
-        toggle.innerHTML = '<svg class="play-pic"><use xlink:href="../img/sprite.svg#play"></use></svg>';
+        toggle.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#play"></use></svg>';
     } else {
-        toggle.innerHTML = '<img src="../img/pause.png" style="height:1.5rem; width:1.5rem">';
+        toggle.innerHTML = '<img src="./img/pause.png" style="height:1.5rem; width:1.5rem">';
         // toggle.innerHTML = '<svg class="play-pic"><use xlink:href="./img/icons/sprite.svg#pause"></use></svg>'; 
     }
     // console.log('Update the button');
@@ -432,10 +432,10 @@ function handleRangeUpdate(e) {
     
     video.volume = this.value / 100;
     if(isMuted) {
-        mute.innerHTML = '<svg class="play-pic"><use xlink:href="../img/sprite.svg#volume"></use></svg>';
+        mute.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#volume"></use></svg>';
     } 
     else {
-        mute.innerHTML = '<svg class="play-pic"><use xlink:href="../img/sprite.svg#volume"></use></svg>';
+        mute.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#volume"></use></svg>';
     }
     
     // isMuted = !isMuted;
@@ -453,11 +453,11 @@ function muteButton() {
     // console.log(muteIcon);
     console.log(isMuted);
     if (!isMuted) {
-        mute.innerHTML = '<svg class="play-pic"><use xlink:href="../img/sprite.svg#volume"></use></svg>';
+        mute.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#volume"></use></svg>';
         video.volume = range.value/100; // 
         // video.volume = 1;
     } else {
-        mute.innerHTML = '<img src="../img/mute.png" style="height:30px; width:28px">';
+        mute.innerHTML = '<img src="./img/mute.png" style="height:30px; width:28px">';
         video.volume = 0;
         // toggle.innerHTML = '<svg class="play-pic"><use xlink:href="./img/icons/sprite.svg#pause"></use></svg>'; 
     }
