@@ -1880,7 +1880,8 @@ p {
   flex-direction: column; }
 
 .player {
-  width: 81%;
+  width: 100%;
+  width: 41.25rem;
   position: relative;
   overflow: hidden; }
 
@@ -1902,13 +1903,14 @@ p {
   bottom: 0;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  height: 3.375rem; }
+  height: 2.5rem; }
 
 .player__button {
   background: rgba(0, 0, 0, 0);
-  width: 3.125rem;
-  height: 3.125rem;
-  outline: none; }
+  width: 2.25rem;
+  height: 2.5rem;
+  outline: none;
+  border: 0rem; }
 
 .play-pic,
 .volume-pic {
@@ -1920,9 +1922,9 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 55%;
-  flex-basis: 55%;
-  height: 5px;
+  -ms-flex-preferred-size: 62%;
+  flex-basis: 62%;
+  height: 4px;
   border-radius: 1px;
   background: #626262;
   cursor: pointer; }
@@ -1947,7 +1949,7 @@ p {
   display: flex; }
 
 .player__slider {
-  height: inherit; }
+  line-height: 0.3; }
 
 input[type=range] {
   -webkit-appearance: none;
