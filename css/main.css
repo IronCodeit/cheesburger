@@ -1879,39 +1879,10 @@ p {
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.workflow {
-  width: 100%;
-  background-image: url(../img/bg_video.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
-.container--workflow {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  @media screen and (max-width: 768px) {
-    .container--workflow {
-      height: 62%; } }
-
 .player {
-  width: 70%;
+  width: 81%;
   position: relative;
   overflow: hidden; }
-  @media screen and (max-width: 768px) {
-    .player {
-      margin-top: 7%;
-      width: 100%; } }
 
 .player__video {
   width: 100%; }
@@ -1931,25 +1902,13 @@ p {
   bottom: 0;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  height: 3.2rem; }
-  @media screen and (max-width: 768px) {
-    .player__controls {
-      -webkit-box-pack: left;
-      -ms-flex-pack: left;
-      justify-content: left; } }
-  @media screen and (max-width: 480px) {
-    .player__controls {
-      height: 2.2rem; } }
+  height: 3.375rem; }
 
 .player__button {
   background: rgba(0, 0, 0, 0);
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   outline: none; }
-  @media screen and (max-width: 480px) {
-    .player__button {
-      width: 2.2rem;
-      height: 2.2rem; } }
 
 .play-pic,
 .volume-pic {
@@ -1967,14 +1926,6 @@ p {
   border-radius: 1px;
   background: #626262;
   cursor: pointer; }
-  @media screen and (max-width: 768px) {
-    .progress {
-      -ms-flex-preferred-size: 49%;
-      flex-basis: 49%; } }
-  @media screen and (max-width: 480px) {
-    .progress {
-      -ms-flex-preferred-size: 83%;
-      flex-basis: 83%; } }
 
 .progress__filled {
   z-index: 150;
@@ -1994,9 +1945,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  @media screen and (max-width: 480px) {
-    .player__volume {
-      display: none; } }
 
 .player__slider {
   height: inherit; }
@@ -2009,12 +1957,12 @@ input[type=range] {
   background: transparent;
   /* Otherwise white in Chrome */ }
 
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; }
+
 input[type=range]:focus {
   outline: none;
   /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none; }
 
 input[type=range]::-ms-track {
   width: 70%;
