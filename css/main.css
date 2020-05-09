@@ -1910,7 +1910,7 @@ p {
   width: 2.25rem;
   height: 2.5rem;
   outline: none;
-  border: 0rem; }
+  border: 0; }
 
 .play-pic,
 .volume-pic {
@@ -1925,22 +1925,20 @@ p {
   -ms-flex-preferred-size: 62%;
   flex-basis: 62%;
   height: 4px;
-  border-radius: 1px;
+  border-radius: 2px;
   background: #626262;
   cursor: pointer; }
 
 .progress__filled {
-  z-index: 150;
-  width: 15px;
-  height: 15px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   position: absolute;
-  left: 0;
-  -webkit-transform: translateY(37%);
-  -ms-transform: translateY(37%);
-  transform: translateY(37%);
-  bottom: 0;
-  background: #626262; }
+  -webkit-transform: translateY(-35%);
+  -ms-transform: translateY(-35%);
+  transform: translateY(-35%);
+  top: 0;
+  background: #585858; }
 
 .player__volume {
   margin-left: auto;
@@ -1953,74 +1951,21 @@ p {
 
 input[type=range] {
   -webkit-appearance: none;
-  /* Hides the slider so that custom slider can be made */
-  width: 55%;
-  /* Specific width is required for Firefox. */
-  background: transparent;
-  /* Otherwise white in Chrome */ }
+  width: 65%;
+  background: transparent; }
 
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none; }
-
-input[type=range]:focus {
-  outline: none;
-  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
-
-input[type=range]::-ms-track {
-  width: 70%;
-  cursor: pointer;
-  /* Hides the slider so custom styles can be added */
-  background: transparent;
-  border-color: transparent;
-  color: transparent; }
-
-/* Special styling for WebKit/Blink */
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 15px;
-  height: 15px;
+  width: 0.9375rem;
+  height: 0.9375rem;
   border-radius: 50%;
-  background: #626262;
+  background: #585858;
   cursor: pointer;
-  margin-top: -5%;
-  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */ }
-
-/* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #626262;
-  cursor: pointer; }
-
-/* All the same stuff for IE */
-input[type=range]::-ms-thumb {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #626262;
-  cursor: pointer; }
-
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  background: #626262;
-  border-radius: 1px; }
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #626262; }
-
-input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  background: #626262;
-  border-radius: 1px; }
+  margin-top: -5%; }
 
 input[type=range]::-ms-track {
   width: 100%;
-  height: 5px;
+  height: 0.3125rem;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
@@ -2028,17 +1973,48 @@ input[type=range]::-ms-track {
   color: transparent; }
 
 input[type=range]::-ms-fill-lower {
-  background: #626262;
-  border-radius: 1px; }
-
-input[type=range]:focus::-ms-fill-lower {
-  background: #626262; }
+  background: #585858;
+  border-radius: 2px; }
 
 input[type=range]::-ms-fill-upper {
-  background: #626262;
-  border-radius: 1x; }
+  background: #585858;
+  border-radius: 2x; }
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #585858; }
 
 input[type=range]:focus::-ms-fill-upper {
+  background: #585858; }
+
+input[type=range]::-moz-range-thumb {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background: #585858;
+  cursor: pointer; }
+
+input[type=range]::-ms-thumb {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background: #585858;
+  cursor: pointer; }
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 0.3125rem;
+  cursor: pointer;
+  background: #585858;
+  border-radius: 1px; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.3125rem;
+  cursor: pointer;
+  background: #626262;
+  border-radius: 2px; }
+
+input[type=range]:focus::-webkit-slider-runnable-track {
   background: #626262; }
 
 .drop {

@@ -386,112 +386,78 @@ if (isMobile) {
     });
 }
 
+//HTML5 Video API 
+const player = document.querySelector('.player'),
+    video = player.querySelector('.viewer'),
+    toggle = player.querySelector('.toggle'),
+    mute = player.querySelector('.mute'),
+    progress = player.querySelector('.progress'),
+    progressBar = player.querySelector('.progress__filled'),
+    range = player.querySelector('.player__slider');
 
-
-
-
-/////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////
-//Работа видеоплеера на HTML Audio/Video API 
-
-/*Получение элементов плеера */
-const player = document.querySelector('.player');
-const video = player.querySelector('.viewer');
-const toggle = player.querySelector('.toggle');
-const mute = player.querySelector('.mute');
-
-const progress = player.querySelector('.progress');
-const progressBar = player.querySelector('.progress__filled');
-const range = player.querySelector('.player__slider');
 let isMuted = 'false';
 
-/* Построение функций */
-function togglePlay() {
-
+video.addEventListener('click', function (togglePlay) {
     if (video.paused) {
         video.play();
     } else {
         video.pause();
     };
-}
-function updateButton() {
+});
+
+video.addEventListener('play', function (updateButton) {
     const icon = this.paused;
     if (icon) {
         toggle.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#play"></use></svg>';
     } else {
-        toggle.innerHTML = '<img src="./img/pause.png" style="height:1.5rem; width:1.5rem">';
-        // toggle.innerHTML = '<svg class="play-pic"><use xlink:href="./img/icons/sprite.svg#pause"></use></svg>'; 
+        toggle.innerHTML = '<img src="./img/pause.png" style="height:1.3rem; width:1.3rem">';
     }
-    // console.log('Update the button');
-    // console.log(icon);
-}
+});
 
-function handleRangeUpdate(e) {
-    // console.log(e.currentTarget.value);
-    
-    video.volume = this.value / 100;
-    if(isMuted) {
+video.addEventListener('pause', function (updateButton) {
+    const icon = this.paused;
+    if (icon) {
+        toggle.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#play"></use></svg>';
+    } else {
+        toggle.innerHTML = '<img src="./img/pause.png" style="height:1.3rem; width:1.3rem">';
+    }
+});
+
+mute.addEventListener('click', function (muteButton) {
+    if (!isMuted) {
         mute.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#volume"></use></svg>';
-    } 
+        video.volume = range.value / 100;
+    } else {
+        mute.innerHTML = '<img src="./img/mute.png" style="height:1.3rem; width:1.3rem">';
+        video.volume = 0;
+    }
+    isMuted = !isMuted;
+});
+
+video.addEventListener('timeupdate', function (handleProgress) {
+    const percent = (video.currentTime / video.duration) * 100;
+    progressBar.style.left = `${percent}%`;
+});
+
+toggle.addEventListener('click', function (togglePlay) {
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    };
+});
+
+range.addEventListener('change', function (handleRangeUpdate) {
+    video.volume = this.value / 100;
+    if (isMuted) {
+        mute.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#volume"></use></svg>';
+    }
     else {
         mute.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#volume"></use></svg>';
     }
-    
-    // isMuted = !isMuted;
-    console.log(isMuted);
-    
-    // let currentVolume = e.currentTarget.value;
-    // return currentVolume
-    // return currentVolume;
-    // console.log(this.value);
-    // return console.log(this.value);
-}
+});
 
-function muteButton() {
-    // let muteIcon=this.muted;
-    // console.log(muteIcon);
-    console.log(isMuted);
-    if (!isMuted) {
-        mute.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#volume"></use></svg>';
-        video.volume = range.value/100; // 
-        // video.volume = 1;
-    } else {
-        mute.innerHTML = '<img src="./img/mute.png" style="height:30px; width:28px">';
-        video.volume = 0;
-        // toggle.innerHTML = '<svg class="play-pic"><use xlink:href="./img/icons/sprite.svg#pause"></use></svg>'; 
-    }
-    isMuted = !isMuted;
-    // console.log(muteIcon);
-}
-
-
-
-function handleProgress() {
-    const percent = (video.currentTime / video.duration) * 100;
-    progressBar.style.left = `${percent}%`;
-}
-
-function scrub(e) {
+progress.addEventListener('click', function (scrub) {
     const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
     video.currentTime = scrubTime;
-    console.log(e);
-}
-
-/* Построение обработчиков событий */
-video.addEventListener('click', togglePlay);
-video.addEventListener('play', updateButton);
-video.addEventListener('pause', updateButton);
-mute.addEventListener('click', muteButton);
-
-
-video.addEventListener('timeupdate', handleProgress);
-
-
-toggle.addEventListener('click', togglePlay);
-
-range.addEventListener('change', handleRangeUpdate);
-// range.addEventListener('mousemove', handleRangeUpdate);
-
-// let mousedown = false
-progress.addEventListener('click', scrub);
+});
