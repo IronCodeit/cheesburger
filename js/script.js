@@ -461,3 +461,55 @@ progress.addEventListener('click', function (scrub) {
     const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
     video.currentTime = scrubTime;
 });
+
+//Yandex map.
+ymaps.ready(init);
+
+var placemarks = [
+    {
+        latitude: 59.97,
+        longitude: 30.31,
+        hintContent: 'Геометка',
+        balloonContent: 'Геометка'
+    },
+    {
+        latitude: 59.94,
+        longitude: 30.25,
+        hintContent: 'Геометка',
+        balloonContent: 'Геометка'
+    },
+    {
+        latitude: 59.93,
+        longitude: 30.34,
+        hintContent: 'Геометка',
+        balloonContent: 'Геометка'
+    },
+    {
+        latitude: 59.95,
+        longitude: 30.46,
+        hintContent: 'Геометка',
+        balloonContent: 'Геометка'
+    }
+];
+
+function init() {
+    var StPsbMap = new ymaps.Map("map", {
+        center: [59.94, 30.32],
+        zoom: 12,
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+    });
+
+    placemarks.forEach(function (obj) {
+        var placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
+            hintContent: obj.hintContent,
+            balloonContent: obj.balloonContent
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map-marker.png',
+            iconImageSize: [46, 57],
+            iconImageOffset: [-23, -57]
+        });
+        StPsbMap.geoObjects.add(placemark);
+    });
+}
