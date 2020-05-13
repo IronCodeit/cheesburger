@@ -1,3 +1,50 @@
-.nav__link {
-    color: red;
+.nav {
+    margin-right: rem(15px);
+    font-family: 'ubunturegular';
+    font-size: rem(13px);
+    font-weight: 500;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__item {
+    margin-right: rem(17px);
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: rem(5px);
+        height: rem(5px);
+        background-color: $white;
+        border-radius: 50%;
+        margin-left: rem(15px);
+    }
+
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+
+    .nav__link {
+        text-decoration: none;
+        color: $white;
+        font-size: rem(13px);
+        font-weight: 500;
+        text-transform: uppercase;
+    }
 }

@@ -1,3 +1,12 @@
-$main-color: #000;
+$gray:#2f3234;
+$gray-tr:#3e3e3e;
+$white: #fff;
+$orange: #e45028;
+$orangelight: #eb8c38;
+$yellow: #f9b43b;
+$black: #000;
+$lightgray:#585858;
+$red:#d00;
 
-@import './blocks/*.scss';
+@import "./layout/*.scss";
+@import "./blocks/*.scss";

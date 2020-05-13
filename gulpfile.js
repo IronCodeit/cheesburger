@@ -22,7 +22,7 @@ const svgSprite = require('gulp-svg-sprite');
 const gulpif = require('gulp-if');
 const env = process.env.NODE_ENV;
 //Перем-е окруж-я лежат в объекте process(это глобальный объект в node.js в поле .env). .NODE_ENV - имя переменной.
-const { SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS } = require('./gulp.config');
+const { SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS, TSW_LIBS } = require('./gulp.config');
 sass.compiler = require('node-sass');
 
 
@@ -112,7 +112,7 @@ task('styles', () => {
 
 
 task('scripts', () => {
-    return src([...JS_LIBS, 'src/scripts/*.js'])
+    return src([...JS_LIBS, ...TSW_LIBS, 'src/scripts/*.js'])
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
         .pipe(concat('main.min.js', { newLine: ';' }))
         .pipe(gulpif(env === 'prod', babel({
@@ -182,5 +182,6 @@ task('default',
 task('build',
     series(
         'clean',
-        parallel('copy:html', 'styles', 'scripts', 'icons'))
+        parallel('copy:html', 'styles', 'scripts', 'icons')
+    )
 );

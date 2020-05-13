@@ -6,5 +6,8 @@ module.exports = {
     ],
     JS_LIBS: [
         'node_modules/jquery/dist/jquery.js'
+    ],
+    TSW_LIBS: [
+        'node_modules/jquery-touchswipe/jquery.touchSwipe.js'
     ]
 }

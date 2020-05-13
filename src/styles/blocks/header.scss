@@ -1,21 +1,35 @@
-header {
-    color: $main-color;
-    font-style: oblique;
+.header {
+    position: absolute;
+    width: 100%;
+    top: rem(15px);
+    z-index: 1;
 }
 
-.new {
+.header--container {
     display: flex;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    border-width: 3px;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    @media (max-width: 768px) {
-        width: 70px;
+.header__wrapper {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon {
+    fill: $white;
+    width: rem(24px);
+    height: rem(22px);
+    display: none;
+
+    @include tablets {
+        display: flex;
     }
 }
 
-.old {
-    @media (max-width: 768px) {
-        display: block;
-    }
+.logo-icon {
+    width: rem(92px);
+    height: rem(69px);
 }
