@@ -1,0 +1,21 @@
+header {
+    color: $main-color;
+    font-style: oblique;
+}
+
+.new {
+    display: flex;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    border-width: 3px;
+
+    @media (max-width: 768px) {
+        width: 70px;
+    }
+}
+
+.old {
+    @media (max-width: 768px) {
+        display: block;
+    }
+}

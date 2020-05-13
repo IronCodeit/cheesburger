@@ -2144,6 +2144,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 .map {
   height: 100vh;
+  width: 100%;
   position: relative; }
 
 .footer {
