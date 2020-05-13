@@ -87,7 +87,7 @@ task('styles', () => {
         .pipe(sass().on('error', sass.logError))
         //Компиляция.
         .pipe(px2rem())
-        .pipe(gulpif(env === 'dev',
+        .pipe(gulpif(env === 'prod',
             autoprefixer({
                 browsers: ['last 2 versions'],
                 cascade: false
@@ -127,7 +127,7 @@ task('scripts', () => {
 
 
 task('icons', () => {
-    return src(`${SRC_PATH}/img/icons/*.svg`)
+    return src('src/img/icons/*.svg')
         .pipe(svgo({
             plugins: [
                 {
