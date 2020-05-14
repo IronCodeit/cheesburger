@@ -161,6 +161,11 @@ task('fonts2', () => {
 });
 
 
+task('video', () => {
+    return src('src/video/*.mp4').pipe(dest(`${DIST_PATH}/video`));
+});
+
+
 task('server', () => {
     browserSync.init({
         server: {
@@ -178,19 +183,18 @@ task('watch', () => {
     watch('./src/*.html', series('copy:html'));
     //будем следить за файлом html и выполнять task 'copy:html'.
     watch('./src/scripts/*.js', series('scripts'));
-    //будем следить за файлом js и выполнять task 'scripts'.
     watch('./src/img/icons/*.svg', series('icons'));
-    //будем следить за файлом svg и выполнять task 'icons'.
     watch('./src/img/*.png', series('images'));
-    //будем следить за файлом png и выполнять task 'images'.    
     watch('./src/fonts/*.woff', series('fonts'));
     watch('./src/fonts/*.woff2', series('fonts2'));
+    watch('./src/video/*.mp4', series('video'));
 });
+
 
 task('default',
     series(
         'clean',
-        parallel('fonts', 'fonts2', 'copy:html', 'styles', 'scripts', 'icons', 'images'),
+        parallel('fonts', 'fonts2', 'copy:html', 'styles', 'scripts', 'icons', 'images', 'video'),
         parallel('watch', 'server')
     )
 );
@@ -201,6 +205,6 @@ task('default',
 task('build',
     series(
         'clean',
-        parallel('fonts', 'fonts2', 'copy:html', 'styles', 'scripts', 'icons', 'images')
+        parallel('fonts', 'fonts2', 'copy:html', 'styles', 'scripts', 'icons', 'images', 'video')
     )
 );
