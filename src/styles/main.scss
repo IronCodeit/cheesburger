@@ -1,11 +1,11 @@
 $gray:#2f3234;
 $gray-tr:#3e3e3e;
+$lightgray:#585858;
 $white: #fff;
 $orange: #e45028;
 $orangelight: #eb8c38;
 $yellow: #f9b43b;
 $black: #000;
-$lightgray:#585858;
 $red:#d00;
 
 @import "./blocks/fonts.scss";
@@ -20,10 +20,10 @@ $red:#d00;
 @import "./blocks/menu.scss";
 @import "./blocks/nav.scss";
 @import "./blocks/btn.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/svg.scss";
 @import "./blocks/scroll-menu.scss";
 @import "./blocks/face.scss";
 @import "./blocks/drop.scss";
 @import "./blocks/map.scss";
 @import "./blocks/video.scss";
-@import "./blocks/footer.scss";
-@import "./blocks/svg.scss";
