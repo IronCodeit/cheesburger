@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg">
-    <symbol id="naturalsprite" viewBox="0 0 88 75.534">
-    <g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="88px" height="75.534px" viewBox="0 0 88 75.534" enable-background="new 0 0 88 75.534" xml:space="preserve">
+<g>
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#8BC03F" d="M60.186,71.927c0.563-0.721,0.885-1.131,1.098-1.406
 		c-0.467-0.35-0.888-0.666-1.289-0.968c-0.396,0.05-0.779,0.082-1.14,0.084C59.268,70.359,59.719,71.1,60.186,71.927z"/>
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#8BC03F" d="M62.062,62.701c0.064-1.222,0.088-1.902-0.103-2.563
@@ -199,5 +202,4 @@
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#8BC03F" d="M48.714,43.98c-0.236-0.272-0.473-0.545-0.71-0.817
 		c-0.035,0.033-0.07,0.067-0.105,0.101c0.246,0.266,0.491,0.529,0.737,0.795C48.663,44.032,48.689,44.006,48.714,43.98z"/>
 </g>
-    </symbol>
 </svg>

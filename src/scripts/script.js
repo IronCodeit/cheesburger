@@ -260,7 +260,7 @@ for (let input of inputs) {
     });
 }
 
-//////////////////////////////////////////////////////////////////
+
 const sections = $(".section");
 const display = $(".maincontent");
 
@@ -408,7 +408,7 @@ video.addEventListener('click', function (togglePlay) {
 video.addEventListener('play', function (updateButton) {
     const icon = this.paused;
     if (icon) {
-        toggle.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#play"></use></svg>';
+        toggle.innerHTML = '<svg class="play-pic"><use xlink:href="./img/icons/sprite.svg#play"></use></svg>';
     } else {
         toggle.innerHTML = '<img src="./img/pause.png" style="height:1.3rem; width:1.3rem">';
     }
@@ -417,7 +417,7 @@ video.addEventListener('play', function (updateButton) {
 video.addEventListener('pause', function (updateButton) {
     const icon = this.paused;
     if (icon) {
-        toggle.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#play"></use></svg>';
+        toggle.innerHTML = '<svg class="play-pic"><use xlink:href="./img/icons/sprite.svg#play"></use></svg>';
     } else {
         toggle.innerHTML = '<img src="./img/pause.png" style="height:1.3rem; width:1.3rem">';
     }
@@ -425,7 +425,7 @@ video.addEventListener('pause', function (updateButton) {
 
 mute.addEventListener('click', function (muteButton) {
     if (!isMuted) {
-        mute.innerHTML = '<svg class="play-pic"><use xlink:href="./img/sprite.svg#volume"></use></svg>';
+        mute.innerHTML = '<svg class="play-pic"><use xlink:href="./img/icons/sprite.svg#volume"></use></svg>';
         video.volume = range.value / 100;
     } else {
         mute.innerHTML = '<img src="./img/mute.png" style="height:1.3rem; width:1.3rem">';

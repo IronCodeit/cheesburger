@@ -41,10 +41,11 @@
 
 .player__button {
     background: rgba(0, 0, 0, 0);
-    width: rem(36px);
-    height: rem(40px);
+    width: rem(21px);
+    height: rem(25px);
     outline: none;
     border: 0;
+    margin-right: rem(20px);
 }
 
 .play-pic,

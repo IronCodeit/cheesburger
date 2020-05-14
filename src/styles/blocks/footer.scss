@@ -65,11 +65,7 @@
     align-items: center;
 }
 
-.fb {
-    fill: $lightgray;
-}
-
 .socials__item>*:hover {
-    fill: $white;
-    transition: 0.3s;
+    fill: $lightgray;
+    transition: 0.4s;
 }

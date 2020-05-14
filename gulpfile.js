@@ -129,12 +129,12 @@ task('scripts', () => {
 task('icons', () => {
     return src('src/img/icons/*.svg')
         .pipe(svgo({
-            plugins: [
+/*             plugins: [
                 {
                     removeAttrs: { attrs: '(fill|stroke|style|width|height|data.*)' }
                 }
             ]
-        }))
+ */        }))
         .pipe(svgSprite({
             mode: {
                 symbol: {
@@ -194,7 +194,7 @@ task('watch', () => {
 task('default',
     series(
         'clean',
-        parallel('fonts', 'fonts2', 'copy:html', 'styles', 'scripts', 'icons', 'images', 'video'),
+        parallel('copy:html', 'styles', 'scripts', 'images', 'video', 'icons', 'fonts', 'fonts2'),
         parallel('watch', 'server')
     )
 );
@@ -205,6 +205,6 @@ task('default',
 task('build',
     series(
         'clean',
-        parallel('fonts', 'fonts2', 'copy:html', 'styles', 'scripts', 'icons', 'images', 'video')
+        parallel('copy:html', 'styles', 'scripts', 'images', 'video', 'icons', 'fonts', 'fonts2')
     )
 );
